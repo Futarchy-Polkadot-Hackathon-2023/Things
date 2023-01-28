@@ -21,6 +21,23 @@
 - The permit.sol interface has the follwing. permit(), nonces(), Domanin_sperator(),Permit_domain(),name(),version(),chainId(),verifyingContract()
 - domain seprator is special
 6. Read Interact with the Precompile using Remix
+- assets external or minted, doesnt matter.
+- prerequiste. Metamask, MoonbaseAlpha, Get TestTokens, precomiled 1x x20 or 1x mintable x 20,
+- add interface ERC20.sol
+- Paste file into remix
+- compile it
+- green mean amazing
+7. Read Access the Precompile
+- Compile it
+- set injected web3 connected to moonbase alpha
+- is account displayed
+- rename erc20 to IER20 
+- deploy via `att Address` enter this `0xFFFFFFFF1FCACBD218EDC0EBA20FC2308C778080`
+- now press buttons
+- use ERC20 precompile [guide](https://docs.moonbeam.network/builders/pallets-precompiles/precompiles/erc20/), if you want to
+
+### Page external xc 20
+
 
 
 
