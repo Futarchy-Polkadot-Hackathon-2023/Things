@@ -162,3 +162,7 @@
 
 ### Send XC-20s
 
+- I lost motivation, becuase now it goes into substrate stuff. Maybe Anton knows more and can take the scare of it away^^
+
+[Follow it thruh](https://docs.moonbeam.network/builders/get-started/)
+there is a section for foundry, hardhat and truffle. Than can help.
