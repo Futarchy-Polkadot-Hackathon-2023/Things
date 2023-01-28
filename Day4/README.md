@@ -104,3 +104,61 @@
 - paste this thing into remix under at adress
 - now you can interact with this asset
 
+### Mintable xc-20s
+1. Read Introduction
+- there are two type. external and mintable. mintable are burned and minted on moonbeam.
+- external are locked into polkadot, even relaychain it seems.
+- there is a precomiled contract. Thats the interface to do thingies.
+- Its special, like roles
+- It need governance, slooow. not the biggest fan
+- It need governance, slooow. not the biggest fan
+2. Read Mintable xc-20 roles
+- some roles are important it seems.
+- owner, he is the owner,
+- creater, he does creating assets
+- issuer, he can mint thingies
+- admin, mostly the owner anyway
+- freezer, mostly the woner anyways
+|Role|Mint|Burn|Freeze|Thaw|
+|-|-|-|-|-|
+|Owner|✓|✓|✓|✓|
+|Creator|X|X|X|X|
+|Issuer|✓|X|X|X|
+|Admin|X|✓|X|✓|
+|Freezer|X|X|✓|X|
+3. Read The mintable xc-20 solidity interface
+- 3 Interfaces
+- ERC20 Interface
+- Permit Interace
+- Mintable Interface
+4. Read mintable xc-20 specific functions
+- mintable include extra function and only owner allowd to call
+- mint(address to, uint256 value)
+- burn(address from, uint256)
+- freeze(address account)
+- thaw(address account)
+- freezeAsset()
+- thawAsset()
+- transferOwnership(address owner)
+- setTeam(address issuer, address admin, address freezer)
+- setMetadata(string calldata name, string calldata symbol, uint8 decimals)
+- clearMetadata()
+5. Read Retrieve List of Mintable xc-20
+- follow docs and get `100,481,493,116,602,214,283,160,747,599,845,770,751`
+- remove the `,` and get `100481493116602214283160747599845770751`
+- go to goole convert it into hex
+- you get this `4B980819E301DA7D7B08B1A64299C5FF`
+- ethereum think it too short, add 8 `F`
+- now you get your eth address `FFFFFFFF4B980819E301DA7D7B08B1A64299C5FF`
+- go [there](https://apps.moonbeam.network/moonbase-alpha/faucet/) get some moonbasealpha eth
+- ahh its exactly the same as before but i choose a diffrent function via polkajs and got a diffrent asset. But the rest is the same
+6. Read creat proposal
+- Go to Polka Js app
+- Select Moonbase Alpha
+- go to Governance, go to Democracy
+- select submit preimage
+- no button [Picture](https://i.ibb.co/FJTvryq/image.png)
+- yeah I will not do that, but its I set it on my list.
+
+### Send XC-20s
+
