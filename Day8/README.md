@@ -31,7 +31,7 @@ Kevin => KevinPurestake#4224
 
 We are tackeling the XCM Challenge. First we want to get something running via normal Ethereum Tools. Later we would like switch to ink(learning purpose). Do you have some ressources, which could help?
 
-[Link to Presentation](bit.ly/MoonbeamDOTEurope2023)
+[Link to Presentation](bit.ly/MoonbeamDOTEurope2023 )
 
 
 
