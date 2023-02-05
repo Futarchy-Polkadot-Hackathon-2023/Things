@@ -29,7 +29,7 @@ const emptyPostObject = {
 
 const bounties = require("./cache/bounties") || {};
 const markets = require("./cache/markets") || emptyMarketsObject;
-const polkassemblyPosts = require("./cache/markets") || emptyPolkassemblyPostsObject;
+const polkassemblyPosts = require("./cache/posts") || emptyPolkassemblyPostsObject;
 const { lastKnownZtgBlock=0 , lastKnownKsmBlock=0 } = require("./cache");
 
 const api = subsquid.getApi('my squid');
