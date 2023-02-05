@@ -47,7 +47,7 @@ const bootstrap = ()=> new Promise (async (resolve, reject) => {
 
   const newActiveBounties= newBountyEvents
     .filter(event=> event.event==='bountyActive');
-  markets.push.apply( markets.todo, newActiveBounties.map(marketFromNewBounty));
+  markets.todo.push.apply( markets.todo, newActiveBounties.map(marketFromNewBounty));
 
   const knownBountiesState = await api.query.system.state({
     bounties: bounties.map(bounty => bounty.number)
@@ -55,7 +55,7 @@ const bootstrap = ()=> new Promise (async (resolve, reject) => {
   const newCloseToEndingBounties = knownBountiesState
     .filter(bounty=> bounty.events.none(event=> event==='bountyActive'))
     .map(isCloseToEnding);    
-  polkassemblyPosts.push.apply( polkassemblyPosts.todo, newCloseToEndingBounties.map(postFromNewBounty) );
+  polkassemblyPosts.todo.push.apply( polkassemblyPosts.todo, newCloseToEndingBounties.map(postFromNewBounty) );
 
   console.log('Found the following new bounties which have moved to the active stage: ');
   console.log('Found the following new bounties which have been rejected or claimed: ');
