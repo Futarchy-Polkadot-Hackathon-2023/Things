@@ -37,4 +37,7 @@ export class Bounty {
 
     @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
     fee!: bigint
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
+    bullshit!: bigint
 }
