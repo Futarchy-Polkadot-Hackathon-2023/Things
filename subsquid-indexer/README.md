@@ -1,13 +1,12 @@
-# Squid template project
+# Squid indexer demo
 
-A starter [Squid](https://subsquid.io) project to demonstrate its structure and conventions.
+A starter [Squid](https://subsquid.io) project.
 It accumulates [kusama](https://kusama.network) bounty events and serves them via GraphQL API.
 
 ## Summary
-
-- [Based on ]()
-- [Main docs for subsquid templates in general]()
-- [(but read in conjunction with these docs)]()
+- [Based on ](https://github.com/subsquid-labs/squid-substrate-template)
+- [Main docs for subsquid templates in general](https://docs.subsquid.io/basics/squid-development/)
+- [(but read in conjunction with these docs)](https://github.com/subsquid/squid-evm-template)
 
 ## Prerequisites
 
@@ -15,7 +14,7 @@ It accumulates [kusama](https://kusama.network) bounty events and serves them vi
 * docker
 * npm -- note that `yarn` package manager is not supported
 
-## Quickly running the sample
+## Try it out
 
 ```bash
 # 0. have docker running
@@ -35,7 +34,7 @@ sqd up
 sqd codegen
 sqd migration:generate
 
-# 5. pick a segment of the kusama chain that you wish to index and edit
+# 5. pick a segment of the kusama chain, eg from https://kusama.subscan.io/event?module=bounties&event=all , that you wish to index and edit
     .setBlockRange({ from: <myStartingBlock> })
 #    in:
      src/processor.ts
