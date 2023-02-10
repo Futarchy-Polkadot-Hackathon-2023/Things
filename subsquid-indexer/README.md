@@ -35,10 +35,16 @@ sqd up
 sqd codegen
 sqd migration:generate
 
-# 5. Start the processor
+# 5. pick a segment of the kusama chain that you wish to index and edit
+    .setBlockRange({ from: <myStartingBlock> })
+#    in:
+     src/processor.ts
+# or just delete that line to index the whole chain (approx 6-8 hours)
+
+# 6. Start the processor
 sqd process
 
-# 6. The command above will block the terminal
+# 7. The command above will block the terminal
 #    being busy with fetching the chain data, 
 #    transforming and storing it in the target database.
 #
@@ -46,6 +52,7 @@ sqd process
 #    and run
 sqd serve
 
-# 7. Try out queries in a [local graphQL explorer](http://localhost:4350/graphql)
+# 8. Try out queries in a local graphQL explorer on http://localhost:4350/graphql
 
 ```
+ [local graphQL explorer](http://localhost:4350/graphql)
