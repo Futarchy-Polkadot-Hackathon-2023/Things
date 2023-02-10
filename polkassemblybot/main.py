@@ -43,9 +43,9 @@ class Driver:
             chrome_options = Options()
             chrome_options.add_argument("user-data-dir=chrome-data")
             # this parameter tells Chrome that it should be run without UI (Headless)
-            chrome_options.add_argument('--headless=new')
+            # chrome_options.add_argument('--headless=new')
             self.driver = webdriver.Chrome(
-                self.driver_path, options=chrome_options)
+            self.driver_path, options=chrome_options)
             self.wait = WebDriverWait(self.driver, Driver.wait_period)
             self.driver.get(self.url)
         except Exception as err:
