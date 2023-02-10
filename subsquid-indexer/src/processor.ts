@@ -173,7 +173,7 @@ processor.run(new TypeormDatabase(), async ctx => {
 
     for (let b of bountiesData) {
         let {
-            id, blockNumber, timestamp, bountyName, extrinsicHash, extrinsicSuccess, // extrinsicError?,  
+            id, blockNumber, timestamp, bountyName, bountyIndex, extrinsicHash, extrinsicSuccess, // extrinsicError?,  
             extrinsicId, callArgsIndex, eventArgsIndex, proposalHash, // proposalIndex, // approve, // proposer?: 
             fee 
         } = b
@@ -184,6 +184,7 @@ processor.run(new TypeormDatabase(), async ctx => {
             blockNumber,
             timestamp,
             bountyName,
+            bountyIndex,
             extrinsicHash,
             extrinsicSuccess ,
             // extrinsicError?, 
@@ -220,12 +221,15 @@ interface BountyEvent {
     bountyName: string
     blockNumber: number
     timestamp: Date
+    bountyIndex: number
     extrinsicHash?: string
     extrinsicSuccess?: boolean
     // extrinsicError?: string
     extrinsicId?: string
+    callArgs?: number
     callArgsIndex?: number
-    eventArgsIndex: number
+    eventArgs?: number
+    eventArgsIndex?: number
     callArgsBountyId?: number
     callArgsBountyRemark?: string
     // proposalIndex: number
@@ -286,11 +290,14 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
+                        bountyIndex: item.event.args,
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
                         extrinsicId: item.event.extrinsic?.id,
+                        eventArgs: item.event.args,
                         eventArgsIndex: item.event.args.index,
+                        callArgs: item.event.call?.args,
                         callArgsIndex: item.event.call?.args.index,
                         callArgsBountyId: item.event.call?.args.bountyId,
                         callArgsBountyRemark: item.event.call?.args.remark,
@@ -309,6 +316,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
+                        bountyIndex: item.event.args[0],
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -332,6 +340,8 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
+                        bountyIndex: item.event.args.index,
+                        // bountyIndex: item.event.call.args.call.value.bountyId,
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -349,12 +359,13 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                     break
                 }
 
-                case "Bounties.BountyBecameActive": {                
+                case "Bounties.BountyBecameActive": {     
                     bounties.push({
                         id: item.event.id,
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
+                        bountyIndex: item.event.args.index,
                         eventArgsIndex: item.event.args.index,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
@@ -365,12 +376,14 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                 }
                 
 
-                case "Bounties.BountyClaimed": {                                
+                case "Bounties.BountyClaimed": {                           
                     bounties.push({
                         id: item.event.id,
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
+                        bountyIndex: item.event.args.index,
+                        // bountyIndex: item.event.call.args.bountyId,
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -394,6 +407,8 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
+                        bountyIndex: item.event.args,
+                        // bountyIndex: item.event.call.args.call.value.call.value.bountyId,
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -418,6 +433,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
+                        bountyIndex: item.event.args.index,
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,

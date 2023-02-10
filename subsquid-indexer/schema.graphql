@@ -21,6 +21,7 @@ type Bounty @entity {
   blockNumber: Int! @index
   timestamp: DateTime! @index
   bountyName: String!
+  bountyIndex: Int! @index
   extrinsicHash: String @index
   extrinsicId: String @index
   extrinsicSuccess: Boolean
