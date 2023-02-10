@@ -17,7 +17,16 @@ const processor = new SubstrateBatchProcessor()
     })
     // .setBlockRange({ from: 6998400 }) // bountyBecameActive
     // .setBlockRange({ from: 6924780, to: 7042000 }) // plenty different type of events in short space
-    .setBlockRange({ from: 6924780 }) // plenty different type of events in short space
+    // .setBlockRange({ from: 6924780 }) // plenty different type of events in short space
+    // .setBlockRange({ from: 6981761 }) // bountyAwarded
+    // .setBlockRange({ from: 6998400 }) // bountyBecameActive
+    // .setBlockRange({ from: 15526366 }) // BountyExtended
+    // .setBlockRange({ from: 15820891 }) // bountyClaimed
+    .setBlockRange({ from: 10330533 }) // BountyRejected
+    // .setBlockRange({ from: 11847382 }) // BountyCanceled
+    // .setBlockRange({ from: 6981761 }) // bountyAwarded
+    // .setBlockRange({ from: 6981761 }) // bountyAwarded
+    // .setBlockRange({ from: 6981761 }) // bountyAwarded
     .addEvent('Bounties.BountyProposed', {
         data: {
             event: {
@@ -334,14 +343,17 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                     break
                 }
                 
-                case "Bounties.BountyAwarded": {                
+                case "Bounties.BountyAwarded": {     
+                    console.log('item=', item);
+                               
                     bounties.push({
                         id: item.event.id,
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: item.event.args.index,
-                        // bountyIndex: item.event.call.args.call.value.bountyId,
+                        // bountyIndex: item.event.args[0],
+                        // @ts-ignore
+                        bountyIndex: item.event.call.args.bountyId,
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -365,7 +377,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: item.event.args.index,
+                        bountyIndex: item.event.args,
                         eventArgsIndex: item.event.args.index,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
@@ -407,8 +419,9 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: item.event.args,
-                        // bountyIndex: item.event.call.args.call.value.call.value.bountyId,
+                        // bountyIndex: item.event.args.index,
+                        // @ts-ignore
+                        bountyIndex: item.event.call.args.call.value.call.value.bountyId,
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
