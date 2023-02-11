@@ -46,3 +46,48 @@ discord for help
 - `npx squid-typeorm-migration apply`
 - `node -r dotenv/config lib/processor.js`
 
+# 5 EVM Log Indexing
+- Intro, schema and models, typescript facades for evml logs, mapping logic, run and veriy
+- Project: ENS token
+- Thats the ERC721 Token [Link](https://etherscan.io/token/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85)
+- the logs are in a transaction
+
+#6 Schema
+- `gh repo clone subsquid-labs/squid-evm-template ens-project`
+- `npm i`
+- `vim schema.graphql`
+- add ```graphql
+type Token @entity{
+  id: ID!
+  owner: Owner
+  transfers: [Transfer!]! @derivedFrom(field: "token")
+  contract: Contract
+}
+
+type Owner @entity{
+  id:ID!
+  ownedTokens: [Token!] @derivedFrom(field: "owner")
+}
+
+type Contract @entity{
+  id: ID!
+  name: String! @index
+  symbol: String!
+  totalSupply: BigInt!
+  tokens: [Token!]! @derivedFrom(field: "contract")
+}
+
+type Transfer @entity{
+  id: ID!
+  token: Token!
+  from: Owner
+  to: Owner
+  timestamp: BigInt!
+  block: Int! @index
+  transactionHash: String
+}
+```
+- `make codegen` 
+- now there is a new file in the folder src/model/generated
+
+# EVM Typegen
