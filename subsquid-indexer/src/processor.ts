@@ -22,11 +22,18 @@ const processor = new SubstrateBatchProcessor()
     // .setBlockRange({ from: 6998400 }) // bountyBecameActive
     // .setBlockRange({ from: 15526366 }) // BountyExtended
     // .setBlockRange({ from: 15820891 }) // bountyClaimed
-    .setBlockRange({ from: 10330533 }) // BountyRejected
+    // .setBlockRange({ from: 10330533 }) // BountyRejected
     // .setBlockRange({ from: 11847382 }) // BountyCanceled
-    // .setBlockRange({ from: 6981761 }) // bountyAwarded
-    // .setBlockRange({ from: 6981761 }) // bountyAwarded
-    // .setBlockRange({ from: 6981761 }) // bountyAwarded
+    // .setBlockRange({ from: 7691636 }) // BountyExtended
+    .setBlockRange({ from: 10208170 }) // bountyClaimed
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
     .addEvent('Bounties.BountyProposed', {
         data: {
             event: {
@@ -299,7 +306,9 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: item.event.args,
+                        bountyIndex: 
+                            item.event.args.index ||
+                            item.event.args,
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -325,7 +334,9 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: item.event.args[0],
+                        bountyIndex: 
+                            item.event.args.index 
+                            || item.event.args[0],
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -352,8 +363,10 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
                         // bountyIndex: item.event.args[0],
+                        bountyIndex: 
                         // @ts-ignore
-                        bountyIndex: item.event.call.args.bountyId,
+                            item.event.call.args.bountyId
+                            || searchItemlikeObjectFor(item.event.call, 'bountyId'),
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -377,7 +390,9 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: item.event.args,
+                        bountyIndex: 
+                            item.event.args.index ||
+                            item.event.args,
                         eventArgsIndex: item.event.args.index,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
@@ -394,8 +409,11 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: item.event.args.index,
-                        // bountyIndex: item.event.call.args.bountyId,
+                        // bountyIndex: item.event.args.index || item.event.args[0],   // :/
+                        // @ts-ignore
+                        bountyIndex: 
+                        item.event.args.index ||     // eg 15820891   (also event.call.args.bountyId)
+                            item.event.args[0],      // eg 
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -419,9 +437,10 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        // bountyIndex: item.event.args.index,
-                        // @ts-ignore
-                        bountyIndex: item.event.call.args.call.value.call.value.bountyId,
+                        bountyIndex: searchItemlikeObjectFor(item.event.call, 'bountyId')
+                            || item.event.args.index  // (eg 15526366)
+                            || item.event.args,     // exists (eg 7691636) but may not be correct
+                        // bountyIndex: item.event.call.args.bountyIndex,     // (eg 14534356 some earlier like this, some not)
                         extrinsicHash: item.event.extrinsic?.hash,
                         extrinsicSuccess: item.event.extrinsic?.success,
                         // extrinsicError: item.event.extrinsic?.error?,
@@ -498,4 +517,21 @@ function getAccount(m: Map<string, Account>, id: string): Account {
         m.set(id, acc)
     }
     return acc
+}
+
+// uurgh
+function searchItemlikeObjectFor(obj :  any, key : string): number | undefined {
+    if (obj[key] !== undefined)
+        return obj[key]
+    if (obj.args !== undefined && obj.args[key] !== undefined)
+        return obj.args[key]
+    if (obj.value !== undefined && obj.value[key] !== undefined)
+        return obj.value[key]
+    if (obj.args !== undefined && obj.args.call !== undefined) {
+        const iShallRecurThisOnlyOnce = obj.args.call
+        if (iShallRecurThisOnlyOnce.value !== undefined && iShallRecurThisOnlyOnce.value[key] !== undefined)
+            return iShallRecurThisOnlyOnce.value[key]            
+        if (iShallRecurThisOnlyOnce.value !== undefined && iShallRecurThisOnlyOnce.value.call !== undefined && iShallRecurThisOnlyOnce.value.call.value !== undefined && iShallRecurThisOnlyOnce.value.call.value[key] !== undefined)
+        return iShallRecurThisOnlyOnce.value.call.value[key]
+    }
 }
