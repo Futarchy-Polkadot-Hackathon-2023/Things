@@ -35,3 +35,14 @@ discord for help
 - developing squid --> blockchain --> squid archive --> process --> data --> graphql
 
 # 4 Squid structure
+
+- There is a template its called squid-evm-template
+- A suqid is in the end a nodeJs project
+- `gh repo clone subsquid-labs/squid-evm-template`
+- `npm i`
+- `vim schema.graphql`
+- `npm run build`
+- `docker compose up -d`
+- `npx squid-typeorm-migration apply`
+- `node -r dotenv/config lib/processor.js`
+
