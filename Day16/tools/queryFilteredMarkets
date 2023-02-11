@@ -1,0 +1,6322 @@
+{
+  "marketId": 566,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675963026029,
+      1675963518979
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      "0x000000000000038cae8fcaa213580400",
+      "0x000000000000038cf6810f2ac6f80400"
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2879899,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "16764814114010000000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        566,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        566,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1675963518979",
+  "start": "1675963026029",
+  "metadata": "0x1530500f26f95af13bc71b321211642075e89e00d883e7315fa3e001fd422376254bb4ab9b885fc6e8060947f64acfd5b2eb",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "301",
+    "disputeDuration": "7201"
+  },
+  "slug": "scalar-date-test",
+  "question": "scalar-date-test",
+  "description": "<p>sdfsdf</p>",
+  "categories": [
+    {
+      "ticker": "sdt-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "sdt-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [
+    "China",
+    "Cricket",
+    "Crypto",
+    "Dotsama",
+    "E-sports",
+    "Football",
+    "Governance",
+    "India",
+    "MMA",
+    "News",
+    "North America",
+    "Pandemics",
+    "Politics",
+    "Science",
+    "Space",
+    "Sports",
+    "Technology",
+    "Zeitgeist"
+  ],
+  "scalarType": "date",
+  "poolId": 200
+}
+{
+  "marketId": 565,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675953018025,
+      1675953602089
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      "0x000000000000038c953003e276fc9c00",
+      "0x000000000000038cdd21486b2a9c9c00"
+    ]
+  },
+  "status": "Disputed",
+  "report": {
+    "at": 2879504,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        565,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        565,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1675953602089",
+  "start": "1675953018025",
+  "metadata": "0x153041aacae78ae9b120055adde36a625fbcce4a89d7360bedbd29b84be04844d6704e4b4bdb5c9878e390724ac0a2224617",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "scalar-test",
+  "question": "scalar-date-1",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "sdt-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "sdt-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "date",
+  "poolId": 199
+}
+{
+  "marketId": 564,
+  "creator": "dDyiay81sjfcZ4q6HL5aK4uVJFWVYBPrqgL9kpSj95hZWHMYv",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDyiay81sjfcZ4q6HL5aK4uVJFWVYBPrqgL9kpSj95hZWHMYv",
+  "period": {
+    "timestamp": [
+      1675940844061,
+      1676026989267
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000000,
+      100000000000
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        564,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        564,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1676026989267",
+  "start": "1675940844061",
+  "metadata": "0x153067f7e4e081a18b31b400d4cc82f8daa2f5b9f6301594cce05f65da361e4b5a381626fba1b66a5a423413d8ee82c14b94",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "scalar_demo",
+  "question": "A scalar market with 1-10",
+  "description": "<p>Test scalar market.</p>",
+  "categories": [
+    {
+      "ticker": "VIV-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "VIV-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 198
+}
+{
+  "marketId": 563,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675884174058,
+      1675884655034
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      "0x000000000000038c8ba33180cc309c00",
+      "0x000000000000038cd39476097fd09c00"
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2879905,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "16762297559350000000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        563,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        563,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1675884655034",
+  "start": "1675884174058",
+  "metadata": "0x153093060f574ceb7e286944d2ae3eba4bb65cdb7ea4c19dd1053e973aa3fde70b76fcf9d6f961b76ab731f23170e6b6a0ef",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "301",
+    "disputeDuration": "7201"
+  },
+  "slug": "scalar-date-test",
+  "question": "aaaa",
+  "description": "<p>scalar date tesst</p>",
+  "categories": [
+    {
+      "ticker": "sdt-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "sdt-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "date",
+  "poolId": 197
+}
+{
+  "marketId": 562,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1675766214064,
+      1675852604207
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        562,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        562,
+        1
+      ]
+    }
+  ],
+  "end": "1675852604207",
+  "start": "1675766214064",
+  "metadata": "0x1530620f117e9ac3b2198fae7048dcf53f0219f7134c903163dce37b2257324b5186fe9505acedacc8da8c616dcc6fa99222",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "test",
+  "question": "test",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 196
+}
+{
+  "marketId": 560,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675336938072,
+      1675337431464
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      "0x000000000000038d1784caf3be59fc00",
+      "0x000000000000038d477af8a43619fc00"
+    ]
+  },
+  "status": "Reported",
+  "report": {
+    "at": 2862885,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        560,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        560,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1675337431464",
+  "start": "1675336938072",
+  "metadata": "0x1530faaec15f29e0f1ba1604a64909b80c207c3d98c58d70e44454cfbfb511c218c8aa2181b375a0e7715f1cf9411ae63d4d",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "scalar-date-test",
+  "question": "scalar-date-test",
+  "description": "<p>erwer</p>",
+  "categories": [
+    {
+      "ticker": "DATE-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "DATE-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "date",
+  "poolId": 195
+}
+{
+  "marketId": 559,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675284396061,
+      1675512017015
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2862241,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 1
+    }
+  },
+  "resolvedOutcome": "1",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        559,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        559,
+        1
+      ]
+    }
+  ],
+  "end": "1675512017015",
+  "start": "1675284396061",
+  "metadata": "0x1530406d2b3e31fc84fd48982d81292ceb71ff1280907015095455d3e0fc26ca228a1d8aef2263a669958d57efeb6fee2caa",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "7200",
+    "disputeDuration": "7200"
+  },
+  "slug": "Price BTCUSD",
+  "question": "Will price of BTC be bellow 23k on Feb 4th 1pm CET",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 194
+}
+{
+  "marketId": 558,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675284186141,
+      1675370446152
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2869386,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        558,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        558,
+        1
+      ]
+    }
+  ],
+  "end": "1675370446152",
+  "start": "1675284186141",
+  "metadata": "0x153015e54964d6ea053216139186ea815b5cdb4dadd0c9a92c1e4adbf70d72095c62dc3f6e66361bdce1cfe2c57da5187562",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "3600",
+    "disputeDuration": "7200"
+  },
+  "slug": "BTC / USD Price",
+  "question": "Will price of BTC be bellow 23k on Feb 4th 1pm CET",
+  "description": "<p>https://www.tradingview.com/symbols/BTCUSD/</p>",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 193
+}
+{
+  "marketId": 557,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675283286018,
+      1675512015439
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      43500000000,
+      83500000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2862238,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "66775000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        557,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        557,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1675512015439",
+  "start": "1675283286018",
+  "metadata": "0x1530527b3d2e33ae8e3be63f55dacd862eef7183d83c162e0f868d6ac3bb8e2c3f8359f496a817ab89846cda8b092f6c46a8",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "301",
+    "disputeDuration": "7201"
+  },
+  "slug": "Price of DOT / USD",
+  "question": "What will be the price of DOT in USD acc. to trading view on Sunday February 4th 1pm",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "DOTUSD-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "DOTUSD-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 192
+}
+{
+  "marketId": 555,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675251132070,
+      1675251639408
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000,
+      1000000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2836636,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "415600000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        555,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        555,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1675251639408",
+  "start": "1675251132070",
+  "metadata": "0x153005a56532d05c97f227387d10847db5e3e913c534ac1ee9090666c1ba7dad5c03387332157ee4e23db108956b2436fb3f",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "DO YOU WANT TO CHOOSE a NUMBER",
+  "question": "DO YOU WANT TO CHOOSE a NUMBER?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "choose-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "choose-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 191
+}
+{
+  "marketId": 554,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675250496056,
+      1675251000037
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      100000000,
+      1000100000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2862252,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "500000000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        554,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        554,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1675251000037",
+  "start": "1675250496056",
+  "metadata": "0x153056fd3d6e47fc09b744b7e8cf998d48a4f578b93a004e9b4c26902a7abb7d8867435659c87e3583e6b29e4089dbf1e69b",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "300",
+    "disputeDuration": "7200"
+  },
+  "slug": "CHOOSE NUMBER",
+  "question": "DO YOU WANT TO  CHOOSE a NUMBER?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "1-100-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "1-100-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 190
+}
+{
+  "marketId": 553,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675240314058,
+      1675241145468
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2836165,
+    "by": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        553,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        553,
+        1
+      ]
+    }
+  ],
+  "end": "1675241145468",
+  "start": "1675240314058",
+  "metadata": "0x153064d59fe54fd49140880927dabc845046875a07a125b0cbeba835e8997bda28d56bb119d5f3098e9801b029b3e7ebc6cc",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "301",
+    "disputeDuration": "7201"
+  },
+  "slug": "Will it be yes or no?",
+  "question": "Will it be yes or no?",
+  "description": "<p>guess yes or no.</p>",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 189
+}
+{
+  "marketId": 552,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "block": [
+      2831119,
+      2831142
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2831147,
+    "by": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        552,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        552,
+        1
+      ]
+    }
+  ],
+  "end": "1675378050055",
+  "start": "1675377774055",
+  "metadata": "0x15300c851b70e3405dba319a8a6f735b32a95aa11fb18ceeb7a80346e93b107982ffd53b161374c3cfc75add559033db0ebf",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "7200",
+    "disputeDuration": "28800"
+  },
+  "slug": "Refactored Redeem button",
+  "question": "Will the redeem button render correctly both by assetId and value?",
+  "description": "<p>Will the redeem button render correctly both by assetId and value?</p>",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [
+    "Zeitgeist"
+  ],
+  "scalarType": null,
+  "poolId": 188
+}
+{
+  "marketId": 551,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "block": [
+      2826671,
+      2826709
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2826718,
+    "by": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        551,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        551,
+        1
+      ]
+    }
+  ],
+  "end": "1675324842022",
+  "start": "1675324386022",
+  "metadata": "0x153018117d3f87468640117b9aac4a04c14d750c65fd1b400229a9c02ab696dd3936ec71494133cb8172ab07c19f830abe45",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "7200",
+    "disputeDuration": "28800"
+  },
+  "slug": "Portfolio testing 2",
+  "question": "Will loosing token positions still show when winning tokens are redeemed?",
+  "description": "<p>Will loosing token positions still show when winning tokens are redeemed?</p>",
+  "categories": [
+    {
+      "ticker": "WT",
+      "name": "Winning",
+      "color": "#7cff00"
+    },
+    {
+      "ticker": "LT",
+      "name": "Loosing",
+      "color": "#ff5b00"
+    }
+  ],
+  "tags": [
+    "Science"
+  ],
+  "scalarType": null,
+  "poolId": 187
+}
+{
+  "marketId": 550,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "block": [
+      2826024,
+      2826092
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2826325,
+    "by": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        550,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        550,
+        1
+      ]
+    }
+  ],
+  "end": "1675317438022",
+  "start": "1675316622022",
+  "metadata": "0x1530b05e0fa43f72fd31dd959cd27b3b3171888eac57d233dfd39a2f282d51c61c6c3b695757995367cb4eea8d605530edf0",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "7200",
+    "disputeDuration": "28800"
+  },
+  "slug": "Testing portfolio 1",
+  "question": "Will positions for loosing outcomes show after the winning outcome only was redeemed.",
+  "description": "<p>Testing portfolio</p>",
+  "categories": [
+    {
+      "ticker": "WO",
+      "name": "Winning",
+      "color": "#73ff00"
+    },
+    {
+      "ticker": "LW",
+      "name": "Loosing",
+      "color": "#ff7200"
+    }
+  ],
+  "tags": [
+    "Technology"
+  ],
+  "scalarType": null,
+  "poolId": 186
+}
+{
+  "marketId": 548,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1674652626052,
+      1674739020803
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        548,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        548,
+        1
+      ]
+    }
+  ],
+  "end": "1674739020803",
+  "start": "1674652626052",
+  "metadata": "0x1530620f117e9ac3b2198fae7048dcf53f0219f7134c903163dce37b2257324b5186fe9505acedacc8da8c616dcc6fa99222",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "test",
+  "question": "test",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 185
+}
+{
+  "marketId": 547,
+  "creator": "dDyXkkoewJvnksMEirA7k6K76STzJz78bxYtG1Y1V2LCHJyMA",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDyXkkoewJvnksMEirA7k6K76STzJz78bxYtG1Y1V2LCHJyMA",
+  "period": {
+    "block": [
+      2764034,
+      2764057
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        547,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        547,
+        1
+      ]
+    }
+  ],
+  "end": "1674572982056",
+  "start": "1674572706056",
+  "metadata": "0x15307b1910e476bd0aeecffc7b5949e8b7771b67bc43eb30676d4ca10d608563816931b724668fb3368ca43eef5471c0bac5",
+  "deadlines": {
+    "gracePeriod": "300",
+    "oracleDuration": "300",
+    "disputeDuration": "3600"
+  },
+  "slug": "Testing market timer.",
+  "question": "Does it look good?",
+  "description": "<p>Does the new market timer look good?</p>",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [
+    "Science"
+  ],
+  "scalarType": null,
+  "poolId": 184
+}
+{
+  "marketId": 546,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1674040764412,
+      1674040990697
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      55000000000,
+      1155000000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2842686,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "760000000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        546,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        546,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1674040990697",
+  "start": "1674040764412",
+  "metadata": "0x15303e676832fe92875c7b5789172fa85557cf56abe78dbe3b445ddbf80067d3ba409a90868b39da8b2646f375a0a938cf4d",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "300",
+    "disputeDuration": "7200"
+  },
+  "slug": "scalar test",
+  "question": "scalar test?",
+  "description": "<p>sstg</p>",
+  "categories": [
+    {
+      "ticker": "555-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "555-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 183
+}
+{
+  "marketId": 545,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "block": [
+      2762734,
+      2762740
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2763073,
+    "by": "dDyXkkoewJvnksMEirA7k6K76STzJz78bxYtG1Y1V2LCHJyMA",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        545,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        545,
+        1
+      ]
+    }
+  ],
+  "end": "1674557178056",
+  "start": "1674557106056",
+  "metadata": "0x1530f71e7fee460b134f69d1b3d37e012a0fb0af1586ba3af3e65b2889949e9ea5d7a5e51f751facad312d837c94fa2fa0d9",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "300",
+    "disputeDuration": "3600"
+  },
+  "slug": "Issue #529",
+  "question": "Is issue #529 solved and report buttons only showing for oracle in report period?",
+  "description": "<p>Is issue #529 solved and report buttons only showing for oracle in report period?</p>",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [
+    "Science"
+  ],
+  "scalarType": null,
+  "poolId": 182
+}
+{
+  "marketId": 544,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1673965494021,
+      1674051867954
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000000,
+      100000000000
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        544,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        544,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1674051867954",
+  "start": "1673965494021",
+  "metadata": "0x15300696007c978fc0135567c4d369ee564b51ca1a1f736f6b94aa0b1c99f5b2fc4775d38800b67c8fc575fa17580b177606",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "test scalar",
+  "question": "test scalar",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "asd-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "asd-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [
+    "Politics"
+  ],
+  "scalarType": "number",
+  "poolId": 181
+}
+{
+  "marketId": 543,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "block": [
+      2752860,
+      2752880
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2753210,
+    "by": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        543,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        543,
+        1
+      ]
+    }
+  ],
+  "end": "1674438858068",
+  "start": "1674438618068",
+  "metadata": "0x153019a23cfccce32593200d170e52906121bd9b23a3dfe011ab105e483f6c65fa9eb964ce7c37e611eff6606908beca897d",
+  "deadlines": {
+    "gracePeriod": "300",
+    "oracleDuration": "301",
+    "disputeDuration": "3601"
+  },
+  "slug": "Testing lifecycle 2",
+  "question": "Testing lifecycle 2",
+  "description": "<p>Testing lifecycle 2</p>",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [
+    "Science"
+  ],
+  "scalarType": null,
+  "poolId": 180
+}
+{
+  "marketId": 541,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "block": [
+      2731096,
+      2731115
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        541,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        541,
+        1
+      ]
+    }
+  ],
+  "end": "1674177648056",
+  "start": "1674177420056",
+  "metadata": "0x15301a5d02839578dd0377a3538b5a19aad61bd795c71f411a64519ed6271da5999c5fd41cae4e7c3e82ac29ca6aff8d88d1",
+  "deadlines": {
+    "gracePeriod": "35976",
+    "oracleDuration": "7200",
+    "disputeDuration": "7200"
+  },
+  "slug": "Testing grace period",
+  "question": "How will the market show when in its grace period?",
+  "description": "<p>How will it show grace period?</p>",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [
+    "Science"
+  ],
+  "scalarType": null,
+  "poolId": 179
+}
+{
+  "marketId": 540,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "block": [
+      2731071,
+      2738278
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        540,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        540,
+        1
+      ]
+    }
+  ],
+  "end": "1674263604056",
+  "start": "1674177120056",
+  "metadata": "0x1530b79f3b325ebee32c3225ad18c047bc5ceb9b4d2bf542f859707b8246aebc7bd3b241fe0fb24e8b2fe66987aef86685d9",
+  "deadlines": {
+    "gracePeriod": "28783",
+    "oracleDuration": "14401",
+    "disputeDuration": "14401"
+  },
+  "slug": "With grace period.",
+  "question": "Will the report button be disabled when the market is in its grace period?",
+  "description": "<p>Testing market grace period in relation to some issues,</p>",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [
+    "Science"
+  ],
+  "scalarType": null,
+  "poolId": 178
+}
+{
+  "marketId": 539,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1673434902054,
+      1673521249837
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        539,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        539,
+        1
+      ]
+    }
+  ],
+  "end": "1673521249837",
+  "start": "1673434902054",
+  "metadata": "0x15307ccc8423fcaa273aaad3a2e498ac7f29195b3db2980320988846de615437b097cd7b7d4c1e3a2243f09881b3e92f1f26",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "no liq",
+  "question": "no liq",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 177
+}
+{
+  "marketId": 537,
+  "creator": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+  "period": {
+    "timestamp": [
+      1671180408063,
+      1671183833076
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000000000,
+      15000000000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2590043,
+    "by": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "1250",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        537,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        537,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1671183833076",
+  "start": "1671180408063",
+  "metadata": "0x15304148065dc1d40e62c1d652b294fbb2f11418049643a025a10cef94453a4421ee08a7963678979ec46990327134ec8055",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "300",
+    "disputeDuration": "3600"
+  },
+  "slug": "TEST_SCALAR",
+  "question": "Test of a scalar market",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "SCALAR-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "SCALAR-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [
+    "Zeitgeist"
+  ],
+  "scalarType": "number",
+  "poolId": 176
+}
+{
+  "marketId": 536,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1671179544262,
+      1671181235544
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      55000000000,
+      605000000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2589775,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "6",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        536,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        536,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1671181235544",
+  "start": "1671179544262",
+  "metadata": "0x1530b3dd2afc31cae3462cfa7e413868f76dd524be970e1edf1f28c78feb80c15e84cdc39479ae1de943cbeac948fb1ab182",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "301",
+    "disputeDuration": "7201"
+  },
+  "slug": "scalar",
+  "question": "...... ?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "Scalar-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "Scalar-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 175
+}
+{
+  "marketId": 533,
+  "creator": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+  "period": {
+    "block": [
+      2585208,
+      2585508
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      0,
+      1000000000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2585512,
+    "by": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "420000000000",
+  "disputeMechanism": "SimpleDisputes",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        533,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        533,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1672430238017",
+  "start": "1672426638017",
+  "metadata": "0x15306e9d7d168cd186ccaa372bf21d77337fff8cb62404b35c18c388cb9fc716639a42be182b99e3b2b08f73252c4b22cd61",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "300",
+    "disputeDuration": "3600"
+  },
+  "slug": "test-global-dispute",
+  "question": "Which number between 0 and 100 deserves the most attention from the Zeitgeist HODLers?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "GLOBAL-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "GLOBAL-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [
+    "Zeitgeist"
+  ],
+  "scalarType": "number",
+  "poolId": 174
+}
+{
+  "marketId": 532,
+  "creator": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+  "period": {
+    "block": [
+      2585110,
+      2585410
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      0,
+      100
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2585417,
+    "by": "dE2NjE8jwMEP4Vygm7RbWXdTWaQshdKmgMgM2krmTZbSgpx9x",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "42",
+  "disputeMechanism": "SimpleDisputes",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        532,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        532,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1672429062017",
+  "start": "1672425462017",
+  "metadata": "0x15306e9d7d168cd186ccaa372bf21d77337fff8cb62404b35c18c388cb9fc716639a42be182b99e3b2b08f73252c4b22cd61",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "300",
+    "disputeDuration": "3600"
+  },
+  "slug": "test-global-dispute",
+  "question": "Which number between 0 and 100 deserves the most attention from the Zeitgeist HODLers?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "GLOBAL-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "GLOBAL-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [
+    "Zeitgeist"
+  ],
+  "scalarType": "number",
+  "poolId": 173
+}
+{
+  "marketId": 525,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1670593584054,
+      1670679983517
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        525,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        525,
+        1
+      ]
+    }
+  ],
+  "end": "1670679983517",
+  "start": "1670593584054",
+  "metadata": "0x1530b717a428e8e56d6ed3dfe9c00460141e30d2aed93a40729fd118ceb23b94762d80ba24514383fb4d3048212ae3c4ad5f",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "base weight fix",
+  "question": "base weight fix",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 172
+}
+{
+  "marketId": 524,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1670591712063,
+      1670678037703
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        524,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        524,
+        1
+      ]
+    }
+  ],
+  "end": "1670678037703",
+  "start": "1670591712063",
+  "metadata": "0x15308629db3088eaab0072f52bb7ac7a2d7258c76424d0c0fb1e7516005d18467da3abf3fedfce469a2b195228224c2a17b4",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "new pool test",
+  "question": "new pool test",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 171
+}
+{
+  "marketId": 523,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1670494974022,
+      1670581337317
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      23450000000,
+      63463400000
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        523,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        523,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1670581337317",
+  "start": "1670494974022",
+  "metadata": "0x15309af74a8cb8912fa112a4ed5a9d9af0c2a128ac53f58825b5453adea21250c99db40e544ddbb15af67b0b356ae4f4bd1b",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "new scalar test",
+  "question": "new scalar test",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "aaa-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "aaa-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 170
+}
+{
+  "marketId": 521,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1670339238054,
+      1670511993702
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      0,
+      1
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        521,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        521,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1670511993702",
+  "start": "1670339238054",
+  "metadata": "0x1530ad535ff67215014421b25d661103ee47f515381afe2ceaea81dd36d358bac0af7f2e11b72d7c2e9b07a18bfadae72541",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "Scalar tradeslip.",
+  "question": "Does scalar  tradeslips work?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "WORKS-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "WORKS-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [
+    "Technology"
+  ],
+  "scalarType": "number",
+  "poolId": 169
+}
+{
+  "marketId": 520,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1670333232061,
+      1670418893596
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        520,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        520,
+        1
+      ]
+    }
+  ],
+  "end": "1670418893596",
+  "start": "1670333232061",
+  "metadata": "0x1530e67235bf620131f31f8692a763d81783f6621e2ca3e57ca7cf8bef86a00c67c7a354bca8e37e75edf8c643be7ed5e7be",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#2AF3F5"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#4E046A"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 168
+}
+{
+  "marketId": 519,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1670331054059,
+      1671627008368
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 4
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        519,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        519,
+        1
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        519,
+        2
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        519,
+        3
+      ]
+    }
+  ],
+  "end": "1671627008368",
+  "start": "1670331054059",
+  "metadata": "0x1530c7cf029c4fbbd01d7587fc221f3f7d7b431c629835b3f281f59bb2ab6c59feb324f19a440930b2e4e1ee1c2478607495",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "mixed-weights",
+  "question": "mixed-weights",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#2E2561"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#510771"
+    },
+    {
+      "ticker": "c",
+      "name": "c",
+      "color": "#0EC290"
+    },
+    {
+      "ticker": "d",
+      "name": "d",
+      "color": "#8CAD7A"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 167
+}
+{
+  "marketId": 518,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1670322954263,
+      1670409337185
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      3634758395,
+      9837598348
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        518,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        518,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1670409337185",
+  "start": "1670322954263",
+  "metadata": "0x1530a795f8cd7eb2b0347522e5a8f9624d0ef77be32ed3954f89946030bb4acdfe27dbfdf11c36dc247ae4ab6c2d0ddfc0cd",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "lots of decimals",
+  "question": "lots of decimals",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "ASD-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "ASD-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 166
+}
+{
+  "marketId": 517,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1670321268022,
+      1670407655613
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      1123000000,
+      3453453400
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        517,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        517,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1670407655613",
+  "start": "1670321268022",
+  "metadata": "0x153095627ba5249061c439310baca11f3fad5765d63691bdfcc8b282554600bc6e19dee4825b4d798f76fc6ff68f99a8d26f",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "decimals",
+  "question": "decimals",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "a-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 165
+}
+{
+  "marketId": 516,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1670254320055,
+      1670340691543
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 4
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        516,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        516,
+        1
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        516,
+        2
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        516,
+        3
+      ]
+    }
+  ],
+  "end": "1670340691543",
+  "start": "1670254320055",
+  "metadata": "0x1530eba56cffca7c9a6ae09b52b6bf965d40a0d68579b619e574c85d4752c11d077de8dfbbc63291b876c47bbf556b625bac",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "no-pool",
+  "question": "no-pool",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#A9FEB2"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#5E249A"
+    },
+    {
+      "ticker": "c",
+      "name": "c",
+      "color": "#F8B9A3"
+    },
+    {
+      "ticker": "d",
+      "name": "d",
+      "color": "#DECAF9"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 164
+}
+{
+  "marketId": 515,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1669902258058,
+      1669988600398
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 4
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        515,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        515,
+        1
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        515,
+        2
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        515,
+        3
+      ]
+    }
+  ],
+  "end": "1669988600398",
+  "start": "1669902258058",
+  "metadata": "0x15306229f5ac07a16d6d93470f40656a7f52c36373945a22a2872cd9e5f337a10a479fe331514f47f04cf583dc9e78cb10c7",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#5E49FA"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#96CB8D"
+    },
+    {
+      "ticker": "c",
+      "name": "c",
+      "color": "#57CEAA"
+    },
+    {
+      "ticker": "d",
+      "name": "d",
+      "color": "#597505"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 163
+}
+{
+  "marketId": 514,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1669822344023,
+      1669908731084
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 4
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        514,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        514,
+        1
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        514,
+        2
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        514,
+        3
+      ]
+    }
+  ],
+  "end": "1669908731084",
+  "start": "1669822344023",
+  "metadata": "0x153050b3b822e2f759fa4a1915d2ae41186f643280ba8049239121b9ca19ba48d6b602e8d3aacdc8d25d47992d15629b6dfb",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "mixed weights",
+  "question": "mixed weights",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "aa",
+      "color": "#50683C"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#C380C3"
+    },
+    {
+      "ticker": "c",
+      "name": "c",
+      "color": "#B95E98"
+    },
+    {
+      "ticker": "d",
+      "name": "d",
+      "color": "#214ADD"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 162
+}
+{
+  "marketId": 508,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1669120326050,
+      1670675515951
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2841558,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        508,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        508,
+        1
+      ]
+    }
+  ],
+  "end": "1670675515951",
+  "start": "1669120326050",
+  "metadata": "0x1530e81267f25a7f25ec8d6effc096502d35acd3f992900ed92672828574cc9ce989c99df8a974c9a90ba7eb9bb29b8a2e76",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "trending",
+  "question": "trending?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 161
+}
+{
+  "marketId": 507,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1668768912054,
+      1668855298765
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        507,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        507,
+        1
+      ]
+    }
+  ],
+  "end": "1668855298765",
+  "start": "1668768912054",
+  "metadata": "0x153024c4a9cbb160620e785860aa543ad3e8e19216b1123b0400c4b2b76bf0e3c818a3048f4e8897df87671aa63bd16ba9ee",
+  "deadlines": {
+    "gracePeriod": "2487125",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "trending2",
+  "question": "Will this market be trending as well?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "b",
+      "name": "a",
+      "color": "#84E8DA"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#BC37F5"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 160
+}
+{
+  "marketId": 506,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1668767886591,
+      1668854276021
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        506,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        506,
+        1
+      ]
+    }
+  ],
+  "end": "1668854276021",
+  "start": "1668767886591",
+  "metadata": "0x153078a5aac905c619be96d8061484ae4271cc822d554dcfa6072dc141137a43d52c544d04b07910db07c9f4b510ffbc83ac",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "trending",
+  "question": "Will this market be trending?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#789AC3"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#19C465"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 159
+}
+{
+  "marketId": 496,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1667302794375,
+      1667389162960
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      "0x0000000000000387d8bdbbeae1bf2800",
+      "0x0000000000000388b0918984fc9f2800"
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        496,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        496,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1667389162960",
+  "start": "1667302794375",
+  "metadata": "0x153055fcf3d694d9bfe5627a66118c8a063e001d53e822348608e66d09465572f3f495e083d834eea2af4e8cd2f5a25b96dd",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "28800",
+    "disputeDuration": "28800"
+  },
+  "slug": "scalar date test",
+  "question": "asfadfsdfsdf",
+  "description": "...",
+  "categories": [
+    {
+      "ticker": "HAHA-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "HAHA-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "date",
+  "poolId": 158
+}
+{
+  "marketId": 487,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666177314070,
+      1666263709023
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        487,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        487,
+        1
+      ]
+    }
+  ],
+  "end": "1666263709023",
+  "start": "1666177314070",
+  "metadata": "0x15307573b09e750c2658a70c38ba3ddc27496c1d14e0deb3a35df2fe964fc69d2e55344cbea966307bd0b9ac1acafcdac1c2",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#DFDC14"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#DEF63B"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 157
+}
+{
+  "marketId": 485,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666176912059,
+      1666263296580
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        485,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        485,
+        1
+      ]
+    }
+  ],
+  "end": "1666263296580",
+  "start": "1666176912059",
+  "metadata": "0x15305792539b58a37f8582624b4db89227eef66750f89a92913184ab80dce6b581f8dd78a139519a4625b33015476f84aa7e",
+  "deadlines": null,
+  "slug": "new",
+  "question": "new",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#3E37F1"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#0CE751"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 156
+}
+{
+  "marketId": 484,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1666093014023,
+      1666179408803
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        484,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        484,
+        1
+      ]
+    }
+  ],
+  "end": "1666179408803",
+  "start": "1666093014023",
+  "metadata": "0x153054f87df661b25f32bf897fa07e2175b2fcb898f7dd29bc7db00989399b4a5036fc27113c3b74c58385b1b29f4831f2c2",
+  "deadlines": null,
+  "slug": "no pool",
+  "question": "no pool",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#17DB08"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#A90B34"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 154
+}
+{
+  "marketId": 483,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666092354076,
+      1666178751179
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        483,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        483,
+        1
+      ]
+    }
+  ],
+  "end": "1666178751179",
+  "start": "1666092354076",
+  "metadata": "0x15301a415579c0b0c6ef1ab8bb898aa89e56d67c52cb8d6bcec2cc0e39a88611ff9361666b69ae919aa921cea2d8431a6bff",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#13BB9C"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#850530"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 153
+}
+{
+  "marketId": 482,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666092282094,
+      1666178674212
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        482,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        482,
+        1
+      ]
+    }
+  ],
+  "end": "1666178674212",
+  "start": "1666092282094",
+  "metadata": "0x1530034d95bf52f397f57b4a7ca46edb84f84081618f234a986a43d9d5c75a9eae62390e5daa58077b7cb15091bb8a4fce0a",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#D444C3"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#20EE98"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 152
+}
+{
+  "marketId": 481,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666092216053,
+      1666178591539
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        481,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        481,
+        1
+      ]
+    }
+  ],
+  "end": "1666178591539",
+  "start": "1666092216053",
+  "metadata": "0x15309e5ee8915d5084c6ec2eb1103110aa0f3bf325a203538e5df52b4a09b9d7989e99ad3c383e30e03b5d021e69836e2a3b",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#236FA7"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#8B6F0C"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 151
+}
+{
+  "marketId": 480,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666092126052,
+      1666178525100
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        480,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        480,
+        1
+      ]
+    }
+  ],
+  "end": "1666178525100",
+  "start": "1666092126052",
+  "metadata": "0x1530139a8d086cb38dd46e364f30ec44be3df8d9eb87b366a9007103eb2988f1d55c5cecac10e9e651d4bca367e4157729da",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#826791"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#660C1A"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 150
+}
+{
+  "marketId": 479,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666092000056,
+      1666178403600
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        479,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        479,
+        1
+      ]
+    }
+  ],
+  "end": "1666178403600",
+  "start": "1666092000056",
+  "metadata": "0x15308686ab1202b81d6266e7bb4a528cf93e0056ef368c7759f87cca78ae4c1253a4791278571ee79fd2b40eac0104998557",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#96466B"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#35BD17"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 149
+}
+{
+  "marketId": 478,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666091670058,
+      1666178079368
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        478,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        478,
+        1
+      ]
+    }
+  ],
+  "end": "1666178079368",
+  "start": "1666091670058",
+  "metadata": "0x153048a77a91662c2a69a68d47ac75bb747a74be8a079fd3cbcffa557ac1cf4d98f23678eaa1b548f63fb0143bc170268c1d",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#F11FFB"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#60E57F"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 148
+}
+{
+  "marketId": 477,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666091604083,
+      1666178003044
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        477,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        477,
+        1
+      ]
+    }
+  ],
+  "end": "1666178003044",
+  "start": "1666091604083",
+  "metadata": "0x153048a77a91662c2a69a68d47ac75bb747a74be8a079fd3cbcffa557ac1cf4d98f23678eaa1b548f63fb0143bc170268c1d",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#F11FFB"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#60E57F"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 147
+}
+{
+  "marketId": 476,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666091442077,
+      1666177837107
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        476,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        476,
+        1
+      ]
+    }
+  ],
+  "end": "1666177837107",
+  "start": "1666091442077",
+  "metadata": "0x1530ef405f9d6cefe47b718a3ef88e2b6dc58d5606cfc58d433b1e6f3f1456d69c15287d42101a2ec4b43aa7acab21aff616",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#73BB50"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#6C78CD"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 146
+}
+{
+  "marketId": 475,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1666091358056,
+      1666177758249
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        475,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        475,
+        1
+      ]
+    }
+  ],
+  "end": "1666177758249",
+  "start": "1666091358056",
+  "metadata": "0x1530dffb8fae1cb39fa29199cd52f846cf0907e2366c01c9609a40b792707fa6fbc2bef4cbff08bcf4e15b67d834a7d694e5",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#7C0BC4"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#A3CCD8"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 155
+}
+{
+  "marketId": 474,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1665402162585,
+      1665488552905
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2251551,
+    "by": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        474,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        474,
+        1
+      ]
+    }
+  ],
+  "end": "1665488552905",
+  "start": "1665402162585",
+  "metadata": "0x1530a12e90b4bfe8cd183ee9ee8fa7749d9dce2c07d44d5a4671ce97d1c438b13244138ffe1adcf8078a0e85c23d4a14c38b",
+  "deadlines": null,
+  "slug": "static",
+  "question": "static",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#11780A"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#6F4D22"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 145
+}
+{
+  "marketId": 471,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1665063276054,
+      1665149660172
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2240319,
+    "by": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        471,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        471,
+        1
+      ]
+    }
+  ],
+  "end": "1665149660172",
+  "start": "1665063276054",
+  "metadata": "0x15300ad9f6b03d1003a1b0f8098cda3a92b33c66317458228a8b663734ef092d8dc934aa1a016e87082fc76e1b4ba6d3116e",
+  "deadlines": null,
+  "slug": "with pool",
+  "question": "with pool",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#AA93E8"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#3DB67F"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 144
+}
+{
+  "marketId": 465,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1664409330036,
+      1664495696222
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        465,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        465,
+        1
+      ]
+    }
+  ],
+  "end": "1664495696222",
+  "start": "1664409330036",
+  "metadata": "0x1530a667cbcdf9ad0c985ca9f69eeceaef6a5a090ad0124a3c91dbe3c78daafa21051cad05756da400e41e841f69a905caef",
+  "deadlines": null,
+  "slug": "Test market observable",
+  "question": "Test market observable, will it stream changes?",
+  "description": "a",
+  "categories": [
+    {
+      "ticker": "YES",
+      "name": "yes",
+      "color": "#0E992D"
+    },
+    {
+      "ticker": "NO",
+      "name": "no",
+      "color": "#00A3FF"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 142
+}
+{
+  "marketId": 464,
+  "creator": "dDyymrYQMxP5ksYCLXQjv9oAYiQdJFE9Ampgv8cYxc4qXpTNH",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1663937022058,
+      1664023412512
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2129037,
+    "by": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        464,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        464,
+        1
+      ]
+    }
+  ],
+  "end": "1664023412512",
+  "start": "1663937022058",
+  "metadata": "0x15302fc633b64a75d7bd8f1026f1cb1e3c7a7a078a1d3da50ff83d9cbdebc0fd21e95e6b931d36f1731c66e2b47dc9c3c7a2",
+  "deadlines": null,
+  "slug": "cycle 2",
+  "question": "cycle 2",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#06E9E3"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#F51F41"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 141
+}
+{
+  "marketId": 463,
+  "creator": "dDyymrYQMxP5ksYCLXQjv9oAYiQdJFE9Ampgv8cYxc4qXpTNH",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1663935642059,
+      1664022026256
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000000,
+      100000000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2128956,
+    "by": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "80000000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        463,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        463,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1664022026256",
+  "start": "1663935642059",
+  "metadata": "0x153057d5c8dcc92694403d763c9568435b7e9f46673b508c44d4d3aca405a83920a456a45599b654bb7ee2c64a2c05582768",
+  "deadlines": null,
+  "slug": "scalar cycle",
+  "question": "scalar cycle",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "bbb-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "bbb-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [
+    "Politics"
+  ],
+  "scalarType": null,
+  "poolId": 140
+}
+{
+  "marketId": 462,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1663934244061,
+      1664020548072
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2128873,
+    "by": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        462,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        462,
+        1
+      ]
+    }
+  ],
+  "end": "1664020548072",
+  "start": "1663934244061",
+  "metadata": "0x15308f0008392988d35997a7c8ef2d062346be91376e0faf55feb29d4544675091722582656fda25d00b7a5318f7190539f6",
+  "deadlines": null,
+  "slug": "cycle",
+  "question": "cycle",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#A8D94C"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#E3E21C"
+    }
+  ],
+  "tags": [
+    "Politics"
+  ],
+  "scalarType": null,
+  "poolId": 139
+}
+{
+  "marketId": 461,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1663931270819,
+      1664104070819
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000000,
+      20000000000
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        461,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        461,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1664104070819",
+  "start": "1663931270819",
+  "metadata": "0x15306073097baa2ea14cd8262cec76546f0dd676d37b1712bb18dfbf47d55d4e4a7e36524d2b73e6feba102c1e6910ec697a",
+  "deadlines": null,
+  "slug": "yornaath_test",
+  "question": "Testing Jørn",
+  "description": "just a test market, can be removed",
+  "categories": [
+    {
+      "ticker": "Y",
+      "name": "yes",
+      "color": null
+    },
+    {
+      "ticker": "N",
+      "name": "no",
+      "color": null
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 138
+}
+{
+  "marketId": 460,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1663931216192,
+      1664104016192
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000000,
+      20000000000
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        460,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        460,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1664104016192",
+  "start": "1663931216192",
+  "metadata": "0x15306073097baa2ea14cd8262cec76546f0dd676d37b1712bb18dfbf47d55d4e4a7e36524d2b73e6feba102c1e6910ec697a",
+  "deadlines": null,
+  "slug": "yornaath_test",
+  "question": "Testing Jørn",
+  "description": "just a test market, can be removed",
+  "categories": [
+    {
+      "ticker": "Y",
+      "name": "yes",
+      "color": null
+    },
+    {
+      "ticker": "N",
+      "name": "no",
+      "color": null
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 137
+}
+{
+  "marketId": 459,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1663695431336,
+      1663868231336
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000000,
+      20000000000
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        459,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        459,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1663868231336",
+  "start": "1663695431336",
+  "metadata": "0x15306073097baa2ea14cd8262cec76546f0dd676d37b1712bb18dfbf47d55d4e4a7e36524d2b73e6feba102c1e6910ec697a",
+  "deadlines": null,
+  "slug": "yornaath_test",
+  "question": "Testing Jørn",
+  "description": "just a test market, can be removed",
+  "categories": [
+    {
+      "ticker": "Y",
+      "name": "yes",
+      "color": null
+    },
+    {
+      "ticker": "N",
+      "name": "no",
+      "color": null
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 136
+}
+{
+  "marketId": 455,
+  "creator": "dDyymrYQMxP5ksYCLXQjv9oAYiQdJFE9Ampgv8cYxc4qXpTNH",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1662650604024,
+      1662736988279
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        455,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        455,
+        1
+      ]
+    }
+  ],
+  "end": "1662736988279",
+  "start": "1662650604024",
+  "metadata": "0x15307751c06f324305c4a9ffcd39cb2c554b983aa18eb80aa04eb6a54fca338541abf29a49f803da12c8c122c921343d4df1",
+  "deadlines": null,
+  "slug": "with pool",
+  "question": "with pool",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#BDD1C4"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#40BAF2"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 135
+}
+{
+  "marketId": 454,
+  "creator": "dDyymrYQMxP5ksYCLXQjv9oAYiQdJFE9Ampgv8cYxc4qXpTNH",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1662650424059,
+      1662736813759
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        454,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        454,
+        1
+      ]
+    }
+  ],
+  "end": "1662736813759",
+  "start": "1662650424059",
+  "metadata": "0x1530d58071ce9bd00f51777c952db0ccc85a038b378f1c482328c8bb272ff97ed07e1b604fc8035ecbc3382a7e04a36448c1",
+  "deadlines": null,
+  "slug": "no pool",
+  "question": "no pool",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#B7040B"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#F86110"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 134
+}
+{
+  "marketId": 451,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1662113226046,
+      1662199600370
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      "0x0000000000000385088b9f5fc2231800",
+      "0x00000000000003865846df3308631800"
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2028827,
+    "by": "dDyymrYQMxP5ksYCLXQjv9oAYiQdJFE9Ampgv8cYxc4qXpTNH",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "16621132171420000000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        451,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        451,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1662199600370",
+  "start": "1662113226046",
+  "metadata": "0x15301982639bfd7897b3a277fcd5223d712943dd4cb959d26b0c1c66bbd63c4fac9fe1bdcab4111bceae18b5564711d54dd4",
+  "deadlines": null,
+  "slug": "date",
+  "question": "date",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "aa-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "aa-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "date",
+  "poolId": 133
+}
+{
+  "marketId": 449,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1661952678058,
+      1662039067416
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      "0x0000000000000384f24413a8d298c400",
+      "0x00000000000003854632e39da428c400"
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        449,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        449,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1662039067416",
+  "start": "1661952678058",
+  "metadata": "0x15303ef1c880850008799cc4abe2c20bd7240de8e31012765bd5fe09e337137337f5bed97662c4b757cd5799afa8b7ba1394",
+  "deadlines": null,
+  "slug": "Will it display dates?",
+  "question": "Will it display dates?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "DR-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "DR-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "date",
+  "poolId": 131
+}
+{
+  "marketId": 448,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1661869140061,
+      1661955496873
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      "0x0000000000000384e6aaf2081bc13c00",
+      "0x00000000000003853a99c1fced513c00"
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        448,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        448,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1661955496873",
+  "start": "1661869140061",
+  "metadata": "0x15304e0b9384c1874209f6fc11dc7f618228ea95c1d4c615ef40f6c4409dc0b3671bdd05f3a3d0ac4656526bbc4c37c13dd7",
+  "deadlines": null,
+  "slug": "Create with date range?",
+  "question": "Create with date range?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "DATES-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "DATES-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 130
+}
+{
+  "marketId": 447,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1661856000018,
+      1661942386639
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      10000000000,
+      1000000000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2028969,
+    "by": "dE2A4n1QY7wFTyb3kom2eRVs6d1YtfJU33K2gYMLZnGH1NEx9",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "510000000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        447,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        447,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1661942386639",
+  "start": "1661856000018",
+  "metadata": "0x15303946073997b3d63f52920bf6e99e738a0cbce5ce25c1de6b1d6f5d9b076a0de1aed46cd0fa0319837b6bc5affb227dc7",
+  "deadlines": null,
+  "slug": "scalar test",
+  "question": "scalar test q",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "a-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 129
+}
+{
+  "marketId": 446,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1661851752060,
+      1662283415156
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      50000000000,
+      100000000000
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        446,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        446,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1662283415156",
+  "start": "1661851752060",
+  "metadata": "0x15301087f20165cd6c9c28d65868ebf412b83b28ac2adab2d205a299186780c403ffce18b13384b2a6366fb336c088e0db4e",
+  "deadlines": null,
+  "slug": "Testing range",
+  "question": "Testing scalar markets",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "SCALE-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "SCALE-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 128
+}
+{
+  "marketId": 444,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "block": [
+      1963619,
+      1978119
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        444,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        444,
+        1
+      ]
+    }
+  ],
+  "end": "1665141018053",
+  "start": "1664967018053",
+  "metadata": "0x1530504f1df3203c806eadb9716fec6272aa4f943b0cb7444882ff4486281f2efd0f0d4c4e81a859951ecfdd254df16874c7",
+  "deadlines": null,
+  "slug": "Will it redirect?",
+  "question": "Will it redirect with pool?",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "y",
+      "name": "y",
+      "color": "#5ABE17"
+    },
+    {
+      "ticker": "n",
+      "name": "n",
+      "color": "#8BCE50"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 127
+}
+{
+  "marketId": 442,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1661351418021,
+      1661436773274
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        442,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        442,
+        1
+      ]
+    }
+  ],
+  "end": "1661436773274",
+  "start": "1661351418021",
+  "metadata": "0x1530506f834ff79fa4a4e844cd97f9b9a0ad9b1739d8ae64d5357a4e303bf46220847fbaec725fde64054c1bc114816e6eff",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#913638"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#D2AC57"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 126
+}
+{
+  "marketId": 441,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1661337612062,
+      1661423819766
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        441,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        441,
+        1
+      ]
+    }
+  ],
+  "end": "1661423819766",
+  "start": "1661337612062",
+  "metadata": "0x1530bb8129ce9e127ad2b88eb26bb542ddffb55abd299635ff1214512a239e14081077087fbc9bb438a077ac914d421cd687",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#0AF99B"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#094DCC"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 125
+}
+{
+  "marketId": 440,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1661242260053,
+      1661933367806
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2027927,
+    "by": "dDyymrYQMxP5ksYCLXQjv9oAYiQdJFE9Ampgv8cYxc4qXpTNH",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        440,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        440,
+        1
+      ]
+    }
+  ],
+  "end": "1661933367806",
+  "start": "1661242260053",
+  "metadata": "0x1530e47ab5d5f27b8b8c811d2f96edeacc97aaf0e68ab5f7cfd5d3bdb9b49ce9f52d5fb109a6ca5f41663f19ed10ed5fd8d5",
+  "deadlines": null,
+  "slug": "App launch by end of august?",
+  "question": "App launch by end of august?",
+  "description": "Will the zeitgeist app launch by end of august 2022",
+  "categories": [
+    {
+      "ticker": "ALY",
+      "name": "yes",
+      "color": "#00FF74"
+    },
+    {
+      "ticker": "ALN",
+      "name": "no",
+      "color": "#9647CD"
+    }
+  ],
+  "tags": [
+    "Politics"
+  ],
+  "scalarType": null,
+  "poolId": 124
+}
+{
+  "marketId": 439,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1661166222065,
+      1661252604066
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        439,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        439,
+        1
+      ]
+    }
+  ],
+  "end": "1661252604066",
+  "start": "1661166222065",
+  "metadata": "0x153057cb21143904008e769212295ab4542a819edb26bba0a9afd710411f3f61b870dc5eb5e33eede7cbb3fde03af0281299",
+  "deadlines": null,
+  "slug": "with fee",
+  "question": "with fee",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#C2EAE6"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#72D5E9"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 123
+}
+{
+  "marketId": 437,
+  "creator": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1660740432060,
+      1660825053459
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        437,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        437,
+        1
+      ]
+    }
+  ],
+  "end": "1660825053459",
+  "start": "1660740432060",
+  "metadata": "0x15302d76cf6a05f1c05cb8619e60007df7619ada95d9f01013075144436b273e706ffea1931d39104f195b73bd2b9ad3edab",
+  "deadlines": null,
+  "slug": "no pool",
+  "question": "no pool",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#BF5250"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#413143"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 121
+}
+{
+  "marketId": 436,
+  "creator": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1660740360024,
+      1660825053459
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        436,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        436,
+        1
+      ]
+    }
+  ],
+  "end": "1660825053459",
+  "start": "1660740360024",
+  "metadata": "0x15302d76cf6a05f1c05cb8619e60007df7619ada95d9f01013075144436b273e706ffea1931d39104f195b73bd2b9ad3edab",
+  "deadlines": null,
+  "slug": "no pool",
+  "question": "no pool",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#BF5250"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#413143"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 122
+}
+{
+  "marketId": 435,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1660648386052,
+      1660734539802
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        435,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        435,
+        1
+      ]
+    }
+  ],
+  "end": "1660734539802",
+  "start": "1660648386052",
+  "metadata": "0x15301cdb1ebcf6f087316e9f09c4109c3404fcedac5993debc15f6cf14c40d39c7095ba278706423fa6f18fcc49e18207a97",
+  "deadlines": null,
+  "slug": "market with fee",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#C35523"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#605025"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 120
+}
+{
+  "marketId": 433,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "timestamp": [
+      1659700170060,
+      1659786533070
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Disputed",
+  "report": {
+    "at": 1838975,
+    "by": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+    "outcome": {
+      "categorical": 1
+    }
+  },
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        433,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        433,
+        1
+      ]
+    }
+  ],
+  "end": "1659786533070",
+  "start": "1659700170060",
+  "metadata": "0x153086d609a7c5cefb95b3739e34343041c646d56627d09325baf5b1ac39825e3fe4f9597c6ad08bbaf2fca636ec12e844c6",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#660F16"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#3550A9"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 119
+}
+{
+  "marketId": 432,
+  "creator": "dDyymrYQMxP5ksYCLXQjv9oAYiQdJFE9Ampgv8cYxc4qXpTNH",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1659697308060,
+      1659783698712
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 1838811,
+    "by": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        432,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        432,
+        1
+      ]
+    }
+  ],
+  "end": "1659783698712",
+  "start": "1659697308060",
+  "metadata": "0x15300efdc7ea9f6a8fbc907a7f06abcee68524e1ef66ff283b96f9ffc3abede983bf31665e3ce0b684f7157acd88f38edc8d",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#C3301B"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#53F3BE"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 118
+}
+{
+  "marketId": 431,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1659611160067,
+      1659697553177
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        431,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        431,
+        1
+      ]
+    }
+  ],
+  "end": "1659697553177",
+  "start": "1659611160067",
+  "metadata": "0x1530b5c8be582f2b1cd54062c339f01f6b5c30b43e192064c54ee014a0199b599424c8228933ad01f084eb3b242e1f7a912b",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#F44652"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#C9C17B"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 117
+}
+{
+  "marketId": 430,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1659523680163,
+      1659610074119
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        430,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        430,
+        1
+      ]
+    }
+  ],
+  "end": "1659610074119",
+  "start": "1659523680163",
+  "metadata": "0x15306c39e1c3645f21f11e90799a754acd566234a84e56fd3e628202b612367d440e881e75fee7eac80c08510fa84a6befc6",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#F5B112"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#4382B9"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 116
+}
+{
+  "marketId": 428,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1659523284058,
+      1659609690553
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        428,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        428,
+        1
+      ]
+    }
+  ],
+  "end": "1659609690553",
+  "start": "1659523284058",
+  "metadata": "0x1530c4ba89b1763f6d0c9e6370d32e06042de5f37743f2778bf318e48ed340b7d8d8e627773d55f22bfa86ed9258029b18ae",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#0150ED"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#4BBE6D"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 115
+}
+{
+  "marketId": 427,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1659522780041,
+      1659609178046
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        427,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        427,
+        1
+      ]
+    }
+  ],
+  "end": "1659609178046",
+  "start": "1659522780041",
+  "metadata": "0x1530c4ba89b1763f6d0c9e6370d32e06042de5f37743f2778bf318e48ed340b7d8d8e627773d55f22bfa86ed9258029b18ae",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#0150ED"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#4BBE6D"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 114
+}
+{
+  "marketId": 426,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1659522624163,
+      1659609016858
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        426,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        426,
+        1
+      ]
+    }
+  ],
+  "end": "1659609016858",
+  "start": "1659522624163",
+  "metadata": "0x1530c4ba89b1763f6d0c9e6370d32e06042de5f37743f2778bf318e48ed340b7d8d8e627773d55f22bfa86ed9258029b18ae",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#0150ED"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#4BBE6D"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 113
+}
+{
+  "marketId": 425,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1659522270060,
+      1659608664585
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        425,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        425,
+        1
+      ]
+    }
+  ],
+  "end": "1659608664585",
+  "start": "1659522270060",
+  "metadata": "0x1530459c44bc6709c55b8fffaa6a6fe0ea74b218ae0833ba1d9fea8337ffebe29dd8e4f0afbdbeb72690decec41271f14172",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#752025"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#554B8D"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 112
+}
+{
+  "marketId": 424,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "block": [
+      1768726,
+      1768739
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        424,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        424,
+        1
+      ]
+    }
+  ],
+  "end": "1662628368034",
+  "start": "1662628212034",
+  "metadata": "0x1530c81a80388ed76927af1dfd3afdf654f8a54c787e2198e66e1dfb4b8566aef0951cee7b3e8e6a154afc6b1f4ac350af08",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#CB733E"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#BF98C7"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 111
+}
+{
+  "marketId": 423,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "block": [
+      1762791,
+      1762800
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 1762868,
+    "by": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "0",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        423,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        423,
+        1
+      ]
+    }
+  ],
+  "end": "1662557100051",
+  "start": "1662556992051",
+  "metadata": "0x153098b03dcf266df6f881661e919e1416f192caf91f060b71f6b8108da35381b3ac5fee8524f3f0e43a33751274dd38f14b",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#F2B944"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#708AEB"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 110
+}
+{
+  "marketId": 422,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "period": {
+    "block": [
+      1762773,
+      1769980
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        422,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        422,
+        1
+      ]
+    }
+  ],
+  "end": "1662643260051",
+  "start": "1662556776051",
+  "metadata": "0x153052ff4b460a1fb0046ccdc94f8b0fb3f620f2d5e972f7b28e520f5563bd7cf7483c63f0698b9be46f5df11bf77d435d53",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#F744DB"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#1E2EB7"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 109
+}
+{
+  "marketId": 421,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1658754156080,
+      1658840547942
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        421,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        421,
+        1
+      ]
+    }
+  ],
+  "end": "1658840547942",
+  "start": "1658754156080",
+  "metadata": "0x15307a605a8053b9a41251ebb0e43ad387d8ca78da8cff44cc940ed27fe8c4f73737ba8a4466b6f64168e6b4d5e8ca151c19",
+  "deadlines": null,
+  "slug": "a",
+  "question": "a",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#C6C532"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#7B6C13"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 108
+}
+{
+  "marketId": 418,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1655721432186,
+      1655806749893
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "SimpleDisputes",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        418,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        418,
+        1
+      ]
+    }
+  ],
+  "end": "1655806749893",
+  "start": "1655721432186",
+  "metadata": "0x153075de9e3aa4532cfda75b3ffe5cfea2a48f1f61b13796a6d99ff2b09b2052d6fd9fcf62957505d678d8c60ffe670218ea",
+  "deadlines": null,
+  "slug": "aa",
+  "question": "aa",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#AA7C17"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#A576A3"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 107
+}
+{
+  "marketId": 417,
+  "creator": "dE2PSbmYGG2jyKACsZk83PydtyCJVrskVHpJdj4eqFY945KJu",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDywmamjrDkaT18ybCRJBfax65CoxJNSWGZfwiQrbkAe95wq3",
+  "period": {
+    "timestamp": [
+      1655719176020,
+      1655805563978
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "SimpleDisputes",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        417,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        417,
+        1
+      ]
+    }
+  ],
+  "end": "1655805563978",
+  "start": "1655719176020",
+  "metadata": "0x15304b98f3e4f0f311d1e225335a0db925694f9f28057c7cc0d05f40a5330177690004aa663cc86633646400de3edb62d8fd",
+  "deadlines": null,
+  "slug": "test",
+  "question": "test",
+  "description": "desc",
+  "categories": [
+    {
+      "ticker": "a",
+      "name": "a",
+      "color": "#9A42E7"
+    },
+    {
+      "ticker": "b",
+      "name": "b",
+      "color": "#5E8C97"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 106
+}
+{
+  "marketId": 416,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDzsfdMMnF19M3HYP8iHHAX6URq9iuXjrxfJ1nzGq1Yg3rtas",
+  "period": {
+    "timestamp": [
+      1655273433136,
+      1655274633136
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2028603,
+    "by": "dE2A4n1QY7wFTyb3kom2eRVs6d1YtfJU33K2gYMLZnGH1NEx9",
+    "outcome": {
+      "categorical": 1
+    }
+  },
+  "resolvedOutcome": "1",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        416,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        416,
+        1
+      ]
+    }
+  ],
+  "end": "1655274633136",
+  "start": "1655273433136",
+  "metadata": "0x15305350ce721c366b462a8022c6b73306274fa3b1ad1963f2334b959b93d0c967ad99a3ce893bdc5e1ff3a41f6049a38748",
+  "deadlines": null,
+  "slug": "tick-tack-block-dE2cVL...4pd8-dDyhan...YyoM",
+  "question": "Who will winn?",
+  "description": "FIGHT!",
+  "categories": [
+    {
+      "ticker": "4pd8",
+      "name": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+      "color": "#1a1a1a"
+    },
+    {
+      "ticker": "YyoM",
+      "name": "dDyhansyfTpTCiMHMXScfgdvSoucqB4xJJX3rDiHsAsdAYyoM",
+      "color": "#ac2dba"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 105
+}
+{
+  "marketId": 415,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDzsfdMMnF19M3HYP8iHHAX6URq9iuXjrxfJ1nzGq1Yg3rtas",
+  "period": {
+    "timestamp": [
+      1655238586779,
+      1655239186779
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        415,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        415,
+        1
+      ]
+    }
+  ],
+  "end": "1655239186779",
+  "start": "1655238586779",
+  "metadata": "0x15305350ce721c366b462a8022c6b73306274fa3b1ad1963f2334b959b93d0c967ad99a3ce893bdc5e1ff3a41f6049a38748",
+  "deadlines": null,
+  "slug": "tick-tack-block-dE2cVL...4pd8-dDyhan...YyoM",
+  "question": "Who will winn?",
+  "description": "FIGHT!",
+  "categories": [
+    {
+      "ticker": "4pd8",
+      "name": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+      "color": "#1a1a1a"
+    },
+    {
+      "ticker": "YyoM",
+      "name": "dDyhansyfTpTCiMHMXScfgdvSoucqB4xJJX3rDiHsAsdAYyoM",
+      "color": "#ac2dba"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 104
+}
+{
+  "marketId": 414,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "period": {
+    "timestamp": [
+      1654691868016,
+      1654778226738
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      20000000000,
+      40000000000
+    ]
+  },
+  "status": "Closed",
+  "report": null,
+  "resolvedOutcome": null,
+  "disputeMechanism": "SimpleDisputes",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        414,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        414,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1654778226738",
+  "start": "1654691868016",
+  "metadata": "0x153064f8f214a9f99069cd53d04eceac224f1095166e8a274219aaa6711a1a4d4894fce223a70933ce8b7416399f1c42259d",
+  "deadlines": null,
+  "slug": "Scalar test",
+  "question": "Testing bounds",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "SCALE-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "SCALE-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [
+    "E-sports"
+  ],
+  "scalarType": null,
+  "poolId": 103
+}
+{
+  "marketId": 413,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE12VaHKNrQWGT2PzPdSQupbn5DyKi89KKrfm6Tq5SJzE8Mpc",
+  "period": {
+    "timestamp": [
+      1654086914875,
+      1654097714875
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 1381212,
+    "by": "dE12VaHKNrQWGT2PzPdSQupbn5DyKi89KKrfm6Tq5SJzE8Mpc",
+    "outcome": {
+      "categorical": 1
+    }
+  },
+  "resolvedOutcome": "1",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        413,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        413,
+        1
+      ]
+    }
+  ],
+  "end": "1654097714875",
+  "start": "1654086914875",
+  "metadata": "0x1530c8c5bb3eb62c10364abfa1aa03306b0a39c7bfeb2b54209be7400c85ba2ea9c82c167b7f635a3b917229a1d0f5ddc4c2",
+  "deadlines": null,
+  "slug": "tick-tack-block-dE2cVL...4pd8-dDyd5z...4YWe",
+  "question": "Who will winn?",
+  "description": "FIGHT!",
+  "categories": [
+    {
+      "ticker": "4pd8",
+      "name": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+      "color": "#1a1a1a"
+    },
+    {
+      "ticker": "4YWe",
+      "name": "dDyd5zdy1y6TC71uKMF2Un74EZzkRcDEPDE7hUwDNfabo4YWe",
+      "color": "#ac2dba"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 102
+}
+{
+  "marketId": 412,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE12VaHKNrQWGT2PzPdSQupbn5DyKi89KKrfm6Tq5SJzE8Mpc",
+  "period": {
+    "timestamp": [
+      1653985554909,
+      1653996354909
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 1368441,
+    "by": "dE12VaHKNrQWGT2PzPdSQupbn5DyKi89KKrfm6Tq5SJzE8Mpc",
+    "outcome": {
+      "categorical": 1
+    }
+  },
+  "resolvedOutcome": "1",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        412,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        412,
+        1
+      ]
+    }
+  ],
+  "end": "1653996354909",
+  "start": "1653985554909",
+  "metadata": "0x1530c8c5bb3eb62c10364abfa1aa03306b0a39c7bfeb2b54209be7400c85ba2ea9c82c167b7f635a3b917229a1d0f5ddc4c2",
+  "deadlines": null,
+  "slug": "tick-tack-block-dE2cVL...4pd8-dDyd5z...4YWe",
+  "question": "Who will winn?",
+  "description": "FIGHT!",
+  "categories": [
+    {
+      "ticker": "4pd8",
+      "name": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+      "color": "#1a1a1a"
+    },
+    {
+      "ticker": "4YWe",
+      "name": "dDyd5zdy1y6TC71uKMF2Un74EZzkRcDEPDE7hUwDNfabo4YWe",
+      "color": "#ac2dba"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 101
+}
+{
+  "marketId": 411,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE12VaHKNrQWGT2PzPdSQupbn5DyKi89KKrfm6Tq5SJzE8Mpc",
+  "period": {
+    "timestamp": [
+      1653649021027,
+      1653649921027
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 1368449,
+    "by": "dE12VaHKNrQWGT2PzPdSQupbn5DyKi89KKrfm6Tq5SJzE8Mpc",
+    "outcome": {
+      "categorical": 1
+    }
+  },
+  "resolvedOutcome": "1",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        411,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        411,
+        1
+      ]
+    }
+  ],
+  "end": "1653649921027",
+  "start": "1653649021027",
+  "metadata": "0x1530c8c5bb3eb62c10364abfa1aa03306b0a39c7bfeb2b54209be7400c85ba2ea9c82c167b7f635a3b917229a1d0f5ddc4c2",
+  "deadlines": null,
+  "slug": "tick-tack-block-dE2cVL...4pd8-dDyd5z...4YWe",
+  "question": "Who will winn?",
+  "description": "FIGHT!",
+  "categories": [
+    {
+      "ticker": "4pd8",
+      "name": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+      "color": "#1a1a1a"
+    },
+    {
+      "ticker": "4YWe",
+      "name": "dDyd5zdy1y6TC71uKMF2Un74EZzkRcDEPDE7hUwDNfabo4YWe",
+      "color": "#ac2dba"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 100
+}
+{
+  "marketId": 410,
+  "creator": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dE12VaHKNrQWGT2PzPdSQupbn5DyKi89KKrfm6Tq5SJzE8Mpc",
+  "period": {
+    "timestamp": [
+      1653578289578,
+      1653578589578
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "categorical": 2
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 1339367,
+    "by": "dE12VaHKNrQWGT2PzPdSQupbn5DyKi89KKrfm6Tq5SJzE8Mpc",
+    "outcome": {
+      "categorical": 1
+    }
+  },
+  "resolvedOutcome": "1",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "categoricalOutcome": [
+        410,
+        0
+      ]
+    },
+    {
+      "categoricalOutcome": [
+        410,
+        1
+      ]
+    }
+  ],
+  "end": "1653578589578",
+  "start": "1653578289578",
+  "metadata": "0x15303c1c7318880272293f16cf3a3f5c299789dec011186eb05c2a71fafbf8c801414f6e604b80787ae1c6eacd1b9d4379a7",
+  "deadlines": null,
+  "slug": "tick-tack-block-dE2cVL...4pd8-dDz4uM...7Fau",
+  "question": "Who will winn?",
+  "description": "FIGHT!",
+  "categories": [
+    {
+      "ticker": "4pd8",
+      "name": "dE2cVL9QAgh3MZEK3ZhPG5S2YSqZET8V1Qa36epaU4pQG4pd8",
+      "color": "#1a1a1a"
+    },
+    {
+      "ticker": "7Fau",
+      "name": "dDz4uM7hqa7opvjwzF2ic5XdbApiWjbusmcefpHR4FTmF7Fau",
+      "color": "#ac2dba"
+    }
+  ],
+  "tags": [],
+  "scalarType": null,
+  "poolId": 99
+}
