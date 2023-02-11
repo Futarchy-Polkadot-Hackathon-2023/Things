@@ -56,7 +56,8 @@ discord for help
 - `gh repo clone subsquid-labs/squid-evm-template ens-project`
 - `npm i`
 - `vim schema.graphql`
-- add ```graphql
+- add 
+```graphql
 type Token @entity{
   id: ID!
   owner: Owner
@@ -91,3 +92,14 @@ type Transfer @entity{
 - now there is a new file in the folder src/model/generated
 
 # EVM Typegen
+
+- We edited the project schema
+- now continue
+- abi of a smart contract, its a description of a smartContract
+- ERC20 and ERC721 they have standard abi
+- We can use Etherscan, ctrl c in the contract section
+- past it as ens.json in the root folder
+- `npx squid-evm-typegen src/abi ens.json`
+- in src/abi is now a ens.ts file. It has a bunch of things. And a contract class, whatever that mean
+
+
