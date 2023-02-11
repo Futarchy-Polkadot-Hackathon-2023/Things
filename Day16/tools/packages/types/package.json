@@ -1,0 +1,32 @@
+{
+  "name": "@zeitgeistpm/types",
+  "version": "1.0.2",
+  "description": "Generated types for the Zeitgeist network.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Zeitgeist PM <contact@zeitgeist.pm>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@polkadot/typegen": "9.13.2"
+  },
+  "dependencies": {
+    "@polkadot/types": "9.13.2",
+    "@zeitgeistpm/type-defs": "^1.0.0",
+    "axios": "^0.21.1"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js"
+    },
+    "./interfaces/predictionMarkets": {
+      "default": "./dist/interfaces/predictionMarkets/index.js"
+    },
+    "./interfaces/predictionMarkets.d.ts": {
+      "default": "./dist/interfaces/predictionMarkets/index.d.ts"
+    }
+  },
+  "gitHead": "f65183993419e36276711f4634c57536ffad93a1"
+}

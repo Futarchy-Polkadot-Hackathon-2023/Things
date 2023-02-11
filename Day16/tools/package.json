@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/cli",
+    "packages/sdk",
+    "packages/type-defs",
+    "packages/types"
+  ],
+  "name": "tools",
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-security": "^1.4.0",
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.3.1",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "typedoc": "^0.21.0",
+    "typescript": "4.3.4"
+  },
+  "scripts": {
+    "hooks-init": "husky install",
+    "clean": "rm -rf packages/**/dist",
+    "compile": "tsc --build --force tsconfig.json",
+    "lint-all": "yarn cli:lint ; yarn sdk:lint ; yarn type-defs:lint",
+    "cli": "ts-node -r tsconfig-paths/register packages/cli/src/index",
+    "cli:lint": "tsc --noEmit && eslint 'packages/cli/src/**/*.ts'",
+    "cli:lint-quiet": "tsc --noEmit && eslint 'packages/cli/src/**/*.ts' --quiet",
+    "cli:lint-fix": "tsc --noEmit && eslint 'packages/cli/src/**/*.ts' --fix",
+    "sdk:lint": "tsc --noEmit && eslint 'packages/sdk/src/**/*.ts'",
+    "sdk:lint-quiet": "tsc --noEmit && eslint 'packages/sdk/src/**/*.ts' --quiet",
+    "sdk:lint-fix": "tsc --noEmit && eslint 'packages/sdk/src/**/*.ts' --fix",
+    "sdk:makeDocs": "npx typedoc packages/sdk/src/index.ts",
+    "type-defs:lint": "tsc --noEmit ; eslint packages/type-defs/src/**/*.ts",
+    "type-defs:lint-fix": "tsc --noEmit ; eslint packages/type-defs/src/**/*.ts --fix",
+    "types:getMetadata": "ts-node packages/types/scripts/getMetadata.ts",
+    "types:generate": "ts-node -r tsconfig-paths/register packages/types/scripts/generate.ts"
+  }
+}
