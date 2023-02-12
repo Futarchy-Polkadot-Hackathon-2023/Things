@@ -6,6 +6,6 @@ services:
     image: zeitgeistpm/zeitgeist-node
     ports:
       - "9944:9944"
-    command: 
-      - --dev 
+    command:
+      - --dev
       - --ws-external
