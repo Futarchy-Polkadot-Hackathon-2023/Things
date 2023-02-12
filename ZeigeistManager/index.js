@@ -107,6 +107,26 @@ const ztgManager = new ZeitgeistManager(websocketEndpoint);
 // console.log(market_123);
 // console.log(await ztgManager.getMarketCount());
 
-
 const sdk = await ztgManager.getDefaultSdk();
-console.log(await new models.default(sdk.api, sdk.errorTable, {MAX_RPC_REQUESTS: 33000}).getAllMarketIds())
+const models_default = new models.default(sdk.api, sdk.errorTable, {MAX_RPC_REQUESTS: 33000});
+console.log(await models_default.getAllMarketIds())
+
+
+// creation
+
+const params =  {
+        signer: "KeyringPairOrExtSigner",
+        baseAsset: "string",
+        oracle: "string",
+        period: "MarketPeriod",
+        deadlines: "MarketDeadlines",
+        metadata: "DecodedMarketMetadata",
+        creationType: "string",
+        marketType: "MarketTypeOf",
+        disputeMechanism: "string",
+        scoringRule: "string",
+        callbackOrPaymentInfo: false
+}
+const newMarket = await models_default.createMarket(params);
+
+
