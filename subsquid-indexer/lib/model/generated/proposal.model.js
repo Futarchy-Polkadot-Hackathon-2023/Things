@@ -32,10 +32,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Bounty = void 0;
+exports.Proposal = void 0;
 const typeorm_1 = require("typeorm");
 const marshal = __importStar(require("./marshal"));
-let Bounty = class Bounty {
+let Proposal = class Proposal {
     constructor(props) {
         Object.assign(this, props);
     }
@@ -43,43 +43,47 @@ let Bounty = class Bounty {
 __decorate([
     (0, typeorm_1.PrimaryColumn)(),
     __metadata("design:type", String)
-], Bounty.prototype, "id", void 0);
+], Proposal.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Index)(),
     (0, typeorm_1.Column)("int4", { nullable: false }),
     __metadata("design:type", Number)
-], Bounty.prototype, "blockNumber", void 0);
+], Proposal.prototype, "blockNumber", void 0);
 __decorate([
     (0, typeorm_1.Index)(),
     (0, typeorm_1.Column)("timestamp with time zone", { nullable: false }),
     __metadata("design:type", Date)
-], Bounty.prototype, "timestamp", void 0);
+], Proposal.prototype, "timestamp", void 0);
 __decorate([
-    (0, typeorm_1.Column)("text", { nullable: false }),
-    __metadata("design:type", String)
-], Bounty.prototype, "bountyName", void 0);
+    (0, typeorm_1.Column)("text", { nullable: true }),
+    __metadata("design:type", Object)
+], Proposal.prototype, "proposalName", void 0);
 __decorate([
     (0, typeorm_1.Index)(),
-    (0, typeorm_1.Column)("int4", { nullable: false }),
-    __metadata("design:type", Number)
-], Bounty.prototype, "bountyIndex", void 0);
+    (0, typeorm_1.Column)("int4", { nullable: true }),
+    __metadata("design:type", Object)
+], Proposal.prototype, "proposalIndex", void 0);
 __decorate([
     (0, typeorm_1.Index)(),
     (0, typeorm_1.Column)("text", { nullable: true }),
     __metadata("design:type", Object)
-], Bounty.prototype, "extrinsicId", void 0);
+], Proposal.prototype, "extrinsicId", void 0);
 __decorate([
     (0, typeorm_1.Index)(),
     (0, typeorm_1.Column)("text", { nullable: true }),
     __metadata("design:type", Object)
-], Bounty.prototype, "proposalHash", void 0);
+], Proposal.prototype, "beneficiary", void 0);
 __decorate([
     (0, typeorm_1.Column)("numeric", { transformer: marshal.bigintTransformer, nullable: true }),
     __metadata("design:type", Object)
-], Bounty.prototype, "fee", void 0);
-Bounty = __decorate([
+], Proposal.prototype, "budgetRemaining", void 0);
+__decorate([
+    (0, typeorm_1.Column)("numeric", { transformer: marshal.bigintTransformer, nullable: true }),
+    __metadata("design:type", Object)
+], Proposal.prototype, "fee", void 0);
+Proposal = __decorate([
     (0, typeorm_1.Entity)(),
     __metadata("design:paramtypes", [Object])
-], Bounty);
-exports.Bounty = Bounty;
-//# sourceMappingURL=bounty.model.js.map
+], Proposal);
+exports.Proposal = Proposal;
+//# sourceMappingURL=proposal.model.js.map

@@ -3,7 +3,7 @@ import * as ss58 from "@subsquid/ss58"
 import {BatchContext, BatchProcessorItem, SubstrateBatchProcessor} from "@subsquid/substrate-processor"
 import {Store, TypeormDatabase} from "@subsquid/typeorm-store"
 import {In} from "typeorm"
-import {Account, Bounty} from "./model"
+import {Account, Proposal} from "./model"
 
 
 const processor = new SubstrateBatchProcessor()
@@ -14,26 +14,9 @@ const processor = new SubstrateBatchProcessor()
         // Use archive created by archive/docker-compose.yml
         archive: lookupArchive('kusama', {release: 'FireSquid'} )
     })
-    // .setBlockRange({ from: 6998400 }) // bountyBecameActive
-    // .setBlockRange({ from: 6924780, to: 7042000 }) // plenty different type of events in short space
-    // .setBlockRange({ from: 6924780 }) // plenty different type of events in short space
-    // .setBlockRange({ from: 6981761 }) // bountyAwarded
-    // .setBlockRange({ from: 6998400 }) // bountyBecameActive
-    // .setBlockRange({ from: 15526366 }) // BountyExtended
-    // .setBlockRange({ from: 15820891 }) // bountyClaimed
-    // .setBlockRange({ from: 10330533 }) // BountyRejected
-    // .setBlockRange({ from: 11847382 }) // BountyCanceled
-    // .setBlockRange({ from: 7691636 }) // BountyExtended
-    .setBlockRange({ from: 10208170 }) // bountyClaimed
-    // .setBlockRange({ from: 6219002 }) // bountyAwarded
-    // .setBlockRange({ from: 6219002 }) // bountyAwarded
-    // .setBlockRange({ from: 6219002 }) // bountyAwarded
-    // .setBlockRange({ from: 6219002 }) // bountyAwarded
-    // .setBlockRange({ from: 6219002 }) // bountyAwarded
-    // .setBlockRange({ from: 6219002 }) // bountyAwarded
-    // .setBlockRange({ from: 6219002 }) // bountyAwarded
-    // .setBlockRange({ from: 6219002 }) // bountyAwarded
-    .addEvent('Bounties.BountyProposed', {
+    .setBlockRange({ from: 15426015 })    // Referendum executed: #244 Runtime v9320 Upgrade On Kusama Network
+    // .setBlockRange({ from: 6998400 }) 
+    .addEvent('Treasury.Proposed', {
         data: {
             event: {
                 args: true,
@@ -48,44 +31,14 @@ const processor = new SubstrateBatchProcessor()
             }
         }
     } as const)
-    .addEvent('Bounties.BountyRejected', {
-        data: {
-            event: {
-                args: true,
-                extrinsic: {
-                    hash: true,
-                    fee: true
-                },
-                call: {
-                    args: true,
-                    error: true
-                }
-            }
-        }
-    } as const)
-    .addEvent('Bounties.BountyAwarded', {
-        data: {
-            event: {
-                args: true,
-                extrinsic: {
-                    hash: true,
-                    fee: true
-                },
-                call: {
-                    args: true,
-                    error: true
-                }
-            }
-        }
-    } as const)
-    .addEvent('Bounties.BountyBecameActive', {
+    .addEvent('Treasury.Awarded', {
         data: {
             event: {
                 args: true
             }
         }
     } as const)
-    .addEvent('Bounties.BountyClaimed', {
+    .addEvent('Treasury.SpendApproved', {
         data: {
             event: {
                 args: true,
@@ -93,40 +46,18 @@ const processor = new SubstrateBatchProcessor()
                     hash: true,
                     fee: true
                 },
-                call: {
-                    args: true,
-                    error: true
-                }
+                // // Why is .call null in SpendApproved?
+                // call: {
+                //     args: true,
+                //     error: true
+                // }
             }
         }
     } as const)
-    .addEvent('Bounties.BountyExtended', {
+    .addEvent('Treasury.Spending', {
         data: {
             event: {
-                args: true,
-                extrinsic: {
-                    hash: true,
-                    fee: true
-                },
-                call: {
-                    args: true,
-                    error: true
-                }
-            }
-        }
-    } as const)
-    .addEvent('Bounties.BountyCanceled', {
-        data: {
-            event: {
-                args: true,
-                extrinsic: {
-                    hash: true,
-                    fee: true
-                },
-                call: {
-                    args: true,
-                    error: true
-                }
+                args: true
             }
         }
     } as const)
@@ -144,27 +75,26 @@ processor.run(new TypeormDatabase(), async ctx => {
         return new Map(accounts.map(a => [a.id, a]))
     })
 
-    let bountiesToStore: Bounty[] = []
+    let bountiesToStore: Proposal[] = []
 
     for (let b of bountiesData) {
         let {
-            id, blockNumber, timestamp, bountyName, bountyIndex, extrinsicHash, extrinsicSuccess, // extrinsicError?,  
-            extrinsicId, callArgsIndex, eventArgsIndex, proposalHash, // proposalIndex, // approve, // proposer?: 
+            id, blockNumber, timestamp, proposalName, proposalIndex, 
+            extrinsicId, beneficiary, // approve, // proposer?: 
             fee 
         } = b
 
         // let proposer = getAccount(accounts, b.proposer)
-        bountiesToStore.push(new Bounty({
+        bountiesToStore.push(new Proposal({
             id,
             blockNumber,
             timestamp,
-            bountyName,
-            bountyIndex,
+            proposalName,
+            proposalIndex,
             extrinsicId,
-            // proposalIndex, 
-            proposalHash,
             // approve,
-            // proposer?: 
+            beneficiary,
+            // proposer
             fee
         }))
     }
@@ -175,191 +105,99 @@ processor.run(new TypeormDatabase(), async ctx => {
 
 
 
-interface BountyEvent {
+interface TreasuryEvent {
     id: string
-    bountyName: string
+    proposalName: string
     blockNumber: number
     timestamp: Date
-    bountyIndex: number
-    extrinsicHash?: string
-    extrinsicSuccess?: boolean
-    // extrinsicError?: string
+    proposalIndex?: number
+    amount?: bigint
     extrinsicId?: string
-    callArgs?: number
-    callArgsIndex?: number
-    eventArgs?: number
-    eventArgsIndex?: number
-    callArgsBountyId?: number
-    callArgsBountyRemark?: string
-    // proposalIndex: number
-    proposalHash?: string    
     // approve: boolean
+    beneficiary?: string
     // proposer?: string
+    budgetRemaining?: bigint
     fee?: bigint
 }
 
 
 // NB These loops will run for every call and event, not just Bounty -related ones.
 // and they will run once for the event, then once for the call.
-function getBounties(ctx: Ctx): BountyEvent[] {
+function getBounties(ctx: Ctx): TreasuryEvent[] {
     let blockBountiesLength = 0;
-    let bounties: BountyEvent[] = []
+    let bounties: TreasuryEvent[] = []
     for (let block of ctx.blocks) {
         for (let item of block.items) {
 
             switch (item.name) {
-                case "Bounties.BountyProposed": {                
+                case "Treasury.Proposed": {         
                     bounties.push({
                         id: item.event.id,
-                        bountyName: item.event.name,
+                        proposalName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: 
-                            item.event.args.index ||
-                            item.event.args,
+                        amount: item.event.call?.args.value,
                         extrinsicId: item.event.extrinsic?.id,
-                        // proposalIndex: item.event.call?.args.proposalIndex,
-                        proposalHash: item.event.call?.args.proposalHash,
+                        proposalIndex: item.event.args.proposalIndex,
                         // TODO: locate item.event.call.args.approve : bool
+                        beneficiary: //ss58.codec('kusama').encode(
+                            item.event.call?.args.beneficiary.value  ,// TODO: output as ss58 account
+                        // ),
                         // proposer: ss58.codec('kusama').encode(rec.proposer),
                         fee: item.event.extrinsic?.fee || 0n
                     })
                     break
-                }                
-
-                case "Bounties.BountyRejected": {                
+                }         
+                       
+                case "Treasury.Awarded": {
                     bounties.push({
                         id: item.event.id,
-                        bountyName: item.event.name,
+                        proposalName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        bountyIndex: 
-                            item.event.args.index 
-                            || item.event.args[0],
-                        extrinsicId: item.event.extrinsic?.id,
-                        // proposalIndex: item.event.call?.args.proposalIndex,
-                        proposalHash: item.event.call?.args.proposalHash,
+                        amount: item.event.args.award,
+                        proposalIndex: item.event.args.proposalIndex,
                         // TODO: locate item.event.call.args.approve : bool
+                        beneficiary: //ss58.codec('kusama').encode(
+                            item.event.call?.args.beneficiary.value  ,// TODO: output as ss58 account
+                        // ),
+                        // proposer: ss58.codec('kusama').encode(rec.proposer),
+                    })
+                    break
+                }         
+                       
+                case "Treasury.SpendApproved": {                
+                    bounties.push({
+                        id: item.event.id,
+                        proposalName: item.event.name,
+                        blockNumber: block.header.height,
+                        timestamp: new Date(block.header.timestamp),
+                        amount: item.event.args.amount,
+                        extrinsicId: item.event.extrinsic?.id,
+                        proposalIndex: item.event.args.proposalIndex,
+                        // TODO: locate item.event.call.args.approve : bool
+                        beneficiary: //ss58.codec('kusama').encode(
+                            item.event.call?.args.beneficiary.value  ,// TODO: output as ss58 account
+                        // ),
                         // proposer: ss58.codec('kusama').encode(rec.proposer),
                         fee: item.event.extrinsic?.fee || 0n
                     })
                     break
-                }
-                
-                case "Bounties.BountyAwarded": {     
-                    console.log('item=', item);
-                               
+                }         
+                       
+                case "Treasury.Spending": {
                     bounties.push({
                         id: item.event.id,
-                        bountyName: item.event.name,
+                        proposalName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        // bountyIndex: item.event.args[0],
-                        bountyIndex: 
-                        // @ts-ignore
-                            item.event.call.args.bountyId
-                            || searchItemlikeObjectFor(item.event.call, 'bountyId'),
-                        extrinsicId: item.event.extrinsic?.id,
-                        // proposalIndex: item.event.call?.args.proposalIndex,
-                        proposalHash: item.event.call?.args.proposalHash,
-                        // TODO: locate item.event.call.args.approve : bool
-                        // proposer: ss58.codec('kusama').encode(rec.proposer),
-                        fee: item.event.extrinsic?.fee || 0n
+                        amount: item.event.args.budgetRemaining,
                     })
                     break
-                }
-
-                case "Bounties.BountyBecameActive": {     
-                    bounties.push({
-                        id: item.event.id,
-                        bountyName: item.event.name,
-                        blockNumber: block.header.height,
-                        timestamp: new Date(block.header.timestamp),
-                        bountyIndex: 
-                            item.event.args.index ||
-                            item.event.args,
-                        // proposalIndex: item.event.call?.args.proposalIndex,
-                        proposalHash: item.event.call?.args.proposalHash,
-                        // TODO: locate item.event.call.args.approve : bool
-                        // proposer: ss58.codec('kusama').encode(rec.proposer),
-                    })
-                    break
-                }
-                
-
-                case "Bounties.BountyClaimed": {                           
-                    bounties.push({
-                        id: item.event.id,
-                        bountyName: item.event.name,
-                        blockNumber: block.header.height,
-                        timestamp: new Date(block.header.timestamp),
-                        // bountyIndex: item.event.args.index || item.event.args[0],   // :/
-                        // @ts-ignore
-                        bountyIndex: 
-                        item.event.args.index ||     // eg 15820891   (also event.call.args.bountyId)
-                            item.event.args[0],      // eg 
-                        extrinsicId: item.event.extrinsic?.id,
-                        // proposalIndex: item.event.call?.args.proposalIndex,
-                        proposalHash: item.event.call?.args.proposalHash,
-                        // TODO: locate item.event.call.args.approve : bool
-                        // proposer: ss58.codec('kusama').encode(rec.proposer),
-                        fee: item.event.extrinsic?.fee || 0n
-                    })
-                    break
-                }
-                
-                case "Bounties.BountyExtended": {    
-                    bounties.push({
-                        id: item.event.id,
-                        bountyName: item.event.name,
-                        blockNumber: block.header.height,
-                        timestamp: new Date(block.header.timestamp),
-                        bountyIndex: searchItemlikeObjectFor(item.event.call, 'bountyId')
-                            || item.event.args.index  // (eg 15526366)
-                            || item.event.args,     // exists (eg 7691636) but may not be correct
-                        // bountyIndex: item.event.call.args.bountyIndex,     // (eg 14534356 some earlier like this, some not)
-                        extrinsicId: item.event.extrinsic?.id,
-                        // proposalIndex: item.event.call?.args.proposalIndex,
-                        proposalHash: item.event.call?.args.proposalHash,
-                        // TODO: locate item.event.call.args.approve : bool
-                        // proposer: ss58.codec('kusama').encode(rec.proposer),
-                        fee: item.event.extrinsic?.fee || 0n
-                    })
-                    break
-                    
-                }
-                
-                case "Bounties.BountyCanceled": {    
-                    bounties.push({
-                        id: item.event.id,
-                        bountyName: item.event.name,
-                        blockNumber: block.header.height,
-                        timestamp: new Date(block.header.timestamp),
-                        bountyIndex: item.event.args.index,
-                        extrinsicId: item.event.extrinsic?.id,
-                        // proposalIndex: item.event.call?.args.proposalIndex,
-                        proposalHash: item.event.call?.args.proposalHash,
-                        // TODO: locate item.event.call.args.approve : bool
-                        // proposer: ss58.codec('kusama').encode(rec.proposer),
-                        fee: item.event.extrinsic?.fee || 0n
-                    })
-                    break
-                }
-
-                default: {
-                    if (item.name.startsWith('Bounties')){
-                        console.log(`Default case reached (due to no break or no match) \nAlready pushed bounty event *or call* at ${ block.header.height }`)
-                        console.log( 'item=', item ) 
-                        // @ts-ignore
-                        if (item.event) {
-                            // @ts-ignore
-                            console.log(`Already pushed bounty event ${ item.event.name || '... BUT NO item.event.name\n'+ item.event.name.toString() } \n`)
-                        }
-                    }
-                }
-                
-
+                }         
+                       
             }
+
             // if (blockBountiesLength!==bounties.length) {
             //     console.log(`Last known length was ${blockBountiesLength}. New item (${bounties.length-1}) added to bounties= `, bounties[bounties.length-1])
             //     console.log('\n')

@@ -6,18 +6,16 @@ type Account @entity {
 }
 
 
-type Bounty @entity {
+type Proposal @entity {
   id: ID!
   blockNumber: Int! @index
   timestamp: DateTime! @index
-  bountyName: String!
-  bountyIndex: Int! @index
+  proposalName: String
+  proposalIndex: Int @index
   extrinsicId: String @index
-  # // NB you could just uncomment proposalIndex everywhere but make it nullable here..
-  # // proposalIndex: Int @index
-  proposalHash: String @index
+  beneficiary: String @index
   # // approve,
+  budgetRemaining: BigInt
   # // proposer?: 
   fee: BigInt # fee is calculated at the best effort and may be zero for some old extrinsics
 }
-

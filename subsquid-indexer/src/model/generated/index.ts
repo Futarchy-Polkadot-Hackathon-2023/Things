@@ -1,2 +1,2 @@
 export * from "./account.model"
-export * from "./bounty.model"
+export * from "./proposal.model"

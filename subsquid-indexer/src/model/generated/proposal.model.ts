@@ -2,8 +2,8 @@ import {Entity as Entity_, Column as Column_, PrimaryColumn as PrimaryColumn_, I
 import * as marshal from "./marshal"
 
 @Entity_()
-export class Bounty {
-    constructor(props?: Partial<Bounty>) {
+export class Proposal {
+    constructor(props?: Partial<Proposal>) {
         Object.assign(this, props)
     }
 
@@ -18,12 +18,12 @@ export class Bounty {
     @Column_("timestamp with time zone", {nullable: false})
     timestamp!: Date
 
-    @Column_("text", {nullable: false})
-    bountyName!: string
+    @Column_("text", {nullable: true})
+    proposalName!: string | undefined | null
 
     @Index_()
-    @Column_("int4", {nullable: false})
-    bountyIndex!: number
+    @Column_("int4", {nullable: true})
+    proposalIndex!: number | undefined | null
 
     @Index_()
     @Column_("text", {nullable: true})
@@ -31,7 +31,10 @@ export class Bounty {
 
     @Index_()
     @Column_("text", {nullable: true})
-    proposalHash!: string | undefined | null
+    beneficiary!: string | undefined | null
+
+    @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: true})
+    budgetRemaining!: bigint | undefined | null
 
     @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: true})
     fee!: bigint | undefined | null

@@ -23,27 +23,29 @@ It accumulates [kusama](https://kusama.network) bounty events and serves them vi
 npm run update
 npm ci
 
-# 2. Clean old files if anything has been changed
+# 2. Set the location of a perisitent volume for storage in docker-compose.yml
+
+# 3. Clean old files if anything has been changed
 sqd down
 sqd migration:clean
 
-# 3. Start target Postgres database and detach
+# 4. Start target Postgres database and detach
 sqd up
 
-# 4. prepare db and processor
+# 5. prepare db and processor
 sqd codegen
 sqd migration:generate
 
-# 5. pick a segment of the kusama chain, eg from https://kusama.subscan.io/event?module=bounties&event=all , that you wish to index and edit
+# 6. pick a segment of the kusama chain, eg from https://kusama.subscan.io/event?module=bounties&event=all , that you wish to index and edit
     .setBlockRange({ from: <myStartingBlock> })
 #    in:
      src/processor.ts
 # or just delete that line to index the whole chain (approx 6-8 hours)
 
-# 6. Start the processor
+# 7. Start the processor
 sqd process
 
-# 7. The command above will block the terminal
+# 8. The command above will block the terminal
 #    being busy with fetching the chain data, 
 #    transforming and storing it in the target database.
 #
@@ -51,7 +53,7 @@ sqd process
 #    and run
 sqd serve
 
-# 8. Try out queries in a local graphQL explorer on http://localhost:4350/graphql
+# 9. Try out queries in a local graphQL explorer on http://localhost:4350/graphql
 
 ```
  [local graphQL explorer](http://localhost:4350/graphql)
