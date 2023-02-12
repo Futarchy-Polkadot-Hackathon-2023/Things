@@ -1,4 +1,4 @@
-import SDK from "@zeitgeistpm/sdk";
+import SDK, { util } from "@zeitgeistpm/sdk";
 
 
 const websocketEndpoint = "wss://roc.zeitgeist.pm";
@@ -63,10 +63,44 @@ class ZeitgeistManager {
         });
     }
 
+    async createMarketPlayground() {
+        const sdk = await this.getDefaultSdk();
+        const res = await sdk.models.createCpmmMarketAndDeployAssets({
+            signer: util.signerFromSeed(`//Alice`),
+            oracle: `dE3pPiRvdKqPD5bUDBu3Xpi83McE3Zf3UG8CbhWBQfvUywd7U`,
+            period: { block: [4000, 5000] },
+            marketType: { categorical: 5 },
+            metadata: {
+                categories: [
+                    { name: `karura` },
+                    { name: `moonriver` },
+                    { name: `phala` },
+                    { name: `robonomics` },
+                    { name: `kilt` },
+                ],
+                slug: `kusama-derby-example`,
+                description: `example description`,
+                question: `who will win?`,
+            },
+            mdm: { authorized: `dE3pPiRvdKqPD5bUDBu3Xpi83McE3Zf3UG8CbhWBQfvUywd7U` },
+            swapFee: `1000000000`,
+            amount: `10000000000`,
+            weights: [
+                `10000000000`,
+                `10000000000`,
+                `10000000000`,
+                `10000000000`,
+                `10000000000`,
+            ],
+            callbackOrPaymentInfo: false,
+        });
+        return res;
+    }
 }
 
 const ztgManager = new ZeitgeistManager(websocketEndpoint);
 
-const market_123 = await ztgManager.queryMarket(123)
-console.log(market_123);
-// console.log(await ztgManager.getAllMarketIds());
+// const market_123 = await ztgManager.queryMarket(123)
+// console.log(market_123);
+
+console.log(await ztgManager.createMarketPlayground());
