@@ -11,6 +11,9 @@ services:
     ports:
       - "${DB_PORT}:5432"
       # command: ["postgres", "-c", "log_statement=all"]
-#    volumes:
-#      - ./data/db:/var/lib/postgresql/data
+    volumes:
+      # !! SET THIS TO YOUR PERSISTENT STORAGE LOCATION!!
+      - squid-treasury-v2:/fkndocker/volumes/squid-treasury-v2
+volumes:
+  squid-treasury-v2:
 

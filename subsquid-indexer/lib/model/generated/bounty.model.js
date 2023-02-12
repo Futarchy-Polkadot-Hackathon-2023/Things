@@ -60,34 +60,14 @@ __decorate([
 ], Bounty.prototype, "bountyName", void 0);
 __decorate([
     (0, typeorm_1.Index)(),
-    (0, typeorm_1.Column)("text", { nullable: true }),
-    __metadata("design:type", Object)
-], Bounty.prototype, "extrinsicHash", void 0);
+    (0, typeorm_1.Column)("int4", { nullable: false }),
+    __metadata("design:type", Number)
+], Bounty.prototype, "bountyIndex", void 0);
 __decorate([
     (0, typeorm_1.Index)(),
     (0, typeorm_1.Column)("text", { nullable: true }),
     __metadata("design:type", Object)
 ], Bounty.prototype, "extrinsicId", void 0);
-__decorate([
-    (0, typeorm_1.Column)("bool", { nullable: true }),
-    __metadata("design:type", Object)
-], Bounty.prototype, "extrinsicSuccess", void 0);
-__decorate([
-    (0, typeorm_1.Column)("int4", { nullable: true }),
-    __metadata("design:type", Object)
-], Bounty.prototype, "callArgsIndex", void 0);
-__decorate([
-    (0, typeorm_1.Column)("int4", { nullable: true }),
-    __metadata("design:type", Object)
-], Bounty.prototype, "callArgsBountyId", void 0);
-__decorate([
-    (0, typeorm_1.Column)("text", { nullable: true }),
-    __metadata("design:type", Object)
-], Bounty.prototype, "callArgsBountyRemark", void 0);
-__decorate([
-    (0, typeorm_1.Column)("int4", { nullable: true }),
-    __metadata("design:type", Object)
-], Bounty.prototype, "eventArgsIndex", void 0);
 __decorate([
     (0, typeorm_1.Index)(),
     (0, typeorm_1.Column)("text", { nullable: true }),

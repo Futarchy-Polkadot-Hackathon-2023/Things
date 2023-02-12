@@ -1,35 +1,10 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const archive_registry_1 = require("@subsquid/archive-registry");
-const ss58 = __importStar(require("@subsquid/ss58"));
 const substrate_processor_1 = require("@subsquid/substrate-processor");
 const typeorm_store_1 = require("@subsquid/typeorm-store");
 const typeorm_1 = require("typeorm");
 const model_1 = require("./model");
-const events_1 = require("./types/events");
 const processor = new substrate_processor_1.SubstrateBatchProcessor()
     .setDataSource({
     // Lookup archive by the network name in the Subsquid registry
@@ -39,7 +14,23 @@ const processor = new substrate_processor_1.SubstrateBatchProcessor()
 })
     // .setBlockRange({ from: 6998400 }) // bountyBecameActive
     // .setBlockRange({ from: 6924780, to: 7042000 }) // plenty different type of events in short space
-    .setBlockRange({ from: 6924780 }) // plenty different type of events in short space
+    // .setBlockRange({ from: 6924780 }) // plenty different type of events in short space
+    // .setBlockRange({ from: 6981761 }) // bountyAwarded
+    // .setBlockRange({ from: 6998400 }) // bountyBecameActive
+    // .setBlockRange({ from: 15526366 }) // BountyExtended
+    // .setBlockRange({ from: 15820891 }) // bountyClaimed
+    // .setBlockRange({ from: 10330533 }) // BountyRejected
+    // .setBlockRange({ from: 11847382 }) // BountyCanceled
+    // .setBlockRange({ from: 7691636 }) // BountyExtended
+    .setBlockRange({ from: 10208170 }) // bountyClaimed
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
+    // .setBlockRange({ from: 6219002 }) // bountyAwarded
     .addEvent('Bounties.BountyProposed', {
     data: {
         event: {
@@ -136,52 +127,16 @@ const processor = new substrate_processor_1.SubstrateBatchProcessor()
             }
         }
     }
-})
-    .addEvent('Balances.Transfer', {
-    data: {
-        event: {
-            args: true,
-            extrinsic: {
-                hash: true,
-                fee: true
-            },
-            call: {
-                args: true,
-                error: true
-            }
-        }
-    }
 });
 processor.run(new typeorm_store_1.TypeormDatabase(), async (ctx) => {
-    let transfersData = getTransfers(ctx);
     let bountiesData = getBounties(ctx);
     let accountIds = new Set();
-    for (let t of transfersData) {
-        accountIds.add(t.from);
-        accountIds.add(t.to);
-    }
     let accounts = await ctx.store.findBy(model_1.Account, { id: (0, typeorm_1.In)([...accountIds]) }).then(accounts => {
         return new Map(accounts.map(a => [a.id, a]));
     });
-    let transfersToStore = [];
     let bountiesToStore = [];
-    for (let t of transfersData) {
-        let { id, blockNumber, timestamp, extrinsicHash, amount, fee } = t;
-        let from = getAccount(accounts, t.from);
-        let to = getAccount(accounts, t.to);
-        transfersToStore.push(new model_1.Transfer({
-            id,
-            blockNumber,
-            timestamp,
-            extrinsicHash,
-            from,
-            to,
-            amount,
-            fee
-        }));
-    }
     for (let b of bountiesData) {
-        let { id, blockNumber, timestamp, bountyName, extrinsicHash, extrinsicSuccess, // extrinsicError?,  
+        let { id, blockNumber, timestamp, bountyName, bountyIndex, extrinsicHash, extrinsicSuccess, // extrinsicError?,  
         extrinsicId, callArgsIndex, eventArgsIndex, proposalHash, // proposalIndex, // approve, // proposer?: 
         fee } = b;
         // let proposer = getAccount(accounts, b.proposer)
@@ -190,12 +145,8 @@ processor.run(new typeorm_store_1.TypeormDatabase(), async (ctx) => {
             blockNumber,
             timestamp,
             bountyName,
-            extrinsicHash,
-            extrinsicSuccess,
-            // extrinsicError?, 
+            bountyIndex,
             extrinsicId,
-            callArgsIndex,
-            eventArgsIndex,
             // proposalIndex, 
             proposalHash,
             // approve,
@@ -204,45 +155,8 @@ processor.run(new typeorm_store_1.TypeormDatabase(), async (ctx) => {
         }));
     }
     await ctx.store.save(Array.from(accounts.values()));
-    await ctx.store.insert(transfersToStore);
     await ctx.store.insert(bountiesToStore);
 });
-function getTransfers(ctx) {
-    let transfers = [];
-    for (let block of ctx.blocks) {
-        for (let item of block.items) {
-            if (item.name == "Balances.Transfer") {
-                let e = new events_1.BalancesTransferEvent(ctx, item.event);
-                let rec;
-                if (e.isV1020) {
-                    let [from, to, amount] = e.asV1020;
-                    rec = { from, to, amount };
-                }
-                else if (e.isV1050) {
-                    let [from, to, amount] = e.asV1050;
-                    rec = { from, to, amount };
-                }
-                else if (e.isV9130) {
-                    rec = e.asV9130;
-                }
-                else {
-                    throw new Error('Unsupported spec');
-                }
-                transfers.push({
-                    id: item.event.id,
-                    blockNumber: block.header.height,
-                    timestamp: new Date(block.header.timestamp),
-                    extrinsicHash: item.event.extrinsic?.hash,
-                    from: ss58.codec('kusama').encode(rec.from),
-                    to: ss58.codec('kusama').encode(rec.to),
-                    amount: rec.amount,
-                    fee: item.event.extrinsic?.fee || 0n
-                });
-            }
-        }
-    }
-    return transfers;
-}
 // NB These loops will run for every call and event, not just Bounty -related ones.
 // and they will run once for the event, then once for the call.
 function getBounties(ctx) {
@@ -257,14 +171,9 @@ function getBounties(ctx) {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
+                        bountyIndex: item.event.args.index ||
+                            item.event.args,
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -279,14 +188,9 @@ function getBounties(ctx) {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
+                        bountyIndex: item.event.args.index
+                            || item.event.args[0],
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -296,19 +200,18 @@ function getBounties(ctx) {
                     break;
                 }
                 case "Bounties.BountyAwarded": {
+                    console.log('item=', item);
                     bounties.push({
                         id: item.event.id,
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
+                        // bountyIndex: item.event.args[0],
+                        bountyIndex: 
+                        // @ts-ignore
+                        item.event.call.args.bountyId
+                            || searchItemlikeObjectFor(item.event.call, 'bountyId'),
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -323,7 +226,8 @@ function getBounties(ctx) {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        eventArgsIndex: item.event.args.index,
+                        bountyIndex: item.event.args.index ||
+                            item.event.args,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -337,14 +241,11 @@ function getBounties(ctx) {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
+                        // bountyIndex: item.event.args.index || item.event.args[0],   // :/
+                        // @ts-ignore
+                        bountyIndex: item.event.args.index || // eg 15820891   (also event.call.args.bountyId)
+                            item.event.args[0],
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -359,14 +260,11 @@ function getBounties(ctx) {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
+                        bountyIndex: searchItemlikeObjectFor(item.event.call, 'bountyId')
+                            || item.event.args.index // (eg 15526366)
+                            || item.event.args,
+                        // bountyIndex: item.event.call.args.bountyIndex,     // (eg 14534356 some earlier like this, some not)
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -381,14 +279,8 @@ function getBounties(ctx) {
                         bountyName: item.event.name,
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
+                        bountyIndex: item.event.args.index,
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -426,5 +318,21 @@ function getAccount(m, id) {
         m.set(id, acc);
     }
     return acc;
+}
+// uurgh
+function searchItemlikeObjectFor(obj, key) {
+    if (obj[key] !== undefined)
+        return obj[key];
+    if (obj.args !== undefined && obj.args[key] !== undefined)
+        return obj.args[key];
+    if (obj.value !== undefined && obj.value[key] !== undefined)
+        return obj.value[key];
+    if (obj.args !== undefined && obj.args.call !== undefined) {
+        const iShallRecurThisOnlyOnce = obj.args.call;
+        if (iShallRecurThisOnlyOnce.value !== undefined && iShallRecurThisOnlyOnce.value[key] !== undefined)
+            return iShallRecurThisOnlyOnce.value[key];
+        if (iShallRecurThisOnlyOnce.value !== undefined && iShallRecurThisOnlyOnce.value.call !== undefined && iShallRecurThisOnlyOnce.value.call.value !== undefined && iShallRecurThisOnlyOnce.value.call.value[key] !== undefined)
+            return iShallRecurThisOnlyOnce.value.call.value[key];
+    }
 }
 //# sourceMappingURL=processor.js.map

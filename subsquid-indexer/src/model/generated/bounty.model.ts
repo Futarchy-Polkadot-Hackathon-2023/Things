@@ -22,27 +22,12 @@ export class Bounty {
     bountyName!: string
 
     @Index_()
-    @Column_("text", {nullable: true})
-    extrinsicHash!: string | undefined | null
+    @Column_("int4", {nullable: false})
+    bountyIndex!: number
 
     @Index_()
     @Column_("text", {nullable: true})
     extrinsicId!: string | undefined | null
-
-    @Column_("bool", {nullable: true})
-    extrinsicSuccess!: boolean | undefined | null
-
-    @Column_("int4", {nullable: true})
-    callArgsIndex!: number | undefined | null
-
-    @Column_("int4", {nullable: true})
-    callArgsBountyId!: number | undefined | null
-
-    @Column_("text", {nullable: true})
-    callArgsBountyRemark!: string | undefined | null
-
-    @Column_("int4", {nullable: true})
-    eventArgsIndex!: number | undefined | null
 
     @Index_()
     @Column_("text", {nullable: true})

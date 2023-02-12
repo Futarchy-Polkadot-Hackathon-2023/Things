@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Account = void 0;
 const typeorm_1 = require("typeorm");
-const transfer_model_1 = require("./transfer.model");
 let Account = class Account {
     constructor(props) {
         Object.assign(this, props);
@@ -21,14 +20,6 @@ __decorate([
     (0, typeorm_1.PrimaryColumn)(),
     __metadata("design:type", String)
 ], Account.prototype, "id", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => transfer_model_1.Transfer, e => e.to),
-    __metadata("design:type", Array)
-], Account.prototype, "transfersTo", void 0);
-__decorate([
-    (0, typeorm_1.OneToMany)(() => transfer_model_1.Transfer, e => e.from),
-    __metadata("design:type", Array)
-], Account.prototype, "transfersFrom", void 0);
 Account = __decorate([
     (0, typeorm_1.Entity)(),
     __metadata("design:paramtypes", [Object])
