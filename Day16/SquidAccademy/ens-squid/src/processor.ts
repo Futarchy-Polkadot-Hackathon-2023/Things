@@ -354,6 +354,9 @@ const processor = new EvmBatchProcessor()
   chain: process.env.RPC_ENDPOINT,
   archive: "https://eth.archive.subsquid.io",
 })
+.setBlockRange({
+  from: 13243690
+})
 .addLog(contractAddress, {
   filter: [
     [
