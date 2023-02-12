@@ -3,16 +3,18 @@ import SDK, { util } from "@zeitgeistpm/sdk";
 
 const websocketEndpoint = "wss://roc.zeitgeist.pm";
 // endpoint = "wss://bsr.zeitgeist.pm",
+//  Rococo testnet  wss://roc.zeitgeist.pm
+// wss://zeitgeist.api.onfinality.io/public-ws
 
 class ZeitgeistManager {
     constructor(endpoint) {
         this._endpoint = endpoint;
     }
 
-    async getSdk(){
+    async getSdk() {
         return await SDK.default.initialize(this._endpoint);
     }
-    async getDefaultSdk(){
+    async getDefaultSdk() {
         return await SDK.default.initialize();
     }
     async jsonify (promise) {
