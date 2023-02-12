@@ -109,4 +109,4 @@ const ztgManager = new ZeitgeistManager(websocketEndpoint);
 
 
 const sdk = await ztgManager.getDefaultSdk();
-console.log(await new models.default(sdk.api, sdk.errorTable, {MAX_RPC_REQUESTS: 3000}).getAllMarketIds())
+console.log(await new models.default(sdk.api, sdk.errorTable, {MAX_RPC_REQUESTS: 33000}).getAllMarketIds())
