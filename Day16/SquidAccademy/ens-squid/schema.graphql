@@ -27,3 +27,12 @@ type Transfer @entity{
   block: Int! @index
   transactionHash: String
 }
+
+# type LandOwner @entity{
+#   owner: String!,
+#   lands: []
+# }
+# type land @entity{
+#   positionX: number
+#   positionY: number
+# }

@@ -1,64 +1,109 @@
-import { TypeormDatabase } from '@subsquid/typeorm-store';
-import {EvmBatchProcessor} from '@subsquid/evm-processor'
-import { lookupArchive } from '@subsquid/archive-registry'
-import assert from 'assert';
-import { Burn } from './model';
+import { Store, TypeormDatabase } from "@subsquid/typeorm-store";
+import { BlockHandlerContext, EvmBatchProcessor, LogHandlerContext } from "@subsquid/evm-processor";
+import { lookupArchive } from "@subsquid/archive-registry";
+// import assert from "assert";
+import { events } from "./abi/ens";
+// import { Burn } from './model';
 
+const contractAddress =
+  "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85".toLowerCase();
 const processor = new EvmBatchProcessor()
   .setDataSource({
-    // uncomment and set RPC_ENDPOONT to enable contract state queries. 
-    // Both https and wss endpoints are supported. 
-    // chain: process.env.RPC_ENDPOINT,
+    // uncomment and set RPC_ENDPOONT to enable contract state queries.
+    // Both https and wss endpoints are supported.
+    chain: process.env.RPC_ENDPOINT,
 
-    // Change the Archive endpoints for run the squid 
+    // Change the Archive endpoints for run the squid
     // against the other EVM networks
     // For a full list of supported networks and config options
     // see https://docs.subsquid.io/develop-a-squid/evm-processor/configuration/
 
-    archive: lookupArchive('eth-mainnet'),
+    archive: lookupArchive("eth-mainnet"),
   })
-  .addTransaction([
-    '0x0000000000000000000000000000000000000000'
-  ], {
-    range: {
-      from: 6_000_000
-    },
+  .addLog(contractAddress, {
+    filter: [[events.Transfer.topic]],
     data: {
+      evmLog: {
+        topics: true,
+        data: true,
+      },
       transaction: {
-        from: true,
-        value: true,
-        hash: true
-      }
-    }
+        hash: true,
+      },
+    },
   });
 
-function formatID(height:any, hash:string) {
-  return `${String(height).padStart(10, '0')}-${hash.slice(3,8)}` 
-
-} 
-
 processor.run(new TypeormDatabase(), async (ctx) => {
-  const burns: Burn[] = []
+  const ensDataArr: ENSData[] = []
   for (let c of ctx.blocks) {
     for (let i of c.items) {
-      assert(i.kind == 'transaction')
-      // decode and normalize the tx data
-      burns.push(new Burn({
-        id: formatID(c.header.height, i.transaction.hash),
-        block: c.header.height,
-        address: i.transaction.from,
-        value: i.transaction.value,
-        txHash: i.transaction.hash
-      }))
+      if (i.address === contractAddress && i.kind === "evmLog") {
+        if (i.evmLog.topics[0] === events.Transfer.topic) {
+          const ensData = handleTransfer({
+            ...ctx,
+            block: c.header,
+            ...i
+          })
+          ensDataArr.push(ensData)
+        }
+      }
     }
-   }
-   // apply vectorized transformations and aggregations
-   const burned = burns.reduce((acc, b) => acc + b.value, 0n)/1_000_000_000n
-   const startBlock = ctx.blocks.at(0)?.header.height
-   const endBlock = ctx.blocks.at(-1)?.header.height
-   ctx.log.info(`Burned ${burned} Gwei from ${startBlock} to ${endBlock}`)
+  }
+  // apply vectorized transformations and aggregations
 
-   // upsert batches of entities with batch-optimized ctx.store.save
-   await ctx.store.save(burns)
+  // upsert batches of entities with batch-optimized ctx.store.save
+  // await ctx.store.save(burns)
 });
 
+type ENSData = {
+  id: string;
+  from: string;
+  to: string;
+  tokenId: bigint;
+  timestamp: bigint;
+  block: number;
+  transactionhash: string;
+};
+
+function handleTransfer(
+  ctx: LogHandlerContext<
+    Store,
+    {
+      evmLog: {
+        topics: true;
+        data: true;
+      };
+      transaction: {
+        hash: true;
+      };
+    }
+  >
+): ENSData {
+  const { evmLog, block, transaction } = ctx;
+  const { from, to, tokenId } = events.Transfer.decode(evmLog);
+  const ensData: ENSData = {
+    id: `${transaction.hash}-${evmLog.address}-${tokenId.toBigInt()}-${
+      evmLog.index
+    }`,
+    from,
+    to,
+    tokenId: tokenId.toBigInt(),
+    timestamp: BigInt(block.timestamp),
+    block: block.height,
+    transactionhash: transaction.hash,
+  };
+  return ensData;
+}
+
+async function saveEnsData(
+  ctx: BlockHandlerContext<Store>,
+  ensDataArr: ENSData[]
+){
+  const tokenIds: Set<string> = new Set();
+  const ownerIds: Set<string> = new Set();
+  for(const ensData of ensDataArr){
+    tokenIds.add(ensData.tokenId.toString())
+    ownerIds.add(ensData.from.toLowerCase())
+    ownerIds.add(ensData.to.toLowerCase())
+  }
+}
