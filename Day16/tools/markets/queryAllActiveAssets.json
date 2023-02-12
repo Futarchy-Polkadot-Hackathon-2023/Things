@@ -1,0 +1,140 @@
+[
+    {
+        "baseWeight": 100000000000,
+        "weight": 50000000000,
+        "marketId": 372,
+        "poolAccount": "dE1VdxVn8xy7HFNWfF1jucr9ndHhDfD2QxAG8TtYWN69USj4P",
+        "poolId": 66,
+        "assetId": {
+            "categoricalOutcome": [
+                372,
+                1
+            ]
+        },
+        "metadata": {
+            "name": "NO",
+            "ticker": "IRNO",
+            "color": "#F58473",
+            "img": null
+        },
+        "marketSlug": "us inflation rate",
+        "swapFee": "",
+        "qty": "2510853907282",
+        "price": 0.33497113106471077
+    },
+    {
+        "baseWeight": 100000000000,
+        "weight": 50000000000,
+        "marketId": 372,
+        "poolAccount": "dE1VdxVn8xy7HFNWfF1jucr9ndHhDfD2QxAG8TtYWN69USj4P",
+        "poolId": 66,
+        "assetId": {
+            "categoricalOutcome": [
+                372,
+                0
+            ]
+        },
+        "metadata": {
+            "name": "YES",
+            "ticker": "IRYES",
+            "color": "#B679D0",
+            "img": null
+        },
+        "marketSlug": "us inflation rate",
+        "swapFee": "",
+        "qty": "1264704316919",
+        "price": 0.6650278345767417
+    },
+    {
+        "baseWeight": 100000000000,
+        "weight": 50000000000,
+        "marketId": 367,
+        "poolAccount": "dE1VdxVn8xy7HFNWfF1jN8o4cQJLpk6pfUpP7N1AqSSQ1uLDY",
+        "poolId": 64,
+        "assetId": {
+            "categoricalOutcome": [
+                367,
+                0
+            ]
+        },
+        "metadata": {
+            "name": "Yes",
+            "ticker": "SCRY",
+            "color": "#F9A4D6",
+            "img": null
+        },
+        "marketSlug": "Star Citizen 2025 Release",
+        "swapFee": "",
+        "qty": "1065604688444",
+        "price": 0.5157172928799292
+    },
+    {
+        "baseWeight": 100000000000,
+        "weight": 50000000000,
+        "marketId": 367,
+        "poolAccount": "dE1VdxVn8xy7HFNWfF1jN8o4cQJLpk6pfUpP7N1AqSSQ1uLDY",
+        "poolId": 64,
+        "assetId": {
+            "categoricalOutcome": [
+                367,
+                1
+            ]
+        },
+        "metadata": {
+            "name": "No",
+            "ticker": "SCRN",
+            "color": "#B8F5E5",
+            "img": null
+        },
+        "marketSlug": "Star Citizen 2025 Release",
+        "swapFee": "",
+        "qty": "1134786301111",
+        "price": 0.4842768763303438
+    },
+    {
+        "baseWeight": 100000000000,
+        "weight": 50000000000,
+        "marketId": 190,
+        "poolAccount": "dE1VdxVn8xy7HFNWfF1g7EUXZ4NETFTcAem6zkgvotXuGg13E",
+        "poolId": 52,
+        "assetId": {
+            "categoricalOutcome": [
+                190,
+                0
+            ]
+        },
+        "metadata": {
+            "name": "Yes",
+            "ticker": "JBY",
+            "color": "#5d37de",
+            "img": null
+        },
+        "marketSlug": "Joe Biden (impeachment)",
+        "swapFee": "",
+        "qty": "1283385463848",
+        "price": 0.47809717804951757
+    },
+    {
+        "baseWeight": 100000000000,
+        "weight": 50000000000,
+        "marketId": 190,
+        "poolAccount": "dE1VdxVn8xy7HFNWfF1g7EUXZ4NETFTcAem6zkgvotXuGg13E",
+        "poolId": 52,
+        "assetId": {
+            "categoricalOutcome": [
+                190,
+                1
+            ]
+        },
+        "metadata": {
+            "name": "No",
+            "ticker": "JBN",
+            "color": "#185908",
+            "img": null
+        },
+        "marketSlug": "Joe Biden (impeachment)",
+        "swapFee": "",
+        "qty": "1175662958783",
+        "price": 0.5219038024729953
+    }
+]
