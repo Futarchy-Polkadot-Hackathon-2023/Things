@@ -1,5 +1,4 @@
-import {Entity as Entity_, Column as Column_, PrimaryColumn as PrimaryColumn_, OneToMany as OneToMany_} from "typeorm"
-import {Transfer} from "./transfer.model"
+import {Entity as Entity_, Column as Column_, PrimaryColumn as PrimaryColumn_} from "typeorm"
 
 @Entity_()
 export class Account {
@@ -12,10 +11,4 @@ export class Account {
      */
     @PrimaryColumn_()
     id!: string
-
-    @OneToMany_(() => Transfer, e => e.to)
-    transfersTo!: Transfer[]
-
-    @OneToMany_(() => Transfer, e => e.from)
-    transfersFrom!: Transfer[]
 }

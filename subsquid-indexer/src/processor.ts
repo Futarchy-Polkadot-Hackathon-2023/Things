@@ -3,8 +3,7 @@ import * as ss58 from "@subsquid/ss58"
 import {BatchContext, BatchProcessorItem, SubstrateBatchProcessor} from "@subsquid/substrate-processor"
 import {Store, TypeormDatabase} from "@subsquid/typeorm-store"
 import {In} from "typeorm"
-import {Account, Transfer, Bounty} from "./model"
-import {BalancesTransferEvent} from "./types/events"
+import {Account, Bounty} from "./model"
 
 
 const processor = new SubstrateBatchProcessor()
@@ -131,21 +130,6 @@ const processor = new SubstrateBatchProcessor()
             }
         }
     } as const)
-    .addEvent('Balances.Transfer', {
-        data: {
-            event: {
-                args: true,
-                extrinsic: {
-                    hash: true,
-                    fee: true
-                },
-                call: {
-                    args: true,
-                    error: true
-                }
-            }
-        }
-    } as const)
 
 
 type Item = BatchProcessorItem<typeof processor>
@@ -153,39 +137,14 @@ type Ctx = BatchContext<Store, Item>
 
 
 processor.run(new TypeormDatabase(), async ctx => {
-    let transfersData = getTransfers(ctx)
     let bountiesData = getBounties(ctx)
 
     let accountIds = new Set<string>()
-    for (let t of transfersData) {
-        accountIds.add(t.from)
-        accountIds.add(t.to)
-    }
-
     let accounts = await ctx.store.findBy(Account, {id: In([...accountIds])}).then(accounts => {
         return new Map(accounts.map(a => [a.id, a]))
     })
 
-    let transfersToStore: Transfer[] = []
     let bountiesToStore: Bounty[] = []
-
-    for (let t of transfersData) {
-        let {id, blockNumber, timestamp, extrinsicHash, amount, fee} = t
-
-        let from = getAccount(accounts, t.from)
-        let to = getAccount(accounts, t.to)
-
-        transfersToStore.push(new Transfer({
-            id,
-            blockNumber,
-            timestamp,
-            extrinsicHash,
-            from,
-            to,
-            amount,
-            fee
-        }))
-    }
 
     for (let b of bountiesData) {
         let {
@@ -201,12 +160,7 @@ processor.run(new TypeormDatabase(), async ctx => {
             timestamp,
             bountyName,
             bountyIndex,
-            extrinsicHash,
-            extrinsicSuccess ,
-            // extrinsicError?, 
             extrinsicId,
-            callArgsIndex,
-            eventArgsIndex, 
             // proposalIndex, 
             proposalHash,
             // approve,
@@ -216,21 +170,10 @@ processor.run(new TypeormDatabase(), async ctx => {
     }
 
     await ctx.store.save(Array.from(accounts.values()))
-    await ctx.store.insert(transfersToStore)
     await ctx.store.insert(bountiesToStore)
 })
 
 
-interface TransferEvent {
-    id: string
-    blockNumber: number
-    timestamp: Date
-    extrinsicHash?: string
-    from: string
-    to: string
-    amount: bigint
-    fee?: bigint
-}
 
 interface BountyEvent {
     id: string
@@ -256,41 +199,6 @@ interface BountyEvent {
 }
 
 
-function getTransfers(ctx: Ctx): TransferEvent[] {
-    let transfers: TransferEvent[] = []
-    for (let block of ctx.blocks) {
-        for (let item of block.items) {
-            if (item.name == "Balances.Transfer") {
-                let e = new BalancesTransferEvent(ctx, item.event)
-                let rec: {from: Uint8Array, to: Uint8Array, amount: bigint}
-                if (e.isV1020) {
-                    let [from, to, amount] = e.asV1020
-                    rec = { from, to, amount}
-                } else if (e.isV1050) {
-                    let [from, to, amount] = e.asV1050
-                    rec = { from, to, amount}
-                } else if (e.isV9130) {
-                    rec = e.asV9130
-                } else {
-                    throw new Error('Unsupported spec')
-                }
-                
-                transfers.push({
-                    id: item.event.id,
-                    blockNumber: block.header.height,
-                    timestamp: new Date(block.header.timestamp),
-                    extrinsicHash: item.event.extrinsic?.hash,
-                    from: ss58.codec('kusama').encode(rec.from),
-                    to: ss58.codec('kusama').encode(rec.to),
-                    amount: rec.amount,
-                    fee: item.event.extrinsic?.fee || 0n
-                })
-            }
-        }
-    }
-    return transfers
-}
-
 // NB These loops will run for every call and event, not just Bounty -related ones.
 // and they will run once for the event, then once for the call.
 function getBounties(ctx: Ctx): BountyEvent[] {
@@ -309,16 +217,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyIndex: 
                             item.event.args.index ||
                             item.event.args,
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgs: item.event.args,
-                        eventArgsIndex: item.event.args.index,
-                        callArgs: item.event.call?.args,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -337,14 +236,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyIndex: 
                             item.event.args.index 
                             || item.event.args[0],
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -367,14 +259,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         // @ts-ignore
                             item.event.call.args.bountyId
                             || searchItemlikeObjectFor(item.event.call, 'bountyId'),
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -393,7 +278,6 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyIndex: 
                             item.event.args.index ||
                             item.event.args,
-                        eventArgsIndex: item.event.args.index,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -414,14 +298,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         bountyIndex: 
                         item.event.args.index ||     // eg 15820891   (also event.call.args.bountyId)
                             item.event.args[0],      // eg 
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -441,14 +318,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                             || item.event.args.index  // (eg 15526366)
                             || item.event.args,     // exists (eg 7691636) but may not be correct
                         // bountyIndex: item.event.call.args.bountyIndex,     // (eg 14534356 some earlier like this, some not)
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
@@ -466,14 +336,7 @@ function getBounties(ctx: Ctx): BountyEvent[] {
                         blockNumber: block.header.height,
                         timestamp: new Date(block.header.timestamp),
                         bountyIndex: item.event.args.index,
-                        extrinsicHash: item.event.extrinsic?.hash,
-                        extrinsicSuccess: item.event.extrinsic?.success,
-                        // extrinsicError: item.event.extrinsic?.error?,
                         extrinsicId: item.event.extrinsic?.id,
-                        eventArgsIndex: item.event.args.index,
-                        callArgsIndex: item.event.call?.args.index,
-                        callArgsBountyId: item.event.call?.args.bountyId,
-                        callArgsBountyRemark: item.event.call?.args.remark,
                         // proposalIndex: item.event.call?.args.proposalIndex,
                         proposalHash: item.event.call?.args.proposalHash,
                         // TODO: locate item.event.call.args.approve : bool
