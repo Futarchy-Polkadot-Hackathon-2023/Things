@@ -1,4 +1,4 @@
-import SDK, { util } from "@zeitgeistpm/sdk";
+import SDK, { util, models } from "@zeitgeistpm/sdk";
 
 
 const websocketEndpoint = "wss://roc.zeitgeist.pm";
@@ -34,6 +34,7 @@ class ZeitgeistManager {
     async queryMarket(marketId) {
         const sdk = await this.getDefaultSdk();
         //return (await sdk.models.queryMarket(marketId)).toJSONString();
+
         return this.jsonify(sdk.models.queryMarket(marketId))
     }
 
@@ -104,5 +105,8 @@ const ztgManager = new ZeitgeistManager(websocketEndpoint);
 
 // const market_123 = await ztgManager.queryMarket(123)
 // console.log(market_123);
+// console.log(await ztgManager.getMarketCount());
 
-console.log(await ztgManager.createMarketPlayground());
+
+const sdk = await ztgManager.getDefaultSdk();
+console.log(await new models.default(sdk.api, sdk.errorTable, {MAX_RPC_REQUESTS: 3000}).getAllMarketIds())
