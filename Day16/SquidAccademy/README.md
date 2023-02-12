@@ -102,4 +102,32 @@ type Transfer @entity{
 - `npx squid-evm-typegen src/abi ens.json`
 - in src/abi is now a ens.ts file. It has a bunch of things. And a contract class, whatever that mean
 
+# Mapping logic
+- add ankr as a free rpc endpoint
+- addLog to processor
+- create a const for contract adress
+- addLog takes a contract adress and a object.
+- it takes a propertie filter
+- it takes data , evmLogs& transaction are a a example
+- the processors thars always with a loop.
+- first the loop 1 block, loop 2 items
+- a bunch of if statemts help, f.e. contractAddress === items.address or items.kind === "evmlog"
+
+- Lets write a type of what I actually want
+- Lets write a function which does the indexing, its a huge generic
+- we can use descrutions of context object and the events form a import
+- now fill that shit into a variable of the type that we previosuly defined
+
+- back to the loop thingy
+- lets  add Memoazistion, basicall create object over the loopy
+
+-  add function saveDate
+- it tatkes the context, and a array
+- declare variables as sets of what I want, f.e. tokenId and ownerId 
+- loop for the array and respective data
+- in the end call store 
+
+- Definitly check out the medium. [link](https://medium.com/subsquid/blockchain-data-indexing-a-full-course-lesson-2-efd292fb0327)
+
+# Run and verify
 
