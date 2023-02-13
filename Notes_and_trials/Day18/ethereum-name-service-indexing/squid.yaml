@@ -1,11 +1,13 @@
 manifestVersion: subsquid.io/v0.1
-name: evm-template
+name: ens-tracker-frankbevr
 version: 1
 description: |-
-  The very first evm squid from manifest  
+  A Squid tracking ENS tokens  
 build:
 
 deploy:
+  secrets:
+    - RPC_ENDPOINT
   addons:
     postgres:
   processor:
