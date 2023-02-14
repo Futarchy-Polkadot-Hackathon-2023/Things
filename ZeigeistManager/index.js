@@ -1,132 +1,106 @@
 import SDK, { util, models } from "@zeitgeistpm/sdk";
+import * as dotenv from 'dotenv';
+dotenv.config()
 
 
-const websocketEndpoint = "wss://roc.zeitgeist.pm";
-// endpoint = "wss://bsr.zeitgeist.pm",
-//  Rococo testnet  wss://roc.zeitgeist.pm
-// wss://zeitgeist.api.onfinality.io/public-ws
+const websocketEndpoint = ["wss://bsr.zeitgeist.pm", // default sdk url
+    "wss://bsr.zeitgeist.pm",
+    "wss://roc.zeitgeist.pm",  //Rococo testnet
+    "wss://zeitgeist.api.onfinality.io/public-ws",
+    "wss://bp-rpc.zeitgeist.pm",
+][0]
+
+
 
 class ZeitgeistManager {
-    constructor(endpoint) {
+    constructor(endpoint=websocketEndpoint) {
         this._endpoint = endpoint;
+        this._opts = {
+            logEndpointInitTime: true,
+            ipfsClientUrl: "http://localhost:8080",
+            initialConnectionTries: 5,
+        }
     }
 
-    async getSdk() {
-        return await SDK.default.initialize(this._endpoint);
+    async getSdk(endpoint=this._endpoint) {
+        return await SDK.default.initialize(endpoint, this._opts);
     }
-    async getDefaultSdk() {
-        return await SDK.default.initialize();
-    }
+
     async jsonify (promise) {
         return (await promise).toJSONString();
     }
 
     async getMarketCount() {
-        const sdk = await this.getDefaultSdk();
+        const sdk = await this.getSdk();
         return sdk.models.getMarketCount();
     }
 
     async getAllMarketIds() {
-        const sdk = await this.getDefaultSdk();
+        const sdk = await this.getSdk();
         return sdk.models.getAllMarketIds();
     }
 
     async queryMarket(marketId) {
-        const sdk = await this.getDefaultSdk();
-        //return (await sdk.models.queryMarket(marketId)).toJSONString();
-
+        const sdk = await this.getSdk();
         return this.jsonify(sdk.models.queryMarket(marketId))
     }
 
-    async createScalarMarket(baseAsset, oracle, period, gracePeriod, oracleDuration, disputeDuration, bounds,
-                             advised, endpoint, seed, timestamp, cpmm, metadata, disputeMechanism) {
-        const sdk = await this.getDefaultSdk();
-        const signer = sdk.util.signerFromSeed(seed);
-        const marketPeriod = timestamp
-            ? { timestamp: period.split(` `).map((x) => +x) }
-            : { block: period.split(` `).map((x) => +x) };
-        const deadlines = {
-            gracePeriod: gracePeriod,
-            oracleDuration: oracleDuration,
-            disputeDuration: disputeDuration,
+
+    async createCategoricalMarket() {
+        const sdk = await this.getSdk();
+
+        // Generate signer based on seed
+        const seed = process.env.seed;
+        const signer = util.signerFromSeed(seed);
+        console.log("Sending transaction from", signer.address);
+
+        // Construct Market metadata
+        const description = "description for test";
+        const slug = "test";
+        const question = "Will this test work?";
+        const categoriesMeta = [
+            { name: "Yes", ticker: "YES" },
+            { name: "No", ticker: "NO" },
+        ];
+
+        const metadata = {
+            description,
+            slug,
+            question,
+            categories: categoriesMeta,
         };
 
-        sdk.models.createMarket({
-            signer,
-            baseAsset,
-            oracle,
+        const oracle = "5CS2Q1XbRR1eYnxeXUm8fqq6PfK3WLfwUvCpNvGsYAjKtsUC";
+        const period = "1000000";
+        const marketPeriod = {
+            block: period.split(" ").map((x) => +x),
+        };
+        const mdm = { authorized: "1" };
+        const creationType = "Advised";
+        const scoringRule = "CPMM";
+        const marketType = { Categorical: categoriesMeta.length };
+
+        const params = {
+            signer: signer,
+            oracle: oracle,
             period: marketPeriod,
-            deadlines,
-            metadata,
-            creationType: advised ? `Advised` : `Permissionless`,
-            marketType: { scalar: bounds ? bounds : ["0", "100"] },
-            disputeMechanism,
-            scoringRule: cpmm ? `CPMM` : `RikiddoSigmoidFeeMarketEma`,
+            metadata: metadata,
+            creationType: creationType,
+            marketType: marketType,
+            disputeMechanism: mdm,
+            scoringRule: scoringRule,
             callbackOrPaymentInfo: false,
-        });
+        };
+
+        const marketId = await sdk.models.createMarket(params);
+        console.log(`Categorical market created! Market Id: ${marketId}`);
     }
 
-    async createMarketPlayground() {
-        const sdk = await this.getDefaultSdk();
-        const res = await sdk.models.createCpmmMarketAndDeployAssets({
-            signer: util.signerFromSeed(`//Alice`),
-            oracle: `dE3pPiRvdKqPD5bUDBu3Xpi83McE3Zf3UG8CbhWBQfvUywd7U`,
-            period: { block: [4000, 5000] },
-            marketType: { categorical: 5 },
-            metadata: {
-                categories: [
-                    { name: `karura` },
-                    { name: `moonriver` },
-                    { name: `phala` },
-                    { name: `robonomics` },
-                    { name: `kilt` },
-                ],
-                slug: `kusama-derby-example`,
-                description: `example description`,
-                question: `who will win?`,
-            },
-            mdm: { authorized: `dE3pPiRvdKqPD5bUDBu3Xpi83McE3Zf3UG8CbhWBQfvUywd7U` },
-            swapFee: `1000000000`,
-            amount: `10000000000`,
-            weights: [
-                `10000000000`,
-                `10000000000`,
-                `10000000000`,
-                `10000000000`,
-                `10000000000`,
-            ],
-            callbackOrPaymentInfo: false,
-        });
-        return res;
-    }
 }
 
 const ztgManager = new ZeitgeistManager(websocketEndpoint);
 
-// const market_123 = await ztgManager.queryMarket(123)
-// console.log(market_123);
-// console.log(await ztgManager.getMarketCount());
-
-const sdk = await ztgManager.getDefaultSdk();
-const models_default = new models.default(sdk.api, sdk.errorTable, {MAX_RPC_REQUESTS: 33000});
-console.log(await models_default.getAllMarketIds())
-
-
-// creation
-
-const params =  {
-        signer: "KeyringPairOrExtSigner",
-        baseAsset: "string",
-        oracle: "string",
-        period: "MarketPeriod",
-        deadlines: "MarketDeadlines",
-        metadata: "DecodedMarketMetadata",
-        creationType: "string",
-        marketType: "MarketTypeOf",
-        disputeMechanism: "string",
-        scoringRule: "string",
-        callbackOrPaymentInfo: false
-}
-const newMarket = await models_default.createMarket(params);
-
-
+ztgManager.getAllMarketIds()
+    .then(console.log)
+    .catch(console.error)
+    .finally(() => process.exit());
