@@ -1,5 +1,6 @@
 // examples:
 // https://github.com/zeitgeistpm/tools/blob/main/examples/index/createMarket.ts
+// https://docs-git-sdk-v2-zeitgeistpm.vercel.app/docs/build/sdk/v2/getting-started
 
 import SDK, { util, models } from "@zeitgeistpm/sdk";
 import * as dotenv from 'dotenv';

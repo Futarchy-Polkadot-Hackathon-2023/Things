@@ -100,7 +100,12 @@ class ZeitgeistManager {
 
 const ztgManager = new ZeitgeistManager(websocketEndpoint);
 
-ztgManager.getAllMarketIds()
+// ztgManager.getAllMarketIds()
+//     .then(console.log)
+//     .catch(console.error)
+//     .finally(() => process.exit());
+
+ztgManager.createCategoricalMarket()
     .then(console.log)
     .catch(console.error)
     .finally(() => process.exit());
