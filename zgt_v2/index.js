@@ -2,7 +2,7 @@ import {create, mainnet, batterystation, ZTG, swapFeeFromFloat} from "@zeitgeist
 import { IPFS } from "@zeitgeistpm/web3.storage";
 import { Keyring } from "@polkadot/keyring";
 import {cryptoWaitReady} from  "@polkadot/util-crypto"
-import { ZtgConfiguration } from "./ztgConfiguration"
+import { ZtgConfiguration } from "./ztgConfiguration.js"
 import * as dotenv from 'dotenv';
 dotenv.config()
 
@@ -70,16 +70,17 @@ class ZtgManager {
         };
 
         const response = await sdk.model.markets.create(params);
+
         // extracts the market and pool creation events from block
         const { market, pool } = response.saturate().unwrap();
+
         let marketCreationResult = new MarketCreationResult();
         marketCreationResult.marketId = market;
         marketCreationResult.poolId = pool;
         marketCreationResult.success = true;
-        marketCreationResult.isTestnet = await this.isMainnet();
+        marketCreationResult.isMainnet = await this.isMainnet();
 
-        console.log(`Market created with id: ${market.marketId}`);
-        console.log(`Pool created with id: ${pool.poolId}`);
+        console.log(`Market created on ${await this.isMainnet()? "mainnet" : "battery station"} with id: ${market.marketId}. Pool created with id: ${pool.poolId}`);
 
         return marketCreationResult;
     }
