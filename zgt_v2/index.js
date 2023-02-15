@@ -3,6 +3,7 @@ import { IPFS } from "@zeitgeistpm/web3.storage";
 import { Keyring } from "@polkadot/keyring";
 import {cryptoWaitReady} from  "@polkadot/util-crypto"
 import { ZtgConfiguration } from "./ztgConfiguration.js"
+import { MarketStatus } from "@zeitgeistpm/indexer";
 import * as dotenv from 'dotenv';
 dotenv.config()
 
@@ -21,14 +22,26 @@ class ZtgManager {
         return process.env.mainnet && process.env.mainnet === "true";
     }
 
-    async getMarket(marketId) {
+    async getMarketById(marketId) {
         const sdk = await this.getSdk();
         return await sdk.model.markets.get(marketId);
     }
 
-    async getAllMarketIds() {
+    async getMarketById2(marketId) {
         const sdk = await this.getSdk();
-        return await sdk.model.markets.get();
+        return await sdk.model.markets.list({
+            limit: 10,
+            where: {
+                status_eq: MarketStatus.Active,
+                marketId: marketId
+            },
+        });
+    }
+
+    async listAllMarkets() {
+        const sdk = await this.getSdk();
+        return await sdk.model.markets.list();
+        // return await sdk.model.markets.get();
     }
 
     async createMarket(marketCreationArguments) {
@@ -90,11 +103,9 @@ class ZtgManager {
 
 const manager = new ZtgManager();
 
-// manager.getAllMarketIds()
-//     .then(console.log)
-//     .catch(console.error)
-//     .finally(() => process.exit());
-manager.getMarket(568)
+
+
+manager.getMarketById2(568)
     .then(console.log)
     .catch(console.error)
     .finally(() => process.exit());
