@@ -7,9 +7,8 @@ const dataInput = {
 
 /* Mock Data Output */
 const dataOutput = {
-  oCreateMarketA: "",
-  oCreateMarketB: "",
-  oCreateMarketC: "",
+  postId: "1596",
+  comment: "Sweet Comment",
 };
 
 /* Main function Declartion */
