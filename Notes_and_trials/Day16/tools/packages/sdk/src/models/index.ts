@@ -326,7 +326,7 @@ export default class Models {
       const fee = estimatedFee(tx, signer.address);
       return fee;
     }
-
+    console.log("dsasddas", metadata);
     const cid = await this.ipfsClient.add(
       JSON.stringify({
         ...metadata,

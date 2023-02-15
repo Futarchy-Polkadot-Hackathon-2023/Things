@@ -17,13 +17,14 @@ class ZeitgeistManager {
         this._endpoint = endpoint;
         this._opts = {
             logEndpointInitTime: true,
-            ipfsClientUrl: "http://localhost:8080",
+            ipfsClientUrl: "http://localhost:5001",
             initialConnectionTries: 5,
         }
     }
 
     async getSdk(endpoint=this._endpoint) {
-        return await SDK.default.initialize(endpoint, this._opts);
+        //return await SDK.default.initialize(endpoint, this._opts);
+        return await SDK.default.initialize(endpoint);
     }
 
     async jsonify (promise) {
@@ -68,6 +69,7 @@ class ZeitgeistManager {
             slug,
             question,
             categories: categoriesMeta,
+            duplex: true,
         };
 
         const oracle = "5CS2Q1XbRR1eYnxeXUm8fqq6PfK3WLfwUvCpNvGsYAjKtsUC";
@@ -82,14 +84,15 @@ class ZeitgeistManager {
 
         const params = {
             signer: signer,
-            oracle: oracle,
+            oracle: "5CS2Q1XbRR1eYnxeXUm8fqq6PfK3WLfwUvCpNvGsYAjKtsUC",
             period: marketPeriod,
             metadata: metadata,
-            creationType: creationType,
-            marketType: marketType,
-            disputeMechanism: mdm,
-            scoringRule: scoringRule,
+            creationType: "Advised",
+            marketType: { Categorical: categoriesMeta.length },
+            disputeMechanism: { authorized: "1" },
+            scoringRule: "CPMM",
             callbackOrPaymentInfo: false,
+            duplex: true,
         };
 
         const marketId = await sdk.models.createMarket(params);
