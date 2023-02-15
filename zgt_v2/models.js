@@ -5,7 +5,7 @@ class MarketCreationResult {
     isMainnet;
 
     getUrl() {
-        if (this.isTestnet != null && this.isTestnet) {
+        if (this.isMainnet != null && this.isMainnet) {
             return `https://app.zeitgeist.pm/markets/${this.marketId}`;
         }
         return `https://test.staging.zeitgeist.pm/markets/${this.marketId}`;
