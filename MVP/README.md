@@ -1,3 +1,9 @@
+### mini Overview via YT
+
+[YT Link](https://youtu.be/6uNDQyTeBOM)
+
+Little explainer. This script can create one market based on the first index of the graphql query. Can be extended to go thruh the array of objects. Create market step by step.
+
 ### Current Issue
 starting subsquid with `cd ../../futarchy/subsquid-indexer/`, `sqd up`, `sqd serve`. write Frank/Tom if it doesnt run.
 

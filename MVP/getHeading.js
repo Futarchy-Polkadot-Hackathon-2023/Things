@@ -65,7 +65,7 @@ async function getHeadingMock(dataInput) {
 }
 
 /* Main function Calling */
-getHeading(dataInput)
+// getHeading(dataInput)
 // getHeadingMock(dataInput)
 
 /* Export */
