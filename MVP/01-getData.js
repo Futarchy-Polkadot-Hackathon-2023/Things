@@ -10,7 +10,7 @@ const dataOutput = {
 };
 
 /* Main function Declartion */
-import { getHeading } from "./getHeading.js"
+import { getHeading } from "./getData/getHeading.js"
 async function getData(dataInput) {
   console.log(dataInput)
   console.log("\x1b[1m","...getData()...","\x1b[0m");
