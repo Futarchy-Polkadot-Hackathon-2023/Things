@@ -6,9 +6,9 @@ const dataInput = {
 };
 /* Mock Data Output */
 const dataOutput = {
-  oGetDataA: "",
-  oGetDataB: "",
-  oGetDataC: "",
+  question: "Hola",
+  description: "A description",
+  slug: "aSlug"
 };
 
 /* Main function Declartion */
