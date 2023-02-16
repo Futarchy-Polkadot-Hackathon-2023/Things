@@ -13,6 +13,30 @@ const dataOutput = {
 /* Main function Declartion */
 import puppeteer from "puppeteer";
 async function getHeading(dataInput) {
+  // Launch the browser
+  const browser = await puppeteer.launch({ headless: true });
+
+  // Create a page
+  const page = await browser.newPage();
+
+  // Go to your site
+  await page.goto(dataInput.url + dataInput.proposalId);
+
+  // Get Heading
+  const h2InnerHTMl = await page.evaluate(
+    () => document.querySelector("h2").innerHTML
+  );
+  // Create Object
+  const heading = {
+    title: h2InnerHTMl,
+  };
+  // Close Browser 
+  browser.close();
+
+  return heading;
+}
+
+async function getHeadingMock(dataInput) {
   console.log(dataInput);
   console.log("\x1b[1m", "... getHeading() ...", "\x1b[0m");
 
@@ -41,7 +65,8 @@ async function getHeading(dataInput) {
 }
 
 /* Main function Calling */
-getHeading(dataInput);
+// getHeading(dataInput)
+// getHeadingMock(dataInput)
 
 /* Export */
 export { getHeading };

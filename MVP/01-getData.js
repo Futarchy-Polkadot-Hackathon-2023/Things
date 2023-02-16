@@ -10,9 +10,11 @@ const dataOutput = {
 };
 
 /* Main function Declartion */
+import { getHeading } from "./getHeading.js"
 async function getData(dataInput) {
   console.log(dataInput)
   console.log("\x1b[1m","...getData()...","\x1b[0m");
+
   const respondse = await fetch("http://localhost:4350/graphql", {
   "headers": {
     "accept": "application/json, multipart/mixed",
@@ -23,14 +25,14 @@ async function getData(dataInput) {
 });
   const jsonfy = await respondse.json()
   const proposalIndex = jsonfy.data.proposals[0].proposalIndex
-  console.log("proposal Index is" , proposalIndex )
+  const getHeadingInput = {
+    url: "https://polkadot.polkassembly.io/treasury/",
+    proposalId: proposalIndex,
+  };
 
-  console.log("\x1b[1m","...creating url to fetch...","\x1b[0m");
-  const polkaassemblyLink = "https://polkadot.polkassembly.io/treasury/" + proposalIndex
+  const dataOutput = await getHeading(getHeadingInput)
 
-  console.log("\x1b[1m","...get heading...","\x1b[0m");
-
-
+  console.log(dataOutput)
   return dataOutput;
 }
 
