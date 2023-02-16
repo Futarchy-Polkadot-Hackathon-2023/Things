@@ -1,3 +1,10 @@
+/* Mock Data Input */
+/* ---None-- */
+
+/* Mock Data Output */
+/* ---None-- */
+
+/* Main function Declartion */
 class MarketCreationResult {
     marketId;
     poolId;
@@ -19,4 +26,8 @@ class MarketCreationArguments {
     description;
     slug;
 }
+/* Main function Calling */
+/* ---None-- */
 
+/* Export */
+/* ---None-- */
