@@ -1,0 +1,3 @@
+[submodule "Day17/createMarket/zeitgeist"]
+	path = Notes_and_trials/Day17/createMarket/zeitgeist
+	url = git@github.com:zeitgeistpm/zeitgeist.git

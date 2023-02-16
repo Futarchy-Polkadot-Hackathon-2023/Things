@@ -1,0 +1,42 @@
+{
+  "name": "@zeitgeistpm/sdk",
+  "version": "1.0.3",
+  "description": "Zeitgeist network javascript library.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "docs": "jsdoc -c jsdoc.json",
+    "lint": "tsc --noEmit && eslint '*/**/*.ts' --quiet",
+    "lint:fix": "tsc --noEmit && eslint '*/**/*.ts' --quiet --fix",
+    "rebuild": "rm -rf dist; yarn dist",
+    "start": "ts-node src/index start",
+    "test": "jest"
+  },
+  "author": "Zeitgeist PM <contact@zeitgeist.pm>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@polkadot/api": "^9.13.2",
+    "@polkadot/keyring": "^10.3.1",
+    "@polkadot/util": "^10.3.1",
+    "@polkadot/util-crypto": "^10.3.1",
+    "@zeitgeistpm/type-defs": "^1.0.0",
+    "@zeitgeistpm/types": "^1.0.2",
+    "commander": "^7.2.0",
+    "decimal.js": "^10.3.1",
+    "graphql": "15.x",
+    "graphql-request": "^3.6.1",
+    "ipfs-http-client": "^49.0.4",
+    "it-all": "^1.0.4",
+    "uint8arrays": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/decimal.js": "^7.4.0",
+    "@types/jest": "^26.0.16",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.0.0"
+  },
+  "gitHead": "f65183993419e36276711f4634c57536ffad93a1"
+}

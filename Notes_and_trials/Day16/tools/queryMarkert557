@@ -1,0 +1,70 @@
+{
+  "marketId": 557,
+  "creator": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "creation": "Permissionless",
+  "creatorFee": 0,
+  "oracle": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+  "period": {
+    "timestamp": [
+      1675283286018,
+      1675512015439
+    ]
+  },
+  "scoringRule": "CPMM",
+  "marketType": {
+    "scalar": [
+      43500000000,
+      83500000000
+    ]
+  },
+  "status": "Resolved",
+  "report": {
+    "at": 2862238,
+    "by": "dDym8Qjm3KJZ2coPj1yy9aZsvndMdNwgbXEdiLquTbQDUu4nd",
+    "outcome": {
+      "categorical": 0
+    }
+  },
+  "resolvedOutcome": "66775000000",
+  "disputeMechanism": "Authorized",
+  "outcomeAssets": [
+    {
+      "scalarOutcome": [
+        557,
+        "Long"
+      ]
+    },
+    {
+      "scalarOutcome": [
+        557,
+        "Short"
+      ]
+    }
+  ],
+  "end": "1675512015439",
+  "start": "1675283286018",
+  "metadata": "0x1530527b3d2e33ae8e3be63f55dacd862eef7183d83c162e0f868d6ac3bb8e2c3f8359f496a817ab89846cda8b092f6c46a8",
+  "deadlines": {
+    "gracePeriod": "0",
+    "oracleDuration": "301",
+    "disputeDuration": "7201"
+  },
+  "slug": "Price of DOT / USD",
+  "question": "What will be the price of DOT in USD acc. to trading view on Sunday February 4th 1pm",
+  "description": "",
+  "categories": [
+    {
+      "ticker": "DOTUSD-L",
+      "name": "Long",
+      "color": "#24FF00"
+    },
+    {
+      "ticker": "DOTUSD-S",
+      "name": "Short",
+      "color": "#FF0000"
+    }
+  ],
+  "tags": [],
+  "scalarType": "number",
+  "poolId": 192
+}

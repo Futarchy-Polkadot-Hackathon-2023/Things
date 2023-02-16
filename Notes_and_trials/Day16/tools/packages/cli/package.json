@@ -1,0 +1,25 @@
+{
+  "name": "@zeitgeistpm/cli",
+  "version": "1.0.3",
+  "description": "Commandline tool for the Zeitgeist prediction market.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "rebuild": "rm -rf dist; yarn dist",
+    "start": "ts-node src/index start",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeitgeistpm/sdk": "^1.0.3",
+    "commander": "^7.2.0"
+  },
+  "devDependencies": {
+    "ts-node": "^9.0.0"
+  },
+  "gitHead": "f65183993419e36276711f4634c57536ffad93a1"
+}

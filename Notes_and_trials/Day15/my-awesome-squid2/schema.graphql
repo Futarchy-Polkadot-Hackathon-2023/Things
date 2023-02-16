@@ -1,0 +1,164 @@
+type Block @entity {
+    id: ID!
+    number: Int! @index
+    timestamp: DateTime!
+    transactions: [Transaction!]! @derivedFrom(field: "block")
+}
+
+type Transaction @entity {
+    id: ID!
+    hash: String! @index
+    block: Block!
+    contract: String
+}
+
+interface Event @query {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String!
+}
+
+type ApprovalEvent implements Event @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    src: String! @index
+    guy: String! @index
+    wad: BigInt!
+}
+
+type LogNoteEvent implements Event @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    sig: String! @index
+    usr: String! @index
+    arg1: String! @index
+    arg2: String! @index
+    data: String!
+}
+
+type TransferEvent implements Event @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    src: String! @index
+    dst: String! @index
+    wad: BigInt!
+}
+
+interface Function @query {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String!
+}
+
+type ApproveFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    usr: String
+    wad: BigInt
+}
+
+type BurnFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    usr: String
+    wad: BigInt
+}
+
+type DenyFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    guy: String
+}
+
+type MintFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    usr: String
+    wad: BigInt
+}
+
+type MoveFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    src: String
+    dst: String
+    wad: BigInt
+}
+
+type PermitFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    holder: String
+    spender: String
+    nonce: BigInt
+    expiry: BigInt
+    allowed: Boolean
+    v: Int
+    r: String
+    s: String
+}
+
+type PullFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    usr: String
+    wad: BigInt
+}
+
+type PushFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    usr: String
+    wad: BigInt
+}
+
+type RelyFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    guy: String
+}
+
+type TransferFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    dst: String
+    wad: BigInt
+}
+
+type TransferFromFunction implements Function @entity {
+    id: ID!
+    block: Block!
+    transaction: Transaction!
+    name: String! @index
+    src: String
+    dst: String
+    wad: BigInt
+}

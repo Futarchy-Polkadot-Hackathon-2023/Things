@@ -1,0 +1,11 @@
+version: "3.2"
+
+services:
+  zeitgeist:
+    container_name: zeitgeist
+    image: zeitgeistpm/zeitgeist-node
+    ports:
+      - "9944:9944"
+    command:
+      - --dev
+      - --ws-external
