@@ -12,9 +12,13 @@ const dataOutput = {
 };
 
 /* Main function Declartion */
-function createMarket(dataInput) {
+import {ZtgManager} from "./index"
+async function createMarket(dataInput) {
   console.log(dataInput)
   console.log("\x1b[1m","...createMarket()...","\x1b[0m");
+  let manager = new ZtgManager();
+  let ZtgManagerResponse = await manager.getMarketById2(568)
+;
   console.log(dataOutput)
   return dataOutput;
 }
