@@ -1,4 +1,0 @@
-type MyEnity @entity {
-  id: ID!
-  foo: String!
-}
