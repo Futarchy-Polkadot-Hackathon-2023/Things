@@ -1,4 +1,38 @@
-# Mock Structure
+### Current Issue
+starting subsquid with `cd ../../futarchy/subsquid-indexer/`, `sqd up`, `sqd serve`. write Frank/Tom if it doesnt run.
+
+1. `node ./01-getData.js` spits out and index and `node ./02-createMarket.js` needs a description.
+
+### Structure 
+Every file follows this convention.
+
+```
+|- MockInput
+|- MockOutput
+|- Function declartion
+|- Function call
+|- Export
+```
+
+- MockInput describes what script takes as an Input
+- MockOutput describes what script gives as an Output
+- Function declartion is main function/class
+- Function call allows to run each script seperatly.(Its comment out to allow clean export)
+- Export exports the main function/class
+- The output of a script follows this convention.
+
+```
+> node ./exampleScript
+>> {InputParamsA: "A", InputParamsB: "B"}
+>> ... nameOfFunction() ...
+>> {OutputParmsA: "A", OutputParamsB: "b"}
+```
+
+# What it does?
+Each file has a Isolated Usage. 
+> Do one thing, do it well
+
+./01-getData.js does ... Work in Progess ...
 
 ### Usage
 0. `node --version`  -> Version 18
@@ -18,11 +52,9 @@
 
 ### Tasks
 
-- [ ] figure out add Colums in Subsquid for slug and description
-- [ ] insert slug and description
 - [ ] make a super Alpha video, ask Tom. 
-- [ ] sit down with Gunjan and implent postComment()
-- [ ] sit down with Serge and try to create a market()
+- [x] sit down with Gunjan and implent postComment()
+- [x] sit down with Serge and try to create a market()
 - [ ] sit down with me and implent getData()
 - [ ] Fill out the form
 - [ ] make everything super nicey.
