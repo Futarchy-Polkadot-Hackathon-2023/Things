@@ -8,8 +8,8 @@ const dataOutput = {
 };
 /* Main function Declartion */
 async function convertPropIndexToPostId(dataInput) {
-  console.log(dataInput);
-  console.log("\x1b[1m", "...convertPropIndexToPostId()...", "\x1b[0m");
+  // console.log(dataInput);
+  // console.log("\x1b[1m", "...convertPropIndexToPostId()...", "\x1b[0m");
   const res = await fetch("https://polkadot.polkassembly.io/v1/graphql", {
     headers: {
       authorization:
@@ -20,16 +20,20 @@ async function convertPropIndexToPostId(dataInput) {
     method: "POST",
   });
   const resJson = await res.json();
+  console.log(resJson)
   const id = await resJson.data.posts[0].id;
   const dataOutput = {
     postId: id,
   };
-  console.log(dataOutput);
+  // console.log(dataOutput);
   return dataOutput;
 }
 
 /* Main function Calling */
-convertPropIndexToPostId(dataInput);
+async function main(dataInput){
+  convertPropIndexToPostId(dataInput);
+}
+main(dataInput)
 
 /* Export */
 export { convertPropIndexToPostId };
