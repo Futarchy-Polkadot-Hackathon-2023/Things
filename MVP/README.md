@@ -1,4 +1,9 @@
-# Structure 
+### Current Issue
+starting subsquid with `cd ../../futarchy/subsquid-indexer/`, `sqd up`, `sqd serve`. write Frank/Tom if it doesnt run.
+
+1. `node ./01-getData.js` spits out and index and `node ./02-createMarket.js` needs a description.
+
+### Structure 
 Every file follows this convention.
 
 ```
@@ -24,9 +29,10 @@ Every file follows this convention.
 ```
 
 # What it does?
-Each file has a Isolated Usage. *alias Do one thing, do it well*
+Each file has a Isolated Usage. 
+> Do one thing, do it well
 
-... Work in Progess ...
+./01-getData.js does ... Work in Progess ...
 
 ### Usage
 0. `node --version`  -> Version 18

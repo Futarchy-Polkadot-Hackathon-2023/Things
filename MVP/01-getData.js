@@ -1,8 +1,6 @@
 /* Mock Data Input */
 const dataInput = {
-  iGetDataA: "",
-  iGetDataB: "",
-  iGetDataC: "",
+  body: "{\"query\":\"query MyQuery {\\n  proposals(limit: 1) {\\n    proposalIndex\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}",
 };
 /* Mock Data Output */
 const dataOutput = {
@@ -12,10 +10,20 @@ const dataOutput = {
 };
 
 /* Main function Declartion */
-function getData(dataInput) {
+async function getData(dataInput) {
   console.log(dataInput)
   console.log("\x1b[1m","...getData()...","\x1b[0m");
-  console.log(dataOutput)
+  const respondse = await fetch("http://localhost:4350/graphql", {
+  "headers": {
+    "accept": "application/json, multipart/mixed",
+    "content-type": "application/json",
+  },
+  "body": dataInput.body,
+  "method": "POST",
+});
+
+  const jsonfy = await respondse.json()
+  console.log("proposal Index is" , jsonfy.data.proposals[0].proposalIndex )
   return dataOutput;
 }
 
