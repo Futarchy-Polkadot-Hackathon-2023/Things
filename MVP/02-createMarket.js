@@ -1,8 +1,8 @@
 /* Mock Data Input */
 const dataInput = {
-  question: "Hola",
-  description: "A description",
-  slug: "aSlug"
+  question: `Will proposal with Index of XXX resolve?`,
+  description: "#229 Treasury Proposal: Polkawatch, Decentralization Analytics, Continued Operation and Development",
+  slug: "#229 Treas"
 };
 
 /* Mock Data Output */

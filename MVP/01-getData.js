@@ -4,9 +4,9 @@ const dataInput = {
 };
 /* Mock Data Output */
 const dataOutput = {
-  question: "Hola",
-  description: "A description",
-  slug: "aSlug"
+  question: `Will proposal with Index of XXX resolve?`,
+  description: "#229 Treasury Proposal: Polkawatch, Decentralization Analytics, Continued Operation and Development",
+  slug: "#229 Treas"
 };
 
 /* Main function Declartion */
@@ -30,7 +30,12 @@ async function getData(dataInput) {
     proposalId: proposalIndex,
   };
 
-  const dataOutput = await getHeading(getHeadingInput)
+  const heading = await getHeading(getHeadingInput)
+  const dataOutput = {
+    question: `Will proposal with Indes of ${proposalIndex} resolve?`,
+    description: heading.title,
+    slug: heading.title.slice(0,10)
+  };
 
   console.log(dataOutput)
   return dataOutput;
