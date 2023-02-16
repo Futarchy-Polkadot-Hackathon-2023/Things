@@ -131,24 +131,23 @@ async function mainCreateMarket(dataInput){
   return dataOutput;
 
 }
+
 async function mainCreateMarketMockUp(dataInput){
-  console.log(dataInput)
-  console.log("\x1b[1m","...mainCreateMarketMockUp()...","\x1b[0m");
   const dataOutput = {
     marketId: "234",
     poolId: "124",
     success: "true",
     isMainnet: "false"
   };
-  console.log(dataOutput)
   return dataOutput
 }
 
-mainCreateMarketMockUp(dataInput)
+// mainCreateMarketMockUp(dataInput)
 
 
 
 /* Export */
 export {
-  ZtgManager
+  ZtgManager,
+  mainCreateMarketMockUp
 }

@@ -27,14 +27,15 @@ async function getData(dataInput) {
   const proposalIndex = jsonfy.data.proposals[0].proposalIndex
   const getHeadingInput = {
     url: "https://polkadot.polkassembly.io/treasury/",
-    proposalId: proposalIndex,
+    proposalIndex: proposalIndex,
   };
 
   const heading = await getHeading(getHeadingInput)
   const dataOutput = {
     question: `Will proposal with Indes of ${proposalIndex} resolve?`,
     description: heading.title,
-    slug: heading.title.slice(0,10)
+    slug: heading.title.slice(0,10),
+    proposalIndex: proposalIndex
   };
 
   console.log(dataOutput)

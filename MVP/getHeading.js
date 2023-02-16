@@ -1,7 +1,7 @@
 /* Mock Data Input */
 const dataInput = {
   url: "https://polkadot.polkassembly.io/treasury/",
-  proposalId: "229",
+  proposalIndex: "229",
 };
 
 /* Mock Data Output */
@@ -20,7 +20,7 @@ async function getHeading(dataInput) {
   const page = await browser.newPage();
 
   // Go to your site
-  await page.goto(dataInput.url + dataInput.proposalId);
+  await page.goto(dataInput.url + dataInput.proposalIndex);
 
   // Get Heading
   const h2InnerHTMl = await page.evaluate(
@@ -65,7 +65,7 @@ async function getHeadingMock(dataInput) {
 }
 
 /* Main function Calling */
-// getHeading(dataInput)
+getHeading(dataInput)
 // getHeadingMock(dataInput)
 
 /* Export */
