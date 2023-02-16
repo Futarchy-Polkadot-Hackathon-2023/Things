@@ -21,9 +21,16 @@ async function getData(dataInput) {
   "body": dataInput.body,
   "method": "POST",
 });
-
   const jsonfy = await respondse.json()
-  console.log("proposal Index is" , jsonfy.data.proposals[0].proposalIndex )
+  const proposalIndex = jsonfy.data.proposals[0].proposalIndex
+  console.log("proposal Index is" , proposalIndex )
+
+  console.log("\x1b[1m","...creating url to fetch...","\x1b[0m");
+  const polkaassemblyLink = "https://polkadot.polkassembly.io/treasury/" + proposalIndex
+
+  console.log("\x1b[1m","...get heading...","\x1b[0m");
+
+
   return dataOutput;
 }
 
