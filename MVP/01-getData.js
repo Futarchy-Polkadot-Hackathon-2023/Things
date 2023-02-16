@@ -39,11 +39,12 @@ async function getData(dataInput) {
   };
 
   console.log(dataOutput)
+  console.log("---------↓-----------")
   return dataOutput;
 }
 
 /* Main function Calling */
-getData(dataInput);
+// getData(dataInput);
 
 /* Export */
 export { getData };
