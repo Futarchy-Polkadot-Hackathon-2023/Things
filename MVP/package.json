@@ -9,7 +9,8 @@
     "@zeitgeistpm/indexer": "^2.12.1",
     "@zeitgeistpm/sdk": "^2.18.1",
     "dotenv": "^16.0.3",
-    "node-fetch": "^3.3.0"
+    "node-fetch": "^3.3.0",
+    "puppeteer": "^19.7.1"
   },
   "type": "module"
 }
