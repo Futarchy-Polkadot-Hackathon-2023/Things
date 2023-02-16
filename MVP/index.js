@@ -115,7 +115,11 @@ class ZtgManager {
 
 /* Main function Calling */
 const manager = new ZtgManager();
-manager.getMarketById2(568)
+manager.createMarket({
+  question: "Hola",
+  description: "A description",
+  slug: "aSlug"
+})
     .then(console.log)
     .catch(console.error)
     .finally(() => process.exit());
