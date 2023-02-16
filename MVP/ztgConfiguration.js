@@ -1,3 +1,10 @@
+/* Mock Data Input */
+/* ---None-- */
+
+/* Mock Data Output */
+/* ---None-- */
+
+/* Main function Declartion */
 import * as dotenv from 'dotenv';
 import {swapFeeFromFloat, ZTG} from "@zeitgeistpm/sdk";
 dotenv.config()
@@ -17,4 +24,9 @@ export class ZtgConfiguration {
         ZtgConfiguration.signerSeed = process.env.seed
     }
 }
+/* Main function Calling */
+/* ---None-- */
+
+/* Export */
+/* ---None-- */
 
