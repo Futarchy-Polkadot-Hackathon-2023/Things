@@ -1,15 +1,17 @@
 /* Mock Data Input */
 const dataInput = {
-  oGetDataA: "",
-  oGetDataB: "",
-  oGetDataC: "",
+  question: "Hola",
+  description: "A description",
+  slug: "aSlug"
 };
 
 /* Mock Data Output */
 const dataOutput = {
-  postId: "1596",
-  comment: "Sweet Comment",
-};
+    marketId: "234",
+    poolId: "124",
+    success: "true",
+    isMainnet: "false"
+  };
 
 /* Main function Declartion */
 import {create, mainnet, batterystation, ZTG, swapFeeFromFloat} from "@zeitgeistpm/sdk";
@@ -114,15 +116,36 @@ class ZtgManager {
 
 
 /* Main function Calling */
-const manager = new ZtgManager();
-manager.createMarket({
-  question: "Hola",
-  description: "A description",
-  slug: "aSlug"
-})
-    .then(console.log)
-    .catch(console.error)
-    .finally(() => process.exit());
+async function mainCreateMarket(dataInput){
+  console.log(dataInput)
+  console.log("\x1b[1m","...mainCreateMarket()...","\x1b[0m");
+  const manager = new ZtgManager();
+  const { marketId, poolId, success, isMainnet } = await manager.createMarket(dataInput)
+  const dataOutput = {
+      marketId: marketId,
+      poolId: poolId,
+      success: success,
+      isMainnet: isMainnet
+    }
+  console.log(dataOutput)
+  return dataOutput;
+
+}
+async function mainCreateMarketMockUp(dataInput){
+  console.log(dataInput)
+  console.log("\x1b[1m","...mainCreateMarketMockUp()...","\x1b[0m");
+  const dataOutput = {
+    marketId: "234",
+    poolId: "124",
+    success: "true",
+    isMainnet: "false"
+  };
+  console.log(dataOutput)
+  return dataOutput
+}
+
+mainCreateMarketMockUp(dataInput)
+
 
 
 /* Export */
