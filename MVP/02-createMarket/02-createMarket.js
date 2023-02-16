@@ -12,7 +12,7 @@ const dataOutput = {
   comment: "A prediction market is created.🗽 \n\nGo to [Zeitgeist App - Market Link](https://app.zeitgeist.pm/markets/229) \n\n ⚠️ Currently only on the Battery-Testnet of Zeitgeist ⚠️ "
 };
 /* Main function Declartion */
-import {ZtgManager, mainCreateMarketMockUp} from "./createMarket/ztgManger.js"
+import {ZtgManager, mainCreateMarketMockUp} from "./ztgManger.js"
 async function createMarket(dataInput) {
   console.log(dataInput)
   console.log("\x1b[1m","...createMarket()...","\x1b[0m");

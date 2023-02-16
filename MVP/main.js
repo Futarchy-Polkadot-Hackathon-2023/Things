@@ -1,6 +1,6 @@
-import { getData } from "./01-getData.js";
-import { createMarket } from "./02-createMarket.js";
-import { postComment } from "./03-postComment.js";
+import { getData } from "./01-getData/01-getData.js";
+import { createMarket } from "./02-createMarket/02-createMarket.js";
+import { postComment } from "./03-postComment/03-postComment.js";
 
 async function main(dataInput) {
   let resGetData = await getData(dataInput)

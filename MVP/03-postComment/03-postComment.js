@@ -11,7 +11,7 @@ const dataOutput = {
 };
 
 /* Main function Declartion */
-import {Polkassembly} from './postComment/polkassembly.js'
+import {Polkassembly} from './polkassembly.js'
 async function postComment(dataInput) {
   console.log(dataInput)
   console.log("\x1b[1m","...postComment()...","\x1b[0m");
