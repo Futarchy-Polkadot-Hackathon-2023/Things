@@ -8,7 +8,7 @@
 
 <h3 align="center">Futurachy - Quickstart</h3>
   <p align="center">
-    <a href="https://github.com/polkahack/futarchy">Futurachy</a> creates incetives for goverments. </a>
+    <a href="https://github.com/polkahack/futarchy">Futurachy</a> creates incentives for goverments. </a>
     <br />
     Quickstart is a simplified version of Futurachy.
     <br />
@@ -27,6 +27,9 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#Screenshot">Screenshot</a></li>
+        <li><a href="#Description">Description</a></li>
+        <li><a href="#TLDR">TLDR</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -51,18 +54,18 @@
 ### Description
 This is a Quickstart of the Project [Futurachy](https://github.com/PolkaHack/futarchy).
 
-Futurachy creates incetives to for Goverments.
+Futurachy creates incentives to for governments.
 
 Quickstart is a simplified version of the inner workings.
 
-#### TLDR
+#### Summary
 1. It spins up a Indexer, which graps the latest proposal from the Zeitgeist Chain. 
 2. It creates a graphQL endpoint. 
 3. It gets the Data through the GraphQL Endpoint. 
-4. It fetches the Title from polkassembly.
+4. It fetches the title from polkassembly based on the graphQL data.
 5. It converts the title in question, description and slug. 
 6. It creates a market from question, description and slug.
-7. The created Market has a market Id.
+7. The created Market created a market Id.
 8. It converts converts marketId to a marketLink.
 8. It posts a comment in [polkassembly](https://polkadot.polkassembly.io/) with a link to the newly created Market.
 
