@@ -8,12 +8,12 @@
 
 <h3 align="center">Futurachy - Quickstart</h3>
   <p align="center">
-    <a href="https://github.com/polkahack/futarchy">Futurachy</a> creates incentives for goverments. </a>
+    <a href="https://github.com/polkahack/futarchy">Futurachy</a> We're incentivising altruistic governance! </a>
     <br />
     Quickstart is a simplified version of Futurachy.
     <br />
     <br />
-    <a href="https://youtu.be/ue22iS_N0MU" name="demo">View Demo</a>
+    <a href="https://youtu.be/3jcPzSFFWS4" name="demo">Guided-Quickstart Video</a>
     ·
     <a href="https://github.com/PolkaHack/futarchy/issues">Report Bug</a>
     ·
@@ -53,9 +53,9 @@
 
 ### Description
 
-This is a Quickstart of the Project [Futurachy](https://github.com/PolkaHack/futarchy).
+We're incentivising altruistic governance!
 
-Futurachy creates incentives to for governments.
+This is a Quickstart of the Project [Futurachy](https://github.com/PolkaHack/futarchy).
 
 Quickstart is a simplified version of the inner workings.
 
