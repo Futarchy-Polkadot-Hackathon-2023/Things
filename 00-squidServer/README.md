@@ -1,4 +1,15 @@
-# Squid indexer demo
+
+ ### *************************************************
+ ### This README is depracted. 
+ ### *************************************************
+
+**Use the README in the root folder.**
+
+---
+---
+---
+
+# Squid Indexer Demo - Depcreated README
 
 A starter [Squid](https://subsquid.io) project.
 It accumulates [kusama](https://kusama.network) bounty events and serves them via GraphQL API.
@@ -55,5 +66,18 @@ sqd serve
 
 # 9. Try out queries in a local graphQL explorer on http://localhost:4350/graphql
 
+```
+
+Scripts from subsquid templates.
+Got removed for increasing `Futurachy - Quickstart` clearity.
+
+```json
+scripts: {
+"sqd:up": "rm -rf lib && tsc",
+"update": "npx npm-check-updates --filter /subsquid/ --upgrade && npm i -f",
+"db:migrate": "npx squid-typeorm-migration apply",
+"processor:start": "node lib/processor.js",
+"query-node:start": "squid-graphql-server --subscriptions --max-response-size 10000 --dumb-cache in-memory --dumb-cache-ttl 1000 --dumb-cache-size 100 --dumb-cache-max-age 1000",
+}
 ```
  [local graphQL explorer](http://localhost:4350/graphql)
