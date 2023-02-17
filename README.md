@@ -36,7 +36,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -83,30 +82,43 @@ Quickstart is a simplified version of the inner workings.
 
 Follow [README](https://github.com/PolkaHack/Things/blob/main/README.md) or Follow via [Video](https://youtu.be/ue22iS_N0MU). 
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/polkahack/futarchy.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
+1. check if `node` is installed. If not download it from [NodeJs.org][nodejs-url].
+```sh
+> node --version
+>> v18.13.0
+```
+2. change directory to `./00-squidServer`
+```sh
+cd ./00-squidServer
+```
+3. rename `./env-example` to `./env`
+```sh
+mv ./env-example ./env
+```
+4. source your `./env`
+```sh
+source ./env
+```
+5. install packages, create `./node_modules` folder
+```sh
+npm install 
+```
+6. set up subsquid indexer. 
+```sh
+sqd down
+sqd migration:clean
+sqd up
+sqd codegen
+sqd migration:generate
+```
+7. run the mirgation process
+```sh
+sqd process
+```
+8. Amazing, open up a fresh new Terminal and let the indexer run.
+9. In the new terminal navigate to the `./`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

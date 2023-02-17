@@ -135,8 +135,8 @@ class Polkassembly {
 
 /* Main function Calling */
 // Outcommet for not double calling.
-// let p = new Polkassembly();
-// console.log(await p.post(dataInput.postId, dataInput.comment));
+let p = new Polkassembly();
+console.log(await p.post(dataInput.postId, dataInput.comment));
 
 /* Export */
 export {
