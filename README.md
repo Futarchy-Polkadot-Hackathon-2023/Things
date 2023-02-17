@@ -107,8 +107,6 @@ npm install
 ```
 6. set up subsquid indexer. 
 ```sh
-sqd down
-sqd migration:clean
 sqd up
 sqd codegen
 sqd migration:generate
@@ -118,7 +116,76 @@ sqd migration:generate
 sqd process
 ```
 8. Amazing, open up a fresh new Terminal and let the indexer run.
-9. In the new terminal navigate to the `./`
+9. In the new terminal navigate to the `./00-squidServer` 
+10. start the graphQL server
+```sh
+sqd serve
+```
+11. Got to [http://localhost:4350/graphql](http://localhost:4350/graphql)
+12. select or paste this query and run it.
+```graphql
+query MyQuery {
+  proposals(limit: 1)
+}
+```
+This is my current output, you will slidly diffrent. Because new proposal will come in daily.
+```js
+{
+  "data": {
+    "proposals": [
+      {
+        "id": "0015438492-000039-c308a"
+      }
+    ]
+  }
+}
+```
+13. Now we have our indexer and graphQL Server running.
+14. Open up a 3rd Terminal and navigate to the root folder.
+15. run tree and you should see the following
+```sh
+tree -L 1
+``` 
+```
+.
+├── 00-squidServer
+├── 01-getData
+├── 02-createMarket
+├── 03-postComment
+├── README-depracted.md
+├── README.md
+├── logs
+├── main.js
+├── node_modules
+├── package-lock.json
+├── package.json
+├── screenshot.png
+└── subsquare.js
+
+6 directories, 7 files
+```
+16. Install packages
+```sh
+npm install
+```
+17. rename `./env-example` to `./env`
+```sh
+mv ./env-example ./env
+```
+18. paste seed in your Dev Account with Zeitgeist Token of the Battery Testnet into the `.env`
+```sh
+echo "seed=YOUR_SEED_WITH_ZTG_TOKENS_ON_BATERRY_TEST_NEXT" >> .env
+```
+19. source your `./env`
+```sh
+source ./env
+```
+20. run the main script.
+```sh 
+node ./main.js
+```
+21. You see the following outcome.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
