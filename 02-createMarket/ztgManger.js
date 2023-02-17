@@ -1,11 +1,15 @@
-/* Mock Data Input */
+ /*******************/
+ /* Mock Data Input */
+ /*******************/
 const dataInput = {
   question: "Hola",
   description: "A description",
   slug: "aSlug"
 };
 
-/* Mock Data Output */
+ /*******************/
+ /* Mock Data Output */
+ /*******************/
 const dataOutput = {
     marketId: "234",
     poolId: "124",
@@ -13,7 +17,9 @@ const dataOutput = {
     isMainnet: "false"
   };
 
-/* Main function Declartion */
+ /****************************/
+ /* Main Function Declartion */
+ /****************************/
 import {create, mainnet, batterystation, ZTG, swapFeeFromFloat} from "@zeitgeistpm/sdk";
 import { IPFS } from "@zeitgeistpm/web3.storage";
 import { Keyring } from "@polkadot/keyring";
@@ -113,9 +119,6 @@ class ZtgManager {
     }
 }
 
-
-
-/* Main function Calling */
 async function mainCreateMarket(dataInput){
   console.log(dataInput)
   console.log("\x1b[1m","...mainCreateMarket()...","\x1b[0m");
@@ -142,11 +145,16 @@ async function mainCreateMarketMockUp(dataInput){
   return dataOutput
 }
 
+/*************************/
+/* Main Function Calling */
+/*************************/
 // mainCreateMarketMockUp(dataInput)
 
 
 
-/* Export */
+ /**********/
+ /* Export */
+ /**********/
 export {
   ZtgManager,
   mainCreateMarketMockUp

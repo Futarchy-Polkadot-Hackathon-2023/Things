@@ -1,16 +1,22 @@
-/* Mock Data Input */
+ /*******************/
+ /* Mock Data Input */
+ /*******************/
 const dataInput = {
   proposalIndex: "229",
   comment: "A prediction market is created.🗽 \n\nGo to [Zeitgeist App - Market Link](https://app.zeitgeist.pm/markets/229) \n\n ⚠️ Currently only on the Battery-Testnet of Zeitgeist ⚠️ "
 };
 
-/* Mock Data Output */
+ /*******************/
+ /* Mock Data Output */
+ /*******************/
 const dataOutput = {
   status: "true",
   link: "https://polkadot.polkassembly.io/post/1301"
 };
 
-/* Main function Declartion */
+ /****************************/
+ /* Main Function Declartion */
+ /****************************/
 import {Polkassembly} from './polkassembly.js'
 async function postComment(dataInput) {
   console.log(dataInput)
@@ -27,8 +33,12 @@ async function postComment(dataInput) {
   return dataOutput;
 }
 
-/* Main function Calling */
+/*************************/
+/* Main Function Calling */
+/*************************/
 // postComment(dataInput);
 
-/* Export */
+ /**********/
+ /* Export */
+ /**********/
 export { postComment };

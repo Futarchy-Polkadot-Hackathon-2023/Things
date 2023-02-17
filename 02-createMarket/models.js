@@ -1,10 +1,16 @@
-/* Mock Data Input */
+ /*******************/
+ /* Mock Data Input */
+ /*******************/
 /* ---None-- */
 
-/* Mock Data Output */
+ /*******************/
+ /* Mock Data Output */
+ /*******************/
 /* ---None-- */
 
-/* Main function Declartion */
+ /****************************/
+ /* Main Function Declartion */
+ /****************************/
 class MarketCreationResult {
     marketId;
     poolId;
@@ -20,14 +26,18 @@ class MarketCreationResult {
 
 }
 
-
 class MarketCreationArguments {
     question;
     description;
     slug;
 }
-/* Main function Calling */
+
+ /*************************/
+ /* Main Function Calling */
+ /*************************/
 /* ---None-- */
 
-/* Export */
+ /**********/
+ /* Export */
+ /**********/
 /* ---None-- */

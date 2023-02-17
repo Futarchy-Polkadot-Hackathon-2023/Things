@@ -1,15 +1,22 @@
-/* Mock Data Input */
+ /*******************/
+ /* Mock Data Input */
+ /*******************/
 const dataInput = {
   body: "{\"query\":\"query MyQuery {\\n  proposals(limit: 1) {\\n    proposalIndex\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}",
 };
-/* Mock Data Output */
+
+ /*******************/
+ /* Mock Data Output */
+ /*******************/
 const dataOutput = {
   question: `Will proposal with Index of XXX resolve?`,
   description: "#229 Treasury Proposal: Polkawatch, Decentralization Analytics, Continued Operation and Development",
   slug: "#229 Treas"
 };
 
-/* Main function Declartion */
+ /****************************/
+ /* Main Function Declartion */
+ /****************************/
 import { getHeading } from "./getHeading.js"
 async function getData(dataInput) {
   console.log(dataInput)
@@ -43,8 +50,12 @@ async function getData(dataInput) {
   return dataOutput;
 }
 
-/* Main function Calling */
+ /*************************/
+ /* Main Function Calling */
+ /*************************/
 // getData(dataInput);
 
-/* Export */
+ /**********/
+ /* Export */
+ /**********/
 export { getData };

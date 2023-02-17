@@ -1,4 +1,6 @@
-/* Mock Data Input */
+ /*******************/
+ /* Mock Data Input */
+ /*******************/
 const dataInput = {
   question: 'Will proposal with Indes of 229 resolve?',
   description: '#229 Treasury Proposal: Polkawatch, Decentralization Analytics, Continued Operation and Development',
@@ -6,12 +8,17 @@ const dataInput = {
   proposalIndex: 229
 }
 
-/* Mock Data Output */
+ /*******************/
+ /* Mock Data Output */
+ /*******************/
 const dataOutput = {
   proposalIndex: "229",
   comment: "A prediction market is created.🗽 \n\nGo to [Zeitgeist App - Market Link](https://app.zeitgeist.pm/markets/229) \n\n ⚠️ Currently only on the Battery-Testnet of Zeitgeist ⚠️ "
 };
-/* Main function Declartion */
+
+ /****************************/
+ /* Main Function Declartion */
+ /****************************/
 import {ZtgManager, mainCreateMarketMockUp} from "./ztgManger.js"
 async function createMarket(dataInput) {
   console.log(dataInput)
@@ -32,8 +39,12 @@ async function createMarket(dataInput) {
   return dataOutput;
 }
 
-/* Main function Calling */
+ /*************************/
+ /* Main Function Calling */
+ /*************************/
 // createMarket(dataInput);
 
-/* Export */
+ /**********/
+ /* Export */
+ /**********/
 export { createMarket };

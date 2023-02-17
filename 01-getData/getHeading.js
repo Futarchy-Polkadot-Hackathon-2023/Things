@@ -1,16 +1,22 @@
-/* Mock Data Input */
+ /*******************/
+ /* Mock Data Input */
+ /*******************/
 const dataInput = {
   url: "https://polkadot.polkassembly.io/treasury/",
   proposalIndex: "229",
 };
 
-/* Mock Data Output */
+ /*******************/
+ /* Mock Data Output */
+ /*******************/
 const dataOutput = {
   title:
     "#229 Treasury Proposal: Polkawatch, Decentralization Analytics, Continued Operation and Development",
 };
 
-/* Main function Declartion */
+ /****************************/
+ /* Main Function Declartion */
+ /****************************/
 import puppeteer from "puppeteer";
 async function getHeading(dataInput) {
   // Launch the browser
@@ -64,9 +70,13 @@ async function getHeadingMock(dataInput) {
   return heading;
 }
 
-/* Main function Calling */
+ /*************************/
+ /* Main Function Calling */
+ /*************************/
 // getHeading(dataInput)
 // getHeadingMock(dataInput)
 
-/* Export */
+ /**********/
+ /* Export */
+ /**********/
 export { getHeading };

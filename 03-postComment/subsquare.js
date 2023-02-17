@@ -10,6 +10,24 @@
 *  nay_ksm: '3.3K KSM'
 *}
 */
+
+/* 
+* -------Subsquare-------
+*/
+
+ /*******************/
+ /* Mock Data Input */
+ /*******************/
+/* ---None-- */
+
+ /*******************/
+ /* Mock Data Output */
+ /*******************/
+/* ---None-- */
+
+ /****************************/
+ /* Main Function Declartion */
+ /****************************/
 var webdriver = require("selenium-webdriver");
 var chrome = require("selenium-webdriver/chrome");
 
@@ -34,10 +52,6 @@ chromeOptions.addArguments("--disable-default-apps");
 chromeOptions.addArguments("--disable-infobars");
 chromeOptions.addArguments('--headless');
 
-driver = new webdriver.Builder()
-.forBrowser("chrome")
-.setChromeOptions(chromeOptions)
-.build();
 
 async function getReferendumStats(refId) {
     let URL = "https://kusama.subsquare.io/referenda/referendum/" + refId;
@@ -77,6 +91,18 @@ async function getReferendumStats(refId) {
     return data
 }
 
+ /*************************/
+ /* Main Function Calling */
+ /*************************/
+driver = new webdriver.Builder()
+.forBrowser("chrome")
+.setChromeOptions(chromeOptions)
+.build();
+
 getReferendumStats('92')
 .then(data => console.log(data))
 
+ /**********/
+ /* Export */
+ /**********/
+/* ---None-- */

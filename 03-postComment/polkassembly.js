@@ -19,18 +19,24 @@
 * -------PolkaAssembly-------
 */
 
-/* Mock Data Input */
+ /*******************/
+ /* Mock Data Input */
+ /*******************/
 const dataInput = {
   postId: "1596",
   comment: "Sweet Comment",
 };
 
-/* Mock Data Output */
+ /*******************/
+ /* Mock Data Output */
+ /*******************/
 const dataOutput = {
   status: "true",
 };
 
-/* Main function Declartion */
+ /****************************/
+ /* Main Function Declartion */
+ /****************************/
 import fetch from "node-fetch";
 class Polkassembly {
   /* Sets constants URL, username, passoword */
@@ -133,10 +139,11 @@ class Polkassembly {
 }
 };
 
-/* Main function Calling */
-// Outcommet for not double calling.
-let p = new Polkassembly();
-console.log(await p.post(dataInput.postId, dataInput.comment));
+/*************************/
+/* Main Function Calling */
+/*************************/
+// let p = new Polkassembly();
+// console.log(await p.post(dataInput.postId, dataInput.comment));
 
 /* Export */
 export {
