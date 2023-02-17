@@ -36,10 +36,10 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#quick-start">Quickstart</a></li>
+        <li><a href="#deep-dive">Deep Dive</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -87,10 +87,31 @@ Follow [README](https://github.com/PolkaHack/Things/blob/main/README.md) or Foll
 
 ### Quick Start
 
+Terminal A
+```sh
+ cd ./00-squidServer
+ npm install
+ source .env
+ npx sqd up
+ npx sqd process 
+```
+
+Terminal B
+```sh
+cd ./00-squidServer
+npx sqd server
+```
+
+Terminal C
 ```sh
 npm install
-node ./main.js
+mv ./env-example ./env
+echo "seed=YOUR_SEED_WITH_ZTG_TOKENS_ON_BATERRY_TEST_NEXT" >> .env
+node main.js
 ```
+
+Output:  
+[Screenshot](./screenshot.png)
 
 ### Deep Dive
 
@@ -128,27 +149,27 @@ npm install
 6. set up subsquid indexer.
 
 ```sh
-sqd up
-sqd codegen
-sqd migration:generate
+npx sqd up
+npx sqd codegen
+npx sqd migration:generate
 ```
 
 7. run the mirgation process
 
 ```sh
-sqd process
+npx sqd process
 ```
 
-8. Amazing, open up a fresh new Terminal and let the indexer run.
-9. In the new terminal navigate to the `./00-squidServer`
+8. Amazing. This terminal will be block from now on. 
+9. Open up a fresh new Terminal. In the new terminal navigate to the `./00-squidServer`
 10. start the graphQL server
 
 ```sh
-sqd serve
+npx sqd serve
 ```
 
 11. Got to [http://localhost:4350/graphql](http://localhost:4350/graphql)
-12. select or paste this query and run it.
+12. Select or paste this query and run it.
 
 ```graphql
 query MyQuery {
@@ -174,7 +195,7 @@ Because new proposal will come in daily.
 </pre>
 </details>
 
-13. Now we have our indexer and our graphQL Server running.
+13. Amazing. Now we have our indexer and our graphQL Server running. This terminal will be block from now on.
 14. Open up a 3rd Terminal and navigate to the root folder.
 15. run tree and you should see the following
 
@@ -190,18 +211,12 @@ tree -L 1
 ├── 01-getData
 ├── 02-createMarket
 ├── 03-postComment
-├── README-depracted.md
 ├── README.md
-├── logs
 ├── main.js
-├── node_modules
-├── package-lock.json
 ├── package.json
 ├── screenshot.png
-└── subsquare.js
 
 6 directories, 7 files
-
 </pre>
 </details>
 
@@ -452,15 +467,15 @@ ls -la ./03-postComment
 28. The scripts are following the following convention.
 
 ```
-|- MockInput
-|- MockOutput
-|- Function declartion
-|- Function call
+|- DataInput
+|- DataOutput
+|- Function Declartion
+|- Function Call
 |- Export
 ```
 
 <details>
-<summary>Explainer Convention</summary
+<summary>The Code Convention</summary
 <ol>
 <li>Every script has a one specific purpose.</li>
 <li>In MockInput / MockOutput you can see what each script takes as a argument.</li>
@@ -472,12 +487,6 @@ ls -la ./03-postComment
     
 
 30. Thanks for following along. : )
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
