@@ -343,9 +343,9 @@ node ./main.js
 24. Section 1 takes a graphQL Query as an Input. \
     Runs getData(). \
     It returns another Object. \
-    The object has a question, description, slug, and a propsalIndex.\
+    The object has a question, description, slug, and a propsalIndex.
 
-</details>
+<details>
 <summary>Section 1</summary>
 <pre>
 {
