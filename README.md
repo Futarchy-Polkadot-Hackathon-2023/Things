@@ -8,12 +8,12 @@
 
 <h3 align="center">Futurachy - Quickstart</h3>
   <p align="center">
-    A Quickstart of a Futurachy Project of Polkadot Global Hackathon Project
+    <a href="https://github.com/polkahack/futarchy">Futurachy</a> creates incetives for goverments. </a>
     <br />
-    <a href="https://github.com/polkahack/futarchy"><strong>Explore the docs »</strong></a>
+    Quickstart is a simplified version of Futurachy.
     <br />
     <br />
-    <a href="https://youtu.be/ue22iS_N0MU">View Demo</a>
+    <a href="https://youtu.be/ue22iS_N0MU" name="demo">View Demo</a>
     ·
     <a href="https://github.com/PolkaHack/futarchy/issues">Report Bug</a>
     ·
@@ -45,23 +45,40 @@
 
 ## About The Project
 
---- Work in Progress - Logo ---
+### Screenshot
 ![screenshot](./screenshot.png)
---- Work in Progress - Description ---
+
+### Description
+This is a Quickstart of the Project [Futurachy](https://github.com/PolkaHack/futarchy).
+
+Futurachy creates incetives to for Goverments.
+
+Quickstart is a simplified version of the inner workings.
+
+#### TLDR
+1. It spins up a Indexer, which graps the latest proposal from the Zeitgeist Chain. 
+2. It creates a graphQL endpoint. 
+3. It gets the Data through the GraphQL Endpoint. 
+4. It fetches the Title from polkassembly.
+5. It converts the title in question, description and slug. 
+6. It creates a market from question, description and slug.
+7. The created Market has a market Id.
+8. It converts converts marketId to a marketLink.
+8. It posts a comment in [polkassembly](https://polkadot.polkassembly.io/) with a link to the newly created Market.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-- [![NodeJs][nodejs]][nodejs-url]
-- [![Subsquid][subsquid]][subsquid-url]
-- [![Zeitgeist][zeitgeist]][zeitgeist-url]
+ [![NodeJs][nodejs]][nodejs-url]
+ [![Subsquid][subsquid]][subsquid-url]
+ [![Zeitgeist][zeitgeist]][zeitgeist-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
-Follow this README.md or Follow via Video.
+Follow [README](https://github.com/PolkaHack/Things/blob/main/README.md) or Follow via [Video](https://youtu.be/ue22iS_N0MU). 
 
 ### Prerequisites
 
