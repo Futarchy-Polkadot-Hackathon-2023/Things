@@ -181,6 +181,7 @@ Because new proposal will come in daily.
 ```sh
 tree -L 1
 ```
+
 <details>
 <summary>Output</summary>
 <pre>
@@ -200,6 +201,7 @@ tree -L 1
 └── subsquare.js
 
 6 directories, 7 files
+
 </pre>
 </details>
 
@@ -290,13 +292,13 @@ node ./main.js
   import { createMarket } from "./02-createMarket/02-createMarket.js";
   import { postComment } from "./03-postComment/03-postComment.js";
 
-  async function main(dataInput) {
-    let resGetData = await getData(dataInput)
-    let resCreateMarket = await createMarket(resGetData)
-    let resPostComment = await postComment(resCreateMarket);
-  }
+async function main(dataInput) {
+let resGetData = await getData(dataInput)
+let resCreateMarket = await createMarket(resGetData)
+let resPostComment = await postComment(resCreateMarket);
+}
 
-  main({ body: "{\"query\":\"query MyQuery {\\n  proposals(limit: 1) {\\n    proposalIndex\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}", })
+main({ body: "{\"query\":\"query MyQuery {\\n proposals(limit: 1) {\\n proposalIndex\\n }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}", })
 
   </pre>
 </details>
@@ -340,13 +342,9 @@ node ./main.js
 node ./main.js
 ```
 
-24. Section 1 takes a graphQL Query as an Input. \
-    Runs getData(). \
-    It returns another Object. \
-    The object has a question, description, slug, and a propsalIndex.
-
+24. Section 1 - Breakdown
 <details>
-<summary>Section 1</summary>
+<summary>Output - Section 1</summary>
 <pre>
 {
   body: '{"query":"query MyQuery {\\n  proposals(limit: 1) {\\n    proposalIndex\\n  }\\n}\\n","variables":null,"operationName":"MyQuery"}'
@@ -360,15 +358,20 @@ node ./main.js
 }
 </pre>
 </details>
+<details>
+<summary>Breakdown - Section 2 </summary>
+<ol>
+<li>Section 1 takes a graphQL Query as an Input</li>
+<li>Runs getData().</li>
+<li>It returns another Object.</li>
+<li>The object has a question, description, slug, and a propsalIndex</li>
+</ol>
+</details>
 
-25. Section 2 takes an object as an Input. \
-    The Object contains a question, description, slug and a proposal Index.\
-    Runs getData(). \
-    It returns another Object. \
-    The object has a proposalIndex and a comment.
+25. Section 2 - Breakdown
 
 <details>
-<summary>Section 2</summary>
+<summary>Output - Section 2</summary> 
 <pre>
 {
   question: 'Will proposal with Indes of 229 resolve?',
@@ -387,17 +390,22 @@ node ./main.js
 }
 </pre>
 </details>
+<details>
+<summary>Breakdown - Section 2</summary>
+<ol>
+<li>Section 2 takes an object as an Input.</li>
+<li>The Object contains a question, description, slug and a proposal Index.</li>
+<li>Runs getData().</li>
+<li>It returns another Object.</li>
+<li>The object has a proposalIndex and a comment.</li>
+</ol>
+</details>
 
-25. Section 3 takes an object as an Input. \
-    The Object contains a proposalIndes and a comment.\
-    Runs postComment().\
-    Spit another Obeject out. \
-    The object has a question, description, slug, and a propsalIndex.
+25. Section 3 - Breakdown
 
 <details>
-<summary>Section 3</summary>
-<ol>
-<code>
+<summary>Output - Section 3</summary>
+<pre>
 {
   proposalIndex: '229',
   comment: 'A prediction market is created.🗽 \n' +
@@ -408,8 +416,18 @@ node ./main.js
 }
 ..postComment()...
 { status: 'true', link: 'https://polkadot.polkassembly.io/post/1617' }
-</code>
-</ol>
+</pre>
+</details>
+
+<details>
+<summary>Breakdown - Section 3</summary>
+<ol>
+<li>Section 3 takes an object as an Input.</li>
+<li>The Object contains a proposalIndes and a comment.</li>
+<li>Runs postComment().</li>
+<li>Spit another Obeject out.</li>
+<li>The object has a question, description, slug, and a propsalIndex.</li>
+<ol>
 </details>
 
 26. This is the simplistic showcase of Futurachy.
@@ -441,11 +459,17 @@ ls -la ./03-postComment
 |- Export
 ```
 
-29. Every script has a one specific purpose. \
-    In MockInput / MockOutput you can see what each script takes as a argument. \
-    The function declartion is the main section. It cointains the main logic. \
-    The function call contains a running example of how to call it. By default its comment out. \
-    The export section contains all exports.
+<details>
+<summary>Explainer Convention</summary
+<ol>
+<li>Every script has a one specific purpose.</li>
+<li>In MockInput / MockOutput you can see what each script takes as a argument.</li>
+<li>The function declartion is the main section. It cointains the main logic.</li>
+<li>The function call contains a running example of how to call it. By default its comment out.</li>
+<li>The export section contains all exports.</li>
+</ol>
+</details>
+    
 
 30. Thanks for following along. : )
 
